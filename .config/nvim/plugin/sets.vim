@@ -27,3 +27,4 @@ set colorcolumn=80
 set cmdheight=2
 set updatetime=50
 set shortmess+=cc
+set completeopt-=preview
