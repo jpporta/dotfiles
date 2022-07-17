@@ -17,7 +17,7 @@ set nobackup
 set undodir=~/.vim/undodir
 set undofile
 set incsearch
-set termguicolors
+set termguicolors background=dark
 set scrolloff=8
 set noshowmode
 set completeopt=menuone,noinsert,noselect
