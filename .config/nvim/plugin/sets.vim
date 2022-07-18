@@ -28,3 +28,6 @@ set cmdheight=2
 set updatetime=50
 set shortmess+=cc
 set completeopt-=preview
+set mouse=a
+set splitbelow splitright
+set fillchars+=vert:\

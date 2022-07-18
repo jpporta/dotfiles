@@ -1,4 +1,5 @@
 call plug#begin('~/.vim/plugged')
+Plug 'https://github.com/tc50cal/vim-terminal' " Vim Terminal
 Plug 'https://github.com/neoclide/coc.nvim'  " Auto Completion
 Plug 'https://github.com/ap/vim-css-color' " CSS Color Preview
 Plug 'https://github.com/preservim/tagbar' " Tagbar for code navigation
