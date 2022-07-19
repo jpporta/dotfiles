@@ -26,3 +26,15 @@ map <Leader>th <C-w>t<C-w>H
 map <Leader>tk <C-w>t<C-w>K
 
 map <Leader>tt :vnew term://zsh<CR>
+nnoremap <C-q> :q!<CR>
+nnoremap <F4> :bd<CR>
+nnoremap <F5> :NERDTreeToggle<CR>
+nnoremap <F6> :sp<CR>:terminal<CR>
+
+" Tabs
+nnoremap <S-Tab> gT
+nnoremap <Tab> gt
+nnoremap <silent> <S-t> :tabnew<CR>
+map gn :bn<cr>
+map gp :bp<cr>
+map gd :bd<cr>

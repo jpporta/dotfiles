@@ -8,3 +8,4 @@ augroup THE_DOOR
     autocmd!
     autocmd BufWritePre * :call TrimWhitespace()
 augroup END
+command! -nargs=0 Prettier :call CocAction('runCommand', 'prettier.formatFile')

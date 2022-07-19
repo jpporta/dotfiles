@@ -1,4 +1,10 @@
 call plug#begin('~/.vim/plugged')
+Plug 'godlygeek/tabular'
+Plug 'https://github.com/kien/ctrlp.vim'
+Plug 'plasticboy/vim-markdown'
+Plug 'jiangmiao/auto-pairs'
+Plug 'sheerun/vim-polyglot'
+Plug 'airblade/vim-gitgutter'
 Plug 'https://github.com/tc50cal/vim-terminal' " Vim Terminal
 Plug 'https://github.com/neoclide/coc.nvim'  " Auto Completion
 Plug 'https://github.com/ap/vim-css-color' " CSS Color Preview
