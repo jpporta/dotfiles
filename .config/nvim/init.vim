@@ -1,4 +1,5 @@
 call plug#begin('~/.vim/plugged')
+Plug 'APZelos/blamer.nvim'
 Plug 'cakebaker/scss-syntax.vim'
 Plug 'godlygeek/tabular'
 Plug 'https://github.com/kien/ctrlp.vim'
