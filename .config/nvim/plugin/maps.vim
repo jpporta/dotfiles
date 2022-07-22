@@ -37,4 +37,4 @@ nnoremap <Tab> gt
 nnoremap <silent> <S-t> :tabnew<CR>
 map gn :bn<cr>
 map gp :bp<cr>
-map gd :bd<cr>
+map gd :bp\|bd #<cr>
