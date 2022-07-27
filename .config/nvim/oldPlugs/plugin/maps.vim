@@ -38,3 +38,4 @@ nnoremap <silent> <S-t> :tabnew<CR>
 map gn :bn<cr>
 map gp :bp<cr>
 map gd :bp\|bd #<cr>
+nnoremap <Leader>pv <cmd>Ex<CR>
