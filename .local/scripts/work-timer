@@ -7,7 +7,6 @@ res=$(grep -e "$(date '+%F')" $TRACKER_FILE)
 sum=0
 if [[ $res == "" ]]
 then
-				echo "No work"
 				exit 0
 fi
 while read line
