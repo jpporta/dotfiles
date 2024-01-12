@@ -253,21 +253,10 @@ mode "resize" {
 
 bindsym $mod+r mode "resize"
 
+exec_always "feh --bg-center $HOME/HD/wallpapers/$(ls $HOME/HD/wallpapers | shuf -n 1)"
 
-
-exec_always setxkbmap -layout "us,us" -variant ",intl" -option 'grp:alt_shift_toggle'
-
-# caps to esc
-exec_always setxkbmap -option caps:escape
-
-# bar {
-# status_command bumblebee-status \
-# -m cpu memory disk pulseout layout date time \
-# -t iceberg-rainbow
-# position top
-# }
-
-exec_always "feh --bg-center $HOME/Documents/wallpapers/$(ls $HOME/Documents/wallpapers | shuf -n 1)"
+exec_always --no-startup-id setxkbmap -option caps:swapescape
+exec_always --no-startup-id setxkbmap -layout "us,us" -variant ",intl" -option 'grp:alt_shift_toggle'
 
 exec_always picom 
 exec_always ~/.config/polybar/forest/launch.sh
@@ -290,5 +279,9 @@ assign [class="firefox"] $ws1
 assign [class="Slack"] $ws2
 assign [class="zoom"] $ws3
 assign [class="obsidian"] $ws5
-assign [class="thunderbird"] $ws5
+assign [class="thunderbird"] $ws3
 assign [class="Spotify"] $ws6
+
+# Brightness control
+bindcode 232 exec "brightnessctl set 3%-"
+bindcode 233 exec "brightnessctl set 3%+"
