@@ -2,11 +2,11 @@
 
 if [[ -z $(pgrep -x "firefox") ]]
 then
-				firefox 2>&1 /dev/null  &
+				firefox  &
 fi
 if [[ -z  $(pgrep -x "thunderbird") ]]
 then
-				thunderbird 2>&1 /dev/null &
+				thunderbird  &
 fi
 if [[ -z $(pgrep -x "obsidian") ]]
 then
@@ -14,4 +14,4 @@ then
 fi
 
 killall slack 2>&1 /dev/null
-flatpak run com.slack.Slack 2>&1 /dev/null &
+slack 2>&1 /dev/null &
