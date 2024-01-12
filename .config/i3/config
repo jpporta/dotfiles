@@ -197,13 +197,10 @@ bindcode $mod+Shift+34 move container to workspace number $ws6
 # bindsym $mod+Shift+9 move container to workspace number $ws19
 
 # gaps
+# gaps inner 10
+# gaps outer 20
 gaps inner 10
-gaps outer 20
-
-# Screen shot
-bindsym Ctrl+Shift+3 exec --no-startup-id maim | xclip -selection clipboard -t image/png
-bindsym Ctrl+Shift+4 exec --no-startup-id maim --window $(xdotool getactivewindow) | xclip -selection clipboard -t image/png
-bindsym Ctrl+Shift+5 exec --no-startup-id maim --select | xclip -selection clipboard -t image/png
+gaps outer 5
 
 # reload the configuration file
 bindsym $mod+Shift+c reload
@@ -260,6 +257,9 @@ bindsym $mod+r mode "resize"
 
 exec_always setxkbmap -layout "us,us" -variant ",intl" -option 'grp:alt_shift_toggle'
 
+# caps to esc
+exec_always setxkbmap -option caps:escape
+
 # bar {
 # status_command bumblebee-status \
 # -m cpu memory disk pulseout layout date time \
@@ -271,7 +271,7 @@ exec_always "feh --bg-center $HOME/Documents/wallpapers/$(ls $HOME/Documents/wal
 
 exec_always picom 
 exec_always ~/.config/polybar/forest/launch.sh
-exec_always "xrandr --output DP-4 --left-of DP-2"
+# exec_always "xrandr --output DP-4 --left-of DP-2"
 
 default_border pixel 1
 default_floating_border pixel 1
