@@ -1,0 +1,8 @@
+name: notes
+root: ~/HD/Obsidian/Avodah/
+
+windows:
+  - editor:
+      layout: main-vertical
+      panes:
+        - nvim .

@@ -153,7 +153,7 @@ esac
 # pnpm end
 
 export BROWSER=firefox
-
+alias tx="tmuxinator"
 # chown $USER:$USER -R ~/HD
 
 
