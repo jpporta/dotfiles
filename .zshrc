@@ -156,3 +156,6 @@ export BROWSER=firefox
 
 # chown $USER:$USER -R ~/HD
 
+
+# bun completions
+[ -s "/home/jpporta/.bun/_bun" ] && source "/home/jpporta/.bun/_bun"

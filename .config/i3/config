@@ -255,8 +255,6 @@ bindsym $mod+r mode "resize"
 
 exec_always "feh --bg-center $HOME/HD/wallpapers/$(ls $HOME/HD/wallpapers | shuf -n 1)"
 
-exec_always --no-startup-id setxkbmap -option caps:swapescape
-exec_always --no-startup-id setxkbmap -layout "us,us" -variant ",intl" -option 'grp:alt_shift_toggle'
 
 exec_always picom 
 exec_always ~/.config/polybar/forest/launch.sh
