@@ -10,4 +10,4 @@ windows:
       layout: main-vertical
       panes:
         - nvim .
-        - ls
+        - ""
