@@ -139,7 +139,7 @@ unset ZSH_AUTOSUGGEST_USE_ASYNC
 setxkbmap -layout us,us -variant ,intl -option grp:win_space_toggle
 
 # Zoxide
-eval "$(zoxide init zsh)"
+eval "$(zoxide init zsh --cmd=cd)"
 
 # Eazy new tmux session to current dir
 alias tn="new-session"
@@ -159,3 +159,5 @@ alias tx="tmuxinator"
 
 # bun completions
 [ -s "/home/jpporta/.bun/_bun" ] && source "/home/jpporta/.bun/_bun"
+
+alias gup="git add --all && git commit -m \"$(date)\" && git push"
