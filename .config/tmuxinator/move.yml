@@ -1,6 +1,7 @@
-name: med
-root: ~/HD/work/avodah-med/
+# /home/jpporta/.config/tmuxinator/move.yml
 
+name: move
+root: ~/HD/projects/move78
 
 # Project hooks
 on_project_start: git fetch origin
