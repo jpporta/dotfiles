@@ -204,29 +204,11 @@ gaps outer 5
 
 # reload the configuration file
 bindsym $mod+Shift+c reload
-# restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
-bindsym $mod+Shift+r restart
-# exit i3 (logs you out of your X session)
-# bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'"
-# Create Log out, Reboot, Poweroff bindings
-# mode "(S)uspend, (L)ogout, (R)eboot, (P)oweroff" {
-#         bindsym r exec --no-startup-id systemctl reboot
-#         bindsym s exec --no-startup-id systemctl suspend; mode "default"
-#         bindsym l exit
-#         bindsym p exec --no-startup-id systemctl poweroff
-#
-#         # back to normal: Enter or Escape
-#         bindsym Return mode "default"
-#         bindsym Escape mode "default"
-# }
-#
-# bindsym $mod+Shift+e mode "(S)uspend, (L)ogout, (R)eboot, (P)oweroff"
+
 bindsym $mod+Shift+e exec --no-startup-id ~/.config/rofi/powermenu/type-1/powermenu.sh
 
 bindsym $mod+Shift+x exec "i3lock -c 000000"
-# exec "xautolock -detectsleep -time 5 -locker \"i3lock -c 000000\""
 
-# resize window (you can also use the mouse for that)
 mode "resize" {
         # These bindings trigger as soon as you enter the resize mode
 
@@ -253,21 +235,10 @@ mode "resize" {
 
 bindsym $mod+r mode "resize"
 
-exec_always "feh --bg-center $HOME/HD/wallpapers/$(ls $HOME/HD/wallpapers | shuf -n 1)"
-
-
-exec_always picom 
 exec_always ~/.config/polybar/forest/launch.sh
-# exec_always "xrandr --output DP-4 --left-of DP-2"
 
 default_border pixel 1
 default_floating_border pixel 1
-
-# Screenshot
-bindsym $mod+Shift+3 exec "scrot -M 1 ~/Captures/Screenshots/$(date '+%FT%H-%M-%S').png -e 'xclip -selection clipboard -target image/png -i $f'"
-bindsym $mod+Shift+4 exec "scrot -M 0 ~/Captures/Screenshots/$(date '+%FT%H-%M-%S').png -e 'xclip -selection clipboard -target image/png -i $f'"
-bindsym $mod+Shift+5 exec "scrot -u ~/Captures/Screenshots/$(date '+%FT%H-%M-%S').png -e 'xclip -selection clipboard -target image/png -i $f'"
-bindsym $mod+Shift+6 exec "sleep 0.2 && scrot -s -f ~/Captures/Screenshots/$(date '+%FT%H-%M-%S').png -e 'xclip -selection clipboard -target image/png -i $f'"
 
 bindsym $mod+Shift+0 exec --no-startup-id "~/.local/scripts/work-tracker"
 bindsym $mod+Shift+s exec --no-startup-id "~/.local/scripts/open-work-apps"
@@ -283,3 +254,6 @@ assign [class="Spotify"] $ws6
 # Brightness control
 bindcode 232 exec "brightnessctl set 3%-"
 bindcode 233 exec "brightnessctl set 3%+"
+
+# Bar
+exec_always waybar
