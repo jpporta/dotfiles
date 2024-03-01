@@ -1,3 +1,6 @@
+git config --global user.name "Joao Pedro Pin Porta"
+git config --global user.email jpedro.porta@gmail.com
+
 # Update mirror list
 sudo cp /etc/pacman.d/mirrorlist /etc/pacman.d/mirrorlist.bkp
 sudo reflector --verbose --latest 10 --protocol https --sort rate --save /etc/pacman.d/mirrorlist
