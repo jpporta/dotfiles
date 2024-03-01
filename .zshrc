@@ -134,3 +134,4 @@ alias tx="tmuxinator"
 [ -s "/home/jpporta/.bun/_bun" ] && source "/home/jpporta/.bun/_bun"
 
 alias gup="git add --all && git commit -m \"$(date)\" && git push"
+alias addpck="echo !! >> ~/dotfiles/setup/install-packages.sh"
