@@ -1,5 +1,5 @@
 name: notes
-root: ~/HD/Obsidian/Brain/
+root: ~/Documents/notes/Brain/
 
 on_project_start: git fetch origin && git pull
 

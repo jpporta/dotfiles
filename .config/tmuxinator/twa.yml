@@ -1,7 +1,7 @@
 # /home/jpporta/.config/tmuxinator/twa.yml
 
 name: twa
-root: ~/HD/work/avodah-twa/
+root: ~/work/avodah-twa/
 
 
 # Project hooks
