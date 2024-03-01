@@ -7,21 +7,19 @@ sudo reflector --verbose --latest 10 --protocol https --sort rate --save /etc/pa
 sudo pacman -Sy
 
 # ZSH
-sudo pacman -Sy zsh
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+# sudo pacman -Sy zsh
+# sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
 # ZSH Plugins
 git clone --depth=1 https://github.com/romkatv/powerlevel10k.git /home/jpporta/.oh-my-zsh/custom/themes/powerlevel10k
 git clone https://github.com/zsh-users/zsh-autosuggestions /home/jpporta/.oh-my-zsh/custom/plugins/zsh-autosuggestions
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git /home/jpporta/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting
 
-# YAY
-pacman -S --needed git base-devel && git clone https://aur.archlinux.org/yay.git && cd yay && makepkg -si
-yay waybar swww spotify slack-desktop zoom -Sy
-
 # Packages
 sudo pacman -Sy firefox neovim stow unzip nodejs yarn pavucontrol neofetch zoxide pnpm man lazygit npm \
 				bluez bluez-utils rofi deno reflector intel-ucode libreoffice-fresh vlc gimp thunderbird \
 				mako libnotify jq grim slurp wl-clipboard linux-headers \
 				v4l2loopback-dkms v4l2loopback-utils v4l-utils wev gphoto2
-
+# # YAY
+# pacman -S --needed git base-devel && git clone https://aur.archlinux.org/yay.git && cd yay && makepkg -si
+# yay waybar swww spotify slack-desktop zoom -Sy
