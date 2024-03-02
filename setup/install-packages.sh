@@ -20,10 +20,10 @@ sudo pacman -Sy firefox neovim stow unzip nodejs yarn pavucontrol neofetch zoxid
 				bluez bluez-utils rofi deno reflector intel-ucode libreoffice-fresh vlc gimp thunderbird \
 				mako libnotify jq grim slurp wl-clipboard linux-headers \
 				v4l2loopback-dkms v4l2loopback-utils v4l-utils wev gphoto2 \
-				tmux ripgrep inetutils 
+				tmux ripgrep inetutils fzf
 # # YAY
 # pacman -S --needed git base-devel && git clone https://aur.archlinux.org/yay.git && cd yay && makepkg -si
-# yay waybar swww spotify slack-desktop zoom tmuxinator discord bun-bin hyprlock  -Sy
+# yay waybar swww spotify slack-desktop zoom tmuxinator discord bun-bin hyprlock hypridle -Sy
 
 
 # Nvidia Drivers
