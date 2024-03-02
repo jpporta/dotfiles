@@ -23,4 +23,8 @@ sudo pacman -Sy firefox neovim stow unzip nodejs yarn pavucontrol neofetch zoxid
 				tmux ripgrep inetutils 
 # # YAY
 # pacman -S --needed git base-devel && git clone https://aur.archlinux.org/yay.git && cd yay && makepkg -si
-# yay waybar swww spotify slack-desktop zoom tmuxinator discord bun-bin -Sy
+# yay waybar swww spotify slack-desktop zoom tmuxinator discord bun-bin hyprlock  -Sy
+
+
+# Nvidia Drivers
+# yay nvidia
