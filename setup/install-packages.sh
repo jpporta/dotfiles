@@ -23,5 +23,5 @@
 # 				tmux ripgrep inetutils fzf
 # YAY
 pacman -S --needed git base-devel && git clone https://aur.archlinux.org/yay.git && cd yay && makepkg -si
-yay waybar swww spotify slack-desktop zoom tmuxinator discord bun-bin hyprlock hypridle -Sy
+yay waybar swww spotify slack-desktop zoom tmuxinator discord bun-bin hyprlock hypridle swappy -Sy
 
