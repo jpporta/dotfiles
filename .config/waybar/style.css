@@ -1,7 +1,6 @@
 * {
     border: none;
     border-radius: 0;
-    font-family: "BerkeleyNF";
     font-size: 13px;
     min-height: 0;
 }
@@ -13,13 +12,8 @@ window#waybar {
 
 #window {
     font-weight: bold;
-    font-family: "Ubuntu";
+    font-family: "BerkeleyNF", 'NerdFont';
 }
-/*
-#workspaces {
-    padding: 0 5px;
-}
-*/
 
 #workspaces button {
     padding: 0 5px;
