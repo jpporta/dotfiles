@@ -1,10 +1,8 @@
 #!/usr/bin/bash
-
-
 swww init &
 
 mako &
 
-./wallpaper.sh &
+exec wallpaper.sh &
 
 waybar &
