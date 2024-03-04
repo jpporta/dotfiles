@@ -1,25 +1,13 @@
 #!/usr/bin/bash
 
-TRACKER_FILE=~/HD/timetracker.csv
-IFS=,
+resp=$(curl http://dev.joaoporta.tech:8080/timetracker -s)
 
-res=$(grep -e "$(date '+%F')" $TRACKER_FILE)
-sum=0
-if [[ $res == "" ]]
-then
-				exit 0
+isworking=$(echo $resp | jq .IsWorking -r)
+total=$(echo $resp | jq .TotalToday -r)
+
+if [ $isworking = "true" ]; then
+				class='"working"'
+else
+				class='"not-working"'
 fi
-while read line
-do
-				read -ra data <<< $line
-				if [[ ${data[2]} != "" ]]
-				then
-								sum=`expr $sum + ${data[2]} - ${data[1]}`
-				else
-								NOW=$(("$(date '+%s')"))
-								DIFF=`expr $NOW - ${data[1]}`
-								sum=`expr $sum + $DIFF`
-				fi
-done <<< "$res"
-date -d@$sum -u "+%H:%M:%S"
-
+    echo "{\"text\":\"$total\",\"class\":$class}"

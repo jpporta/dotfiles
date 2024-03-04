@@ -6,7 +6,7 @@
     // Choose the order of the modules
     "modules-left": ["hyprland/workspaces", "hyprland/submap", "custom/spotify"],
     "modules-center": ["hyprland/window"],
-    "modules-right": ["hyprland/language", "pulseaudio", "network", "cpu", "memory", "battery", "tray", "clock"],
+    "modules-right": ["custom/worktimer", "hyprland/language", "pulseaudio", "network", "cpu", "memory", "battery", "tray", "clock"],
     "sway/workspaces": {
         "disable-scroll": true,
         "all-outputs": false,
@@ -79,5 +79,12 @@
         "interval": 30, // Remove this if your script is endless and write in loop
         "exec": "$HOME/.config/waybar/mediaplayer.sh 2> /dev/null", // Script in resources folder
         "exec-if": "pgrep spotify"
+    },
+		"custom/worktimer": {
+	"format": " {}",
+	"interval": 60,
+	"return-type": "json",
+	"exec": "$HOME/.local/scripts/work-timer 2> /dev/null",
+	"on-click": "curl -X POST http://dev.joaoporta.tech:8080/timetracker"
     }
 }
