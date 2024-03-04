@@ -137,5 +137,5 @@ export GPG_TTY=$(tty)
 [ -s "/home/jpporta/.bun/_bun" ] && source "/home/jpporta/.bun/_bun"
 
 alias gup="git add --all && git commit -m \"$(date)\" && git push"
-alias rec0"echo 2 | wf-recorder -a -f ~/Documents/Recordings/$(date +%s).mp4" 
-alias rec1"echo 2 | wf-recorder -a -f ~/Documents/Recordings/$(date +%s).mp4" 
+alias rec0="echo 2 | wf-recorder -a -f ~/Documents/Recordings/$(date +%s).mp4" 
+alias rec1="echo 1 | wf-recorder -a -f ~/Documents/Recordings/$(date +%s).mp4" 
