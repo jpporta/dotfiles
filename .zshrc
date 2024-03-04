@@ -129,6 +129,9 @@ export BROWSER=firefox
 alias tx="tmuxinator"
 # chown $USER:$USER -R ~/HD
 
+# GPG Key
+export GPG_TTY=$(tty)
+
 
 # bun completions
 [ -s "/home/jpporta/.bun/_bun" ] && source "/home/jpporta/.bun/_bun"
