@@ -82,9 +82,9 @@
     },
 		"custom/worktimer": {
 	"format": " {}",
-	"interval": 60,
+	"interval": 1,
 	"return-type": "json",
 	"exec": "$HOME/.local/scripts/work-timer 2> /dev/null",
-	"on-click": "curl -X POST http://dev.joaoporta.tech:8080/timetracker"
+	"on-click": "$HOME/.local/scripts/work-timer-toggle 2> /dev/null"
     }
 }
