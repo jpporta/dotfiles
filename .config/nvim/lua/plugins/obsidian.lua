@@ -1,5 +1,5 @@
 return {
-	'epwalsh/obsidian.nvim',
+	"epwalsh/obsidian.nvim",
 	version = "*",
 	lazy = "true",
 	event = "VeryLazy",
@@ -13,15 +13,15 @@ return {
 				action = function()
 					return require("obsidian").util.gf_passthrough()
 				end,
-				opts = { noremap = false, expr = true, buffer = true }
+				opts = { noremap = false, expr = true, buffer = true },
 			},
 			-- Toggle check-boxes.
 			["<leader>ch"] = {
 				action = function()
 					return require("obsidian").util.toggle_checkbox()
 				end,
-				opts = { buffer = true }
-			}
+				opts = { buffer = true },
+			},
 		},
 		daily_notes = { template = "daily.md" },
 		templates = {
@@ -41,9 +41,8 @@ return {
 				end,
 				date_full = function()
 					return os.date("%B %-d, %Y")
-				end
-
-			}
+				end,
+			},
 		},
 		note_frontmatter_func = function(note)
 			-- This is equivalent to the default frontmatter function.
@@ -52,12 +51,14 @@ return {
 				aliases = note.aliases,
 				tags = note.tags,
 				title = note.aliases[1],
-				createdAt = os.date("%Y-%m-%d %H:%M:%S")
+				createdAt = os.date("%Y-%m-%d %H:%M:%S"),
 			}
 			-- `note.metadata` contains any manually added fields in the frontmatter.
 			-- So here we just make sure those fields are kept in the frontmatter.
 			if note.metadata ~= nil and not vim.tbl_isempty(note.metadata) then
-				for k, v in pairs(note.metadata) do out[k] = v end
+				for k, v in pairs(note.metadata) do
+					out[k] = v
+				end
 			end
 			return out
 		end,
@@ -71,16 +72,12 @@ return {
 				[" "] = { char = "󰄱", hl_group = "ObsidianTodo" },
 				["x"] = { char = "", hl_group = "ObsidianDone" },
 				[">"] = { char = "", hl_group = "ObsidianRightArrow" },
-				["~"] = { char = "󰰱", hl_group = "ObsidianTilde" }
-				-- Replace the above with this if you don't have a patched font:
-				-- [" "] = { char = "☐", hl_group = "ObsidianTodo" },
-				-- ["x"] = { char = "✔", hl_group = "ObsidianDone" },
-
-				-- You can also add more custom ones...
+				["~"] = { char = "󰰱", hl_group = "ObsidianTilde" },
+				["v"] = { char = "", hl_group = "ObsidianPlay" },
 			},
 			external_link_icon = {
 				char = "",
-				hl_group = "ObsidianExtLinkIcon"
+				hl_group = "ObsidianExtLinkIcon",
 			},
 			-- Replace the above with this if you don't have a patched font:
 			-- external_link_icon = { char = "", hl_group = "ObsidianExtLinkIcon" },
@@ -91,16 +88,17 @@ return {
 				-- The options are passed directly to `vim.api.nvim_set_hl()`. See `:help nvim_set_hl`.
 				ObsidianTodo = { bold = true, fg = "#f78c6c" },
 				ObsidianDone = { bold = true, fg = "#89ddff" },
+				ObsidianPlay = { bold = true, fg = "#a6e3a1" },
 				ObsidianRightArrow = { bold = true, fg = "#f78c6c" },
 				ObsidianTilde = { bold = true, fg = "#ff5370" },
 				ObsidianRefText = { underline = true, fg = "#c792ea" },
 				ObsidianExtLinkIcon = { fg = "#c792ea" },
 				ObsidianTag = { italic = true, fg = "#89ddff" },
-				ObsidianHighlightText = { bg = "#75662e" }
-			}
+				ObsidianHighlightText = { bg = "#75662e" },
+			},
 		},
 		workspaces = {
-			{ name = "Brain", path = "~/Documents/notes/Brain" }
-		}
-	}
+			{ name = "Brain", path = "~/Documents/notes/Brain" },
+		},
+	},
 }
