@@ -12,7 +12,7 @@ window#waybar {
 
 #window {
     font-weight: bold;
-    font-family: "BerkeleyNF", 'NerdFont';
+    font-family: "BerkeleyMono Nerd Font", 'NerdFont';
 }
 
 #workspaces button {
