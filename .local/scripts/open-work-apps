@@ -1,9 +1,5 @@
 #!/usr/bin/bash
 
-if [[ -z $(pgrep -x "firefox") ]]
-then
-				firefox  &
-fi
 if [[ -z  $(pgrep -x "thunderbird") ]]
 then
 				thunderbird  &
@@ -13,4 +9,13 @@ then
 				obsidian &
 fi
 
-slack  &
+if [[ -z $(pgrep -x "firefox") ]]
+then
+				firefox  &
+fi
+
+if [[ -z $(pgrep -x "slack") ]]
+then
+				slack  &
+fi
+
