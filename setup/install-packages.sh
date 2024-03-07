@@ -20,7 +20,7 @@
 # 				bluez bluez-utils rofi deno reflector intel-ucode libreoffice-fresh vlc gimp thunderbird \
 # 				mako libnotify jq grim slurp wl-clipboard linux-headers \
 # 				v4l2loopback-dkms v4l2loopback-utils v4l-utils wev gphoto2 \
-# 				tmux ripgrep inetutils fzf python-pip tree-sitter fd composer glow docker
+# 				tmux ripgrep inetutils fzf python-pip tree-sitter fd composer glow docker openvpn
 # YAY
 pacman -S --needed git base-devel && git clone https://aur.archlinux.org/yay.git && cd yay && makepkg -si
-yay waybar swww spotify slack-desktop zoom tmuxinator discord bun-bin hyprlock hypridle swappy luarocks compose php jdk julia ttf-twemoji dbeaver xdg-desktop-portal-gnome obsidian -Sy
+yay waybar swww spotify slack-desktop zoom tmuxinator discord bun-bin hyprlock hypridle swappy luarocks compose php jdk julia ttf-twemoji dbeaver xdg-desktop-portal-gnome obsidian bat -Sy
