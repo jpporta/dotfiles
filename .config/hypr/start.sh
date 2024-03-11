@@ -3,6 +3,4 @@ swww init &
 
 mako &
 
-exec wallpaper.sh &
-
 waybar &
