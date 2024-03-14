@@ -1,0 +1,4 @@
+--background '#89b4fa'
+--font 'Berkeley Mono Nerd Font=16'
+--no-window-controls
+--theme '/home/jpporta/dotfiles/setup/catppuccin.tmTheme'
