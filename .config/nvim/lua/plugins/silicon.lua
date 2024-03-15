@@ -45,5 +45,6 @@ return {
 			end,
 			theme = "Catppuccin Mocha",
 		})
+		vim.keymap.set("v", "<leader>cs", "<cmd>'<,'>Silicon<CR>", { desc = "[C]ode [S]elfie" })
 	end,
 }
