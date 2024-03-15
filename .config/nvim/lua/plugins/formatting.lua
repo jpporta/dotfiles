@@ -11,6 +11,8 @@ return {
 			lua = { "stylua" },
 			rust = { "rustfmt" },
 			go = { "goimports" },
+			java = { "google-java-format" },
+			processing = { "google-java-format" },
 		},
 		format_on_save = {
 			lsp_fallback = true,
