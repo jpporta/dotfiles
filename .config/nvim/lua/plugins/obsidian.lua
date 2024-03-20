@@ -4,7 +4,29 @@ return {
 	lazy = "true",
 	event = "VeryLazy",
 	dependencies = { "nvim-lua/plenary.nvim" },
-	-- way then set 'mappings = {}'.
+	keys = {
+		{
+			"<leader>ot",
+			function()
+				vim.cmd("ObsidianToday")
+			end,
+			desc = "[O]bsidian [T]oday",
+		},
+		{
+			"<leader>oe",
+			function()
+				vim.cmd("ObsidianExtractNote")
+			end,
+			desc = "[O]bsidian [E]xtract",
+		},
+		{
+			"<leader>os",
+			function()
+				vim.cmd("ObsidianSearch")
+			end,
+			desc = "[O]bsidian [S]earch",
+		},
+	},
 	opts = {
 
 		mappings = {
