@@ -24,4 +24,4 @@
 # 				tmux ripgrep inetutils fzf python-pip tree-sitter fd composer glow docker openvpn
 # YAY
 pacman -S --needed git base-devel && git clone https://aur.archlinux.org/yay.git && cd yay && makepkg -si
-yay waybar swww spotify slack-desktop zoom tmuxinator discord bun-bin hyprlock hypridle swappy luarocks compose php jdk julia ttf-twemoji dbeaver xdg-desktop-portal-gnome obsidian bat -Sy
+yay waybar swww spotify slack-desktop zoom tmuxinator discord bun-bin hyprlock hypridle swappy luarocks compose php jdk julia ttf-twemoji dbeaver xdg-desktop-portal-gnome obsidian bat eslint -Sy
