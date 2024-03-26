@@ -1,4 +1,4 @@
 return {
 	"gleam-lang/gleam.vim",
-	fz = "gleam",
+	ft = "gleam",
 }
