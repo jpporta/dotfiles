@@ -13,13 +13,6 @@ return {
 			desc = "[O]bsidian [T]oday",
 		},
 		{
-			"<leader>oe",
-			function()
-				vim.cmd("ObsidianExtractNote")
-			end,
-			desc = "[O]bsidian [E]xtract",
-		},
-		{
 			"<leader>os",
 			function()
 				vim.cmd("ObsidianSearch")
@@ -45,7 +38,7 @@ return {
 				opts = { buffer = true },
 			},
 		},
-		daily_notes = { template = "daily.md" },
+		daily_notes = { template = "daily.md", folder = "Journal" },
 		templates = {
 			subdir = "templates",
 			date_format = "%Y-%m-%d",
