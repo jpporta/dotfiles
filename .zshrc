@@ -140,3 +140,6 @@ alias gup="git add --all && git commit -m \"$(date)\" && git push"
 alias rec0="echo 2 | wf-recorder -a -f ~/Documents/Recordings/$(date +%s).mp4" 
 alias rec1="echo 1 | wf-recorder -a -f ~/Documents/Recordings/$(date +%s).mp4" 
 alias bc="bc -l -q"
+alias load_cam="sudo modprobe v4l2loopback devices=2 card_label=\"iPhone\",\"Canon\" exclusive_caps=1,1 max_buffers=2
+"
+alias start_cam="gphoto2 --stdout --capture-movie | ffmpeg -i - -f rawvideo -pix_fmt yuv420p -threads 0  -s:v 1280x720 -r 25 -f v4l2 /dev/video1"
