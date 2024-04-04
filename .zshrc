@@ -142,5 +142,5 @@ alias rec0="echo 2 | wf-recorder -a -f ~/Documents/Recordings/$(date +%s).mp4"
 alias rec1="echo 1 | wf-recorder -a -f ~/Documents/Recordings/$(date +%s).mp4"
 alias bc="bc -l -q"
 alias start_cam="gphoto2 --stdout --capture-movie | ffmpeg -i - -f rawvideo -pix_fmt yuv420p -threads 0  -s:v 1280x720 -r 25 -f v4l2 /dev/video1"
-alias clight=gsettings set org.gnome.desktop.interface color-scheme 'prefer-light'
-alias cdark=gsettings set org.gnome.desktop.interface color-scheme 'prefer-dark'
+alias clight="gsettings set org.gnome.desktop.interface color-scheme 'prefer-light'"
+alias cdark="gsettings set org.gnome.desktop.interface color-scheme 'prefer-dark'"
