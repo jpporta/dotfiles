@@ -1,6 +1,0 @@
-#!/usr/bin/bash
-sudo rmmod v4l2loopback
-
-sudo modprobe v4l2loopback devices=1 video_nr=2 card_label="Test Camera" exclusive_caps=1
-
-ffmpeg -re -loop 1 -i ~/test.png -vf format=yuv420p -f v4l2 /dev/video2
