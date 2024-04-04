@@ -84,11 +84,14 @@ return {
 			-- Define how various check-boxes are displayed
 			checkboxes = {
 				-- NOTE: the 'char' value has to be a single character, and the highlight groups are defined below.
-				[" "] = { char = "󰄱", hl_group = "ObsidianTodo" },
-				["x"] = { char = "", hl_group = "ObsidianDone" },
+				[" "] = { char = "", hl_group = "ObsidianTodo" },
+				["x"] = { char = "", hl_group = "ObsidianDone" },
 				[">"] = { char = "", hl_group = "ObsidianRightArrow" },
-				["~"] = { char = "󰰱", hl_group = "ObsidianTilde" },
+				["<"] = { char = "", hl_group = "ObsidianLeftArrow" },
+				["~"] = { char = "", hl_group = "ObsidianTilde" },
 				["v"] = { char = "", hl_group = "ObsidianPlay" },
+				["?"] = { char = "", hl_group = "ObsidianQuestion" },
+				["I"] = { char = "", hl_group = "ObsidianIdea" },
 			},
 			external_link_icon = {
 				char = "",
@@ -101,11 +104,14 @@ return {
 			tags = { hl_group = "ObsidianTag" },
 			hl_groups = {
 				-- The options are passed directly to `vim.api.nvim_set_hl()`. See `:help nvim_set_hl`.
-				ObsidianTodo = { bold = true, fg = "#f78c6c" },
-				ObsidianDone = { bold = true, fg = "#89ddff" },
-				ObsidianPlay = { bold = true, fg = "#a6e3a1" },
-				ObsidianRightArrow = { bold = true, fg = "#f78c6c" },
-				ObsidianTilde = { bold = true, fg = "#ff5370" },
+				ObsidianTodo = { bold = true, fg = "#7f849c" },
+				ObsidianDone = { bold = true, fg = "#a6e3a1" },
+				ObsidianPlay = { bold = true, fg = "#89b4fa" },
+				ObsidianRightArrow = { bold = true, fg = "#fab387" },
+				ObsidianLeftArrow = { bold = true, fg = "#f5c2e7" },
+				ObsidianTilde = { bold = true, fg = "#f38ba8" },
+				ObsidianQuestion = { bold = true, fg = "#b4befe" },
+				ObsidianIdea = { bold = true, fg = "#f9e2af" },
 				ObsidianRefText = { underline = true, fg = "#c792ea" },
 				ObsidianExtLinkIcon = { fg = "#c792ea" },
 				ObsidianTag = { italic = true, fg = "#89ddff" },
