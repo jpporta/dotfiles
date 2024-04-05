@@ -20,7 +20,7 @@ return {
 				lua = { require("formatter.filetypes.lua").stylua },
 				rust = { require("formatter.filetypes.rust").rustfmt },
 				go = { require("formatter.filetypes.go").goimports },
-				markdown = { require("formatter.filetypes.markdown").denofmt },
+				markdown = { require("formatter.filetypes.markdown").prettier },
 				html = { require("formatter.filetypes.html").prettier },
 				css = { require("formatter.filetypes.css").prettier },
 				["*"] = {

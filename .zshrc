@@ -144,3 +144,9 @@ alias bc="bc -l -q"
 alias start_cam="gphoto2 --stdout --capture-movie | ffmpeg -i - -f rawvideo -pix_fmt yuv420p -threads 0  -s:v 1280x720 -r 25 -f v4l2 /dev/video1"
 alias clight="gsettings set org.gnome.desktop.interface color-scheme 'prefer-light'"
 alias cdark="gsettings set org.gnome.desktop.interface color-scheme 'prefer-dark'"
+
+# Fly.io
+export FLYCTL_INSTALL="/home/jpporta/.fly"
+  export PATH="$FLYCTL_INSTALL/bin:$PATH"
+
+alias pandock='docker run --rm -v "$(pwd):/data" -u $(id -u):$(id -g) pandoc/extra'
