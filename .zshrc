@@ -129,6 +129,7 @@ esac
 export BROWSER=firefox
 alias tx="tmuxinator"
 # chown $USER:$USER -R ~/HD
+export PATH=/home/jpporta/.cargo/bin:$PATH
 
 # GPG Key
 export GPG_TTY=$(tty)

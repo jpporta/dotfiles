@@ -19,6 +19,12 @@ return {
 			end,
 			desc = "[O]bsidian [S]earch",
 		},
+		{
+			"<leader>oe",
+			":ObsidianExtractNote<CR>",
+			desc = "[O]bsidian [E]xtract",
+			mode = "v",
+		},
 	},
 	opts = {
 

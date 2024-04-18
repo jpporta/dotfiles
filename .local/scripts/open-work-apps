@@ -19,5 +19,5 @@ then
 				sleep 1
 				firefox --new-tab  https://app.clickup.com/14228731/v/l/6-901302382584-1
 				firefox --new-tab  https://github.com/Avodah-Inc/avodah-med/pulls
+				firefox --new-tab  https://icloud.com/calendar
 fi
-

@@ -12,17 +12,17 @@ return {
 	config = function()
 		require("formatter").setup({
 			filetype = {
-				javascript = { require("formatter.filetypes.javascript").prettier },
-				typescript = { require("formatter.filetypes.typescript").prettier },
-				javascriptreact = { require("formatter.filetypes.javascriptreact").prettier },
-				typescriptreact = { require("formatter.filetypes.typescriptreact").prettier },
+				javascript = { require("formatter.filetypes.javascript").prettierd },
+				typescript = { require("formatter.filetypes.typescript").prettierd },
+				javascriptreact = { require("formatter.filetypes.javascriptreact").prettierd },
+				typescriptreact = { require("formatter.filetypes.typescriptreact").prettierd },
 				json = { require("formatter.filetypes.json").jq },
 				lua = { require("formatter.filetypes.lua").stylua },
 				rust = { require("formatter.filetypes.rust").rustfmt },
 				go = { require("formatter.filetypes.go").goimports },
-				markdown = { require("formatter.filetypes.markdown").prettier },
-				html = { require("formatter.filetypes.html").prettier },
-				css = { require("formatter.filetypes.css").prettier },
+				markdown = { require("formatter.filetypes.markdown").prettierd },
+				html = { require("formatter.filetypes.html").prettierd },
+				css = { require("formatter.filetypes.css").prettierd },
 				["*"] = {
 					require("formatter.filetypes.any").remove_trailing_whitespace,
 				},
