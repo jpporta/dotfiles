@@ -1,7 +1,12 @@
 return {
 	"nvim-telescope/telescope.nvim",
 	version = "*",
-	dependencies = { "nvim-lua/plenary.nvim", "xiyaowong/telescope-emoji" },
+	dependencies = {
+		"nvim-lua/plenary.nvim",
+		"xiyaowong/telescope-emoji",
+		{ "nvim-telescope/telescope-fzf-native.nvim", build = "make" },
+		"nvim-tree/nvim-web-devicons",
+	},
 	opts = {
 		defaults = { mappings = { i = { ["<C-u>"] = false, ["<C-d>"] = false } } },
 		extensions = {
@@ -29,6 +34,19 @@ return {
 				ignore_current_buffer = true,
 			})
 		end, { desc = "[ ] Find existing buffers" })
+		vim.keymap.set("n", "gr", require("telescope.builtin").lsp_references, { desc = "[G]oto [R]eferences" })
+		vim.keymap.set(
+			"n",
+			"<leader>ds",
+			require("telescope.builtin").lsp_document_symbols,
+			{ desc = "[D]ocument [S]ymbols" }
+		)
+		vim.keymap.set(
+			"n",
+			"<leader>ws",
+			require("telescope.builtin").lsp_dynamic_workspace_symbols,
+			{ desc = "[W]orkspace [S]ymbols" }
+		)
 		vim.keymap.set("n", "<leader>/", function()
 			require("telescope.builtin").current_buffer_fuzzy_find(require("telescope.themes").get_dropdown({
 				winblend = 10,

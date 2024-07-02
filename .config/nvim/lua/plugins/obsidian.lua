@@ -3,6 +3,7 @@ return {
 	version = "*",
 	lazy = "true",
 	event = "VeryLazy",
+		ft = "markdown",
 	dependencies = { "nvim-lua/plenary.nvim" },
 	keys = {
 		{
@@ -65,6 +66,8 @@ return {
 				end,
 			},
 		},
+		new_notes_locations = "notes_subdir",
+		notes_subdir = "0. INBOX",
 		note_frontmatter_func = function(note)
 			-- This is equivalent to the default frontmatter function.
 			local out = {

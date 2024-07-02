@@ -1,6 +1,5 @@
 return {
-	"krivahtoo/silicon.nvim",
-	build = "./install.sh",
+	"michaelrommel/nvim-silicon",
 	lazy = true,
 	cmd = "Silicon",
 	config = function()
@@ -24,26 +23,23 @@ return {
 			two.col = two.col + 1
 			return one.row
 		end
-		require("silicon").setup({
-			output = {
-				clipboard = true,
-			},
-			font = "Berkeley Mono Nerd Font=26",
-			background = "#11111b",
-			line_number = true,
+		require("nvim-silicon").setup({
+			font = "BerkeleyMono Nerd Font=24",
+			disable_defaults = true,
+			debug = true,
+			background = "#89b4fa",
 			pad_vert = 80,
 			pad_horiz = 50,
-			window_controls = false,
+			no_window_controls = true,
+			no_line_number = false,
 			line_offset = get_visual() + 1,
-			watermark = {
-				text = " @jpporta",
-				style = "bold",
-				color = "#cdd6f4",
-			},
+			to_clipboard = true,
 			window_title = function()
-				return vim.fn.fnamemodify(vim.fn.bufname(vim.fn.bufnr()), ":~:.")
+				return vim.fn.fnamemodify(vim.fn.bufname(vim.fn.bufnr()), ":~:.") .. "  -  @jpporta"
 			end,
-			theme = "Catppuccin Mocha",
+			language = function()
+				return vim.bo.filetype
+			end,
 		})
 		vim.keymap.set("v", "<leader>cs", "<cmd>'<,'>Silicon<CR>", { desc = "[C]ode [S]elfie" })
 	end,

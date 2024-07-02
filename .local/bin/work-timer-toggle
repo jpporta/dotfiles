@@ -1,0 +1,15 @@
+# /usr/bin/bash
+
+url="http://dev.joaoporta.tech:8080/timetracker"
+cache=$(cat ~/.local/share/worktimercache.json)
+data=$(curl $url -s)
+
+if [ $(echo $cache | jq ".isWorking") = $(echo $data | jq ".IsWorking") ]; then
+				rm ~/.local/share/worktimercache.json
+				curl -X POST $url -s
+				exit
+else
+				rm ~/.local/share/worktimercache.json
+fi
+
+echo $data
