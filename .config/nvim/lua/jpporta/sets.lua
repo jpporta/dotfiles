@@ -22,7 +22,7 @@ vim.o.cursorline = true
 vim.cmd.set("cursorline")
 vim.cmd.set("cursorcolumn")
 vim.cmd.colorscheme("catppuccin-frappe")
-vim.opt.conceallevel = 1
+vim.opt.conceallevel = 0
 vim.o.background = "dark"
 vim.opt.colorcolumn = "80"
 vim.api.nvim_create_user_command("CpFullPath", function()

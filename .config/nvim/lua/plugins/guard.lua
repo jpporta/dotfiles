@@ -5,14 +5,14 @@ return {
 		local ft = require("guard.filetype")
 
 		ft("typescript,javascript,typescriptreact"):fmt({
-			cmd = "prettier",
+			cmd = "prettierd",
 			args = { "--stdin-filepath" },
 			fname = true,
 			stdin = true,
 		}):lint("eslint_d")
 
 		ft("lua"):fmt("stylua")
-		ft("json"):fmt("prettier"):lint("eslint_d")
+		ft("json"):fmt("prettierd"):lint("eslint_d")
 		ft("nix"):fmt("nixfmt")
 
 		ft("*"):lint("codespell")

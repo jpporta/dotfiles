@@ -17,8 +17,18 @@ alias n="nvim"
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 source <(fzf --zsh)
 
-export LC_ALL=en_US.utf8
 export LANG=en_US.utf8
+export LC_COLLATE=$LANG
+export LC_CTYPE=$LANG
+export LC_MESSAGES=$LANG
+export LC_MONETARY=$LANG
+export LC_NUMERIC=$LANG
+export LC_TIME=$LANG
+export LC_ALL=$LANG
 
 export GPG_TTY=$(tty)
 
+alias ls="eza --icons=always"
+eval "$(zoxide init zsh --cmd cd)"
+
+alias bat="bat --theme ~/.config/bat/themes/Catppuccin\ Mocha.tmTheme"
