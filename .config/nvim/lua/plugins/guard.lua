@@ -4,24 +4,26 @@ return {
 	config = function()
 		local ft = require("guard.filetype")
 
-		ft("typescript,javascript,typescriptreact"):fmt({
-			cmd = "prettierd",
-			args = { "--stdin-filepath" },
-			fname = true,
-			stdin = true,
-		}):lint("eslint_d")
+		ft("typescript,javascript,typescriptreact,json,markdown"):fmt("prettier"):lint("eslint")
+		-- ft("typescript,javascript,typescriptreact"):fmt({
+		-- 	cmd = "prettierd",
+		-- 	args = { "--stdin-filepath" },
+		-- 	fname = true,
+		-- 	stdin = true,
+		-- }):lint("eslint_d")
 
 		ft("lua"):fmt("stylua")
-		ft("json"):fmt("prettierd"):lint("eslint_d")
-		ft("nix"):fmt("nixfmt")
+		-- ft("json"):fmt("prettierd"):lint("eslint_d")
+		-- ft("markdown"):fmt("prettierd"):lint("eslint_d")
 
-		ft("*"):lint("codespell")
+		-- ft("*"):lint("codespell")
 
 		vim.keymap.set("n", "<leader>f", "<cmd>GuardFmt<CR>", { desc = "Format" })
 
 		require("guard").setup({
 			fmt_on_save = true,
-			lsp_as_default_formatter = true,
+			lsp_as_default_formatter = false,
+			save_on_fmt = false,
 		})
 	end,
 }
