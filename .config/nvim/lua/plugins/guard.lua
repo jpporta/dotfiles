@@ -21,9 +21,9 @@ return {
 		vim.keymap.set("n", "<leader>f", "<cmd>GuardFmt<CR>", { desc = "Format" })
 
 		require("guard").setup({
-			fmt_on_save = true,
+			fmt_on_save = false,
 			lsp_as_default_formatter = false,
-			save_on_fmt = false,
+			save_on_fmt = true,
 		})
 	end,
 }
