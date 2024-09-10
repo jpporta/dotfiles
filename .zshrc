@@ -35,3 +35,31 @@ alias bat="bat --theme ~/.config/bat/themes/Catppuccin\ Mocha.tmTheme"
 export HOMEBREW_NO_ENV_HINTS=1
 
 export PATH=$PATH:/Users/jpporta/.local/share/nvim/mason/bin
+
+# pnpm
+export PNPM_HOME="/Users/jpporta/Library/pnpm"
+case ":$PATH:" in
+  *":$PNPM_HOME:"*) ;;
+  *) export PATH="$PNPM_HOME:$PATH" ;;
+esac
+# pnpm end
+export EDITOR=nvim
+export PATH="/opt/homebrew/opt/libpq/bin:$PATH"
+
+# bun completions
+[ -s "/Users/jpporta/.bun/_bun" ] && source "/Users/jpporta/.bun/_bun"
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
+export PATH="$PATH:/Users/jpporta/go/bin/"
+export PATH="$PATH:/Users/jpporta/.local/bin"
+
+function yy() {
+	local tmp="$(mktemp -t "yazi-cwd.XXXXXX")"
+	yazi "$@" --cwd-file="$tmp"
+	if cwd="$(cat -- "$tmp")" && [ -n "$cwd" ] && [ "$cwd" != "$PWD" ]; then
+		builtin cd -- "$cwd"
+	fi
+	rm -f -- "$tmp"
+}
