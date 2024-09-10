@@ -43,3 +43,9 @@ vim.api.nvim_create_user_command("Chill", function()
 	vim.cmd("SoftPencil")
 	vim.cmd("ZenMode")
 end, {})
+
+vim.filetype.add({
+		extension = {
+				http = 'http'
+		}
+})

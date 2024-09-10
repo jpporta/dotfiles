@@ -60,6 +60,16 @@ return {
 					"javascriptreact",
 				},
 			},
+			gopls = {
+				cmd = { "gopls" },
+
+				filetypes = {
+					"go",
+					"gomod",
+					"gowork",
+					"gotmpl",
+				},
+			},
 			lua_ls = {
 				Lua = {
 					workspace = { checkThirdParty = false },

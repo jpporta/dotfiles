@@ -3,8 +3,13 @@ return {
 	dependencies = { "nvimdev/guard-collection" },
 	config = function()
 		local ft = require("guard.filetype")
+		local mdformat = {
+			cmd = "mdformat",
+			stdin = true,
+		}
 
-		ft("typescript,javascript,typescriptreact,json,markdown"):fmt("prettier"):lint("eslint")
+		ft("typescript,javascript,typescriptreact,json"):fmt("prettierd"):lint("eslint_d")
+		ft("markdown"):fmt(mdformat):lint("eslint_d")
 		-- ft("typescript,javascript,typescriptreact"):fmt({
 		-- 	cmd = "prettierd",
 		-- 	args = { "--stdin-filepath" },
@@ -16,14 +21,13 @@ return {
 		-- ft("json"):fmt("prettierd"):lint("eslint_d")
 		-- ft("markdown"):fmt("prettierd"):lint("eslint_d")
 
-		-- ft("*"):lint("codespell")
+		ft("go"):fmt("gofmt"):lint("golangci_lint")
+		ft("*"):lint("codespell")
 
 		vim.keymap.set("n", "<leader>f", "<cmd>GuardFmt<CR>", { desc = "Format" })
 
 		require("guard").setup({
-			fmt_on_save = false,
-			lsp_as_default_formatter = false,
-			save_on_fmt = true,
+			fmt_on_save = true,
 		})
 	end,
 }
