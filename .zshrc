@@ -55,6 +55,8 @@ export PATH="$BUN_INSTALL/bin:$PATH"
 export PATH="$PATH:/Users/jpporta/go/bin/"
 export PATH="$PATH:/Users/jpporta/.local/bin"
 
+alias pc="ssh jpporta@192.168.3.150"
+
 function yy() {
 	local tmp="$(mktemp -t "yazi-cwd.XXXXXX")"
 	yazi "$@" --cwd-file="$tmp"

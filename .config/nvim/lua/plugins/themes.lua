@@ -56,5 +56,5 @@ return {
 	-- 		vim.cmd("colorscheme cyberdream") -- set the colorscheme
 	-- 	end,
 	-- },
-	-- { "rose-pine/neovim", as = "rose-pine" },
+	{ "rose-pine/neovim", as = "rose-pine" },
 }

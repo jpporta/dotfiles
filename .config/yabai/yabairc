@@ -40,27 +40,17 @@ function setup_space {
   fi
 }
 
-setup_space 1 slack
-setup_space 2 web
-setup_space 3 meeting
-setup_space 4 code
-setup_space 5 notes
-setup_space 6 calendar
+setup_space 1 work
+setup_space 2 code
+setup_space 3 random
 
-for idx in $(yabai -m query --spaces | jq '.[].index | select(. > 6)' | sort -nr); do
+for idx in $(yabai -m query --spaces | jq '.[].index | select(. > 3)' | sort -nr); do
   yabai -m space --destroy "$idx"
 done
 
 yabai -m rule --add app="^System Settings$" manage=off
 yabai -m rule --add app="^Calculator$" manage=off
 yabai -m rule --add app="^Karabiner-Elements$" manage=off
-
-yabai -m rule --add app="^Slack$" space=1
-yabai -m rule --add app="^Safari$" space=2
-yabai -m rule --add app="^(Zoom Workplace|Tidal)$" space=3
-yabai -m rule --add app="^WezTerm$" space=4
-yabai -m rule --add app="^(Obsidian|Whatsapp)$" space=5
-yabai -m rule --add app="^(Calendar|Mail)$" space=6
 
 yabai pm config window_border on
 yabai -m config window_border_width 3;

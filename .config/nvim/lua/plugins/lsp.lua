@@ -48,7 +48,7 @@ return {
 		local capabilities = cmp_nvim_lsp.default_capabilities()
 		local servers = {
 			html = {},
-			tsserver = {},
+			ts_ls = {},
 			emmet_ls = {},
 			tailwindcss = {
 				filetypes = {
