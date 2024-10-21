@@ -13,6 +13,7 @@ return {
     },
 		cmd = "Leet",
     opts = {
+				lang = "golang"
         -- configuration goes here
     },
 }

@@ -48,8 +48,16 @@ return {
 		local capabilities = cmp_nvim_lsp.default_capabilities()
 		local servers = {
 			html = {},
-			ts_ls = {},
-			emmet_ls = {},
+			ts_ls = {
+				filetypes={
+					"html",
+					"css",
+					"javascript",
+					"typescript",
+					"typescriptreact",
+					"javascriptreact",
+				}
+			},
 			tailwindcss = {
 				filetypes = {
 					"html",
@@ -62,7 +70,6 @@ return {
 			},
 			gopls = {
 				cmd = { "gopls" },
-
 				filetypes = {
 					"go",
 					"gomod",
@@ -92,10 +99,6 @@ return {
 			capabilities = capabilities,
 			on_attach = function(client, bufnr)
 				on_attach(client, bufnr)
-				vim.api.nvim_create_autocmd("BufWritePre", {
-					buffer = bufnr,
-					command = "EslintFixAll",
-				})
 			end,
 		})
 	end,

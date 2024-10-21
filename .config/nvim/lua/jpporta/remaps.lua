@@ -20,3 +20,5 @@ vim.keymap.set("n", "<leader>qq", function()
 	end
 	vim.cmd.copen()
 end, { desc = "Toggle quickfix list" })
+
+vim.keymap.set("n", "<leader>bo", "<cmd>%bd|e#<cr>", {desc="Close all buffers but the current one"}) -- https://stackoverflow.com/a/42071865/516188
