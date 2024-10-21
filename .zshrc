@@ -66,4 +66,6 @@ function yy() {
 	rm -f -- "$tmp"
 }
 
+alias gnow="git commit --amend --date=\"$(date -R)\""
+
 macchina
