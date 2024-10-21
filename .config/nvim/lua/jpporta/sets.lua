@@ -21,7 +21,7 @@ vim.o.swapfile = false
 vim.o.cursorline = true
 vim.cmd.set("cursorline")
 vim.cmd.set("cursorcolumn")
-vim.cmd.colorscheme("rose-pine-main")
+vim.cmd.colorscheme("catppuccin-mocha")
 vim.opt.conceallevel = 2
 vim.o.background = "dark"
 vim.opt.colorcolumn = "80"
@@ -45,7 +45,7 @@ vim.api.nvim_create_user_command("Chill", function()
 end, {})
 
 vim.filetype.add({
-		extension = {
-				http = 'http'
-		}
+	extension = {
+		http = "http",
+	},
 })
