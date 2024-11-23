@@ -1,101 +1,102 @@
+@import "mocha.css";
+
 * {
-    border: none;
-    border-radius: 0;
-    font-size: 13px;
-    min-height: 0;
+  font-family: FantasqueSansMono Nerd Font;
+  font-size: 14px;
+  min-height: 0;
 }
 
-window#waybar {
-    background: transparent;
-    color: white;
+#waybar {
+  background: @base;
+  color: @text;
+  margin: 5px 5px;
 }
 
-#window {
-    font-weight: bold;
-    font-family: "BerkeleyMono Nerd Font", 'NerdFont';
+#workspaces {
+  border-radius: 1rem;
+  margin: 5px;
+  background-color: @surface0;
+  margin-left: 1rem;
 }
 
 #workspaces button {
-    padding: 0 5px;
-    background: transparent;
-    color: white;
-    border-top: 2px solid transparent;
+  color: @lavender;
+  border-radius: 1rem;
+  padding: 0.4rem;
 }
 
 #workspaces button.active {
-    color: #f5c2e7;
+  color: @sky;
+  border-radius: 1rem;
 }
 
-#mode {
-    background: #64727D;
-    border-bottom: 3px solid white;
+#workspaces button:hover {
+  color: @sapphire;
+  border-radius: 1rem;
 }
 
-#clock, #battery, #cpu, #memory, #network, #pulseaudio, #custom-spotify, #tray, #mode, #custom-worktimer {
-    padding: 0 4px;
-    margin: 0 8px;
+#custom-music,
+#tray,
+#backlight,
+#clock,
+#battery,
+#pulseaudio,
+#custom-lock,
+#custom-power {
+  background-color: @surface0;
+  padding: 0.5rem 1rem;
+  margin: 5px 0;
 }
 
-#clock {
-    font-weight: bold;
+#clock.work {
+  color: @blue;
+  border-radius: 0px 1rem 1rem 0px;
+  margin-right: 1rem;
 }
 
 #battery {
-}
-
-#battery icon {
-    color: red;
+  color: @green;
 }
 
 #battery.charging {
-}
-
-@keyframes blink {
-    to {
-        background-color: #ffffff;
-        color: black;
-    }
+  color: @green;
 }
 
 #battery.warning:not(.charging) {
-    color: white;
-    animation-name: blink;
-    animation-duration: 0.5s;
-    animation-timing-function: linear;
-    animation-iteration-count: infinite;
-    animation-direction: alternate;
+  color: @red;
 }
 
-#cpu {
+#backlight {
+  color: @yellow;
 }
 
-#memory {
-}
-
-#network {
-}
-
-#network.disconnected {
-    background: #f53c3c;
+#backlight, #battery {
+    border-radius: 0;
 }
 
 #pulseaudio {
+  color: @maroon;
+  border-radius: 1rem 0px 0px 1rem;
+  margin-left: 1rem;
 }
 
-#pulseaudio.muted {
+#custom-music {
+  color: @mauve;
+  border-radius: 1rem;
 }
 
-#custom-spotify {
-    color: rgb(102, 220, 105);
+#custom-lock {
+    border-radius: 1rem 0px 0px 1rem;
+    color: @lavender;
 }
 
-#custom-worktimer.not-working {
-				color: #f38ba8;
-}
-#custom-worktimer.working {
-				color: #a6e3a1;
+#custom-power {
+    margin-right: 1rem;
+    border-radius: 0px 1rem 1rem 0px;
+    color: @red;
 }
 
 #tray {
+  margin-right: 1rem;
+  border-radius: 1rem;
 }
-
