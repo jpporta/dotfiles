@@ -14,6 +14,9 @@ return {
 			vim.keymap.set("n", "<leader>lp", function()
 				kulala.from_curl()
 			end, { noremap = true, silent = true, desc = "Past cURL" })
+			vim.keymap.set("n", "<leader>lt", function()
+				kulala.toggle_view()
+			end, { noremap = true, silent = true, desc = "Toggle View" })
 		end,
 	},
 }

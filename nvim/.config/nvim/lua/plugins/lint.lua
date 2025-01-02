@@ -14,7 +14,7 @@ return {
 			json = { "eslint_d" },
 			markdown = { "markdownlint" },
 			lua = { "luac" },
-			go = { "golangci_lint" },
+			go = { "golangcilint" },
 		}
 
 		local lint_autogroup = vim.api.nvim_create_augroup("lint", { clear = true })

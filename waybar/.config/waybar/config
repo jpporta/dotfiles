@@ -5,7 +5,7 @@
     // Choose the order of the modules
     "modules-left": ["hyprland/workspaces"],
     "modules-center": ["custom/music"],
-    "modules-right": ["pulseaudio", "clock#br", "clock#work", "tray", "custom/lock", "custom/power"],
+    "modules-right": ["custom/worktimer", "pulseaudio", "clock#br", "clock#work", "tray", "network",  "custom/lock", "custom/power"],
     "hyprland/workspaces": {
          "disable-scroll": true,
          "sort-by-name": true,
@@ -30,6 +30,17 @@
         "icon-size": 21,
         "spacing": 10
     },
+		"custom/worktimer": {
+				"exec": "work-timer",
+				"interval": 60,
+				"format": "{icon} {}",
+				"format-icons": {
+						"true": "󰃖 ",
+						"false": " ",
+				},
+				"return-type": "json"
+
+		},
     "custom/music": {
         "format": "  {}",
         "escape": true,

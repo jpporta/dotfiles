@@ -1,6 +1,5 @@
 name: notes
-root: ~/Documents/notes/Brain/
-
+root: ~/Documents/Main
 on_project_start: git fetch origin && git pull
 
 windows:

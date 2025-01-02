@@ -1,0 +1,16 @@
+#!/usr/bin/env node
+
+// If cache is expired or doesn't exist
+async function getNewCache(url) {
+  const res = await fetch("https://tool.joaoporta.com/timetracker");
+  /* @type {ReturnType} */
+  const data = await res.json();
+  /*@type {CacheData} */
+  const d = {
+    text: data.TotalToday.split(":").slice(0, -1).join(":"),
+    alt: String(data.IsWorking),
+  };
+  console.log(JSON.stringify(d));
+}
+
+getNewCache();
