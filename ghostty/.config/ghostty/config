@@ -1,0 +1,6 @@
+font-family = JetBrainsMono Nerd Font
+font-size = 14
+theme = catppuccin-mocha
+background-opacity = 0.9
+gtk-titlebar = false
+window-decoration = false
