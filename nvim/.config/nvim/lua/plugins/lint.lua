@@ -12,9 +12,9 @@ return {
 			javascriptreact = { "eslint_d" },
 			typescriptreact = { "eslint_d" },
 			json = { "eslint_d" },
-			markdown = { "markdownlint" },
 			lua = { "luac" },
 			go = { "golangcilint" },
+			templ = { "golangcilint" },
 		}
 
 		local lint_autogroup = vim.api.nvim_create_augroup("lint", { clear = true })

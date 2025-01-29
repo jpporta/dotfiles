@@ -19,7 +19,7 @@ return {
 	},
 	-- { "sainnhe/everforest", priority = 1000 },
 	-- { "ellisonleao/gruvbox.nvim", priority = 1000 },
--- 	{ "tribela/vim-transparent" },
+ 	{ "tribela/vim-transparent" },
 	-- {
 	-- 	"fynnfluegge/monet.nvim",
 	-- 	name = "monet",

@@ -49,7 +49,7 @@ return {
 		local servers = {
 			html = {},
 			ts_ls = {
-				filetypes={
+				filetypes = {
 					"html",
 					"css",
 					"javascript",
@@ -101,5 +101,6 @@ return {
 				on_attach(client, bufnr)
 			end,
 		})
+
 	end,
 }
