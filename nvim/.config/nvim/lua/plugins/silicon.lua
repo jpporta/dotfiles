@@ -24,18 +24,14 @@ return {
 			return one.row
 		end
 		require("nvim-silicon").setup({
-			font = "BerkeleyMono Nerd Font=24",
-			disable_defaults = true,
-			debug = true,
-			background = "#89b4fa",
-			pad_vert = 80,
-			pad_horiz = 50,
+			font = "JetBrainsMono Nerd Font=24",
+			theme = "Catppuccin Mocha",
 			no_window_controls = true,
 			no_line_number = false,
 			line_offset = get_visual() + 1,
 			to_clipboard = true,
 			window_title = function()
-				return vim.fn.fnamemodify(vim.fn.bufname(vim.fn.bufnr()), ":~:.") .. "  -  @jpporta"
+				return vim.fn.fnamemodify(vim.fn.bufname(vim.fn.bufnr()), ":~:.") .. " -  @jpporta"
 			end,
 			language = function()
 				return vim.bo.filetype

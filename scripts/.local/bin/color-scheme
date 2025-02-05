@@ -1,0 +1,26 @@
+#!/usr/bin/env bash
+
+# Supported
+# - Catppuccin (dark)
+# - Dracula (dark)
+# - Gruvbox (dark)
+# - Catppuccin Latte
+# - Gruvbox Light
+supported="catppuccin dracula gruvbox catppuccin-latte gruvbox-light"
+colorscheme=${1:-catppuccin}
+
+if ! $(echo $supported | grep -w -q $colorscheme); then 
+		echo "Colorscheme Not Supported"
+		exit 1
+fi
+
+# Wallpaper
+wallpapers=(["catppuccin"]="/catppuccin-mocha/evening-sky.png" ["catppuccin-latte"]="/catppuccin-latte/gradient.png" ["gruvbox"]="/gruvbox-dark/japan-street.jpg" ["gruvbox-light"]="/gruvbox-light/sunflower.png" ["dracula"]="/dracula/forest.jpg")
+
+wallpaperpath="/home/jpporta/Documents/wallpaper${wallpapers["$(echo $1)"]}"
+
+echo "${wallpapers[$1]}"
+echo $wallpaperpath
+# Terminal
+# Neovim
+# Hyprland
