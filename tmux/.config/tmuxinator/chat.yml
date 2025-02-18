@@ -1,7 +1,7 @@
-# /Users/jpporta/.config/tmuxinator/chat.yml
+# /home/jpporta/.config/tmuxinator/chat.yml
 
 name: chat
-root: ~/chats
+root: ~/
 
 # Optional tmux socket
 # socket_name: foo
@@ -45,10 +45,13 @@ root: ~/chats
 # attach: false
 
 windows:
-  - chat:
+  - editor:
       layout: main-vertical
       # Synchronize all panes of this window, can be enabled before or after the pane commands run.
       # 'before' represents legacy functionality and will be deprecated in a future release, in favour of 'after'
       # synchronize: after
       panes:
-        - clear
+        - ollama run deepseek-r1:14b
+        - ollama serve
+  - server: bundle exec rails s
+  - logs: tail -f log/development.log

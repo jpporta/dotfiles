@@ -1,0 +1,11 @@
+# /home/jpporta/.config/tmuxinator/lambdas.yml
+
+name: vpn
+root: ~/work/vpn/
+
+windows:
+  - main:
+      layout: main-horizontal
+      panes:
+        - editor:
+          - sudo openvpn avodah.ovpn

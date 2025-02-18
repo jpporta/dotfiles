@@ -1,0 +1,12 @@
+# /home/jpporta/.config/tmuxinator/lambdas.yml
+
+name: docgen
+root: ~/work/avodah-med-lambdas/daily-document-generation/
+
+windows:
+  - main:
+      layout: main-vertical
+      panes:
+        - editor:
+          - n .
+        - project:
