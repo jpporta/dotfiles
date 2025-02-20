@@ -1,0 +1,4 @@
+current_shell = true
+physical_cores = true
+
+theme = "Lithium"

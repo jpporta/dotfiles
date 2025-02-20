@@ -4,11 +4,10 @@ fi
 
 export ZSH="$HOME/.oh-my-zsh"
 
-ZSH_THEME="powerlevel10k/powerlevel10k"
 export TERM=tmux-256color
 plugins=(git zsh-autosuggestions zsh-syntax-highlighting web-search)
 
-source $ZSH/oh-my-zsh.sh
+eval "$(starship init zsh)" 
 alias tx="tmuxinator"
 alias gup="git add --all && git commmit -m \"$(date)\" && git push"
 alias n="nvim"
@@ -52,8 +51,9 @@ export PATH="/opt/homebrew/opt/libpq/bin:$PATH"
 # bun
 export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
-export PATH="$PATH:/Users/jpporta/go/bin/"
-export PATH="$PATH:/Users/jpporta/.local/bin"
+export PATH="$PATH:/home/jpporta/go/bin/"
+export PATH="$PATH:/home/jpporta/.local/bin"
+export PATH="$PATH:/home/jpporta/.local/python3.13/site-packages"
 
 alias pc="ssh jpporta@192.168.3.150"
 
