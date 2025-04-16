@@ -1,8 +1,12 @@
 local wezterm = require("wezterm")
 local config = wezterm.config_builder()
-
 config.color_scheme = "Catppuccin Mocha"
-config.font = wezterm.font("JetBrainsMono Nerd Font")
+config.max_fps = 240
+config.font = wezterm.font_with_fallback {
+	'JetBrainsMono Nerd Font Mono',
+	'Font Awesome 6',
+	'Noto Color Emoji',
+}
 config.font_rules = {
 	{
 
@@ -43,9 +47,9 @@ config.font_rules = {
 		}),
 	},
 }
-config.font_size = 14
+config.font_size = 13
 config.enable_tab_bar = false
 config.window_decorations = "NONE"
-config.window_background_opacity = 0.85
+config.window_background_opacity = 0.9
 config.macos_window_background_blur = 20
 return config

@@ -96,6 +96,10 @@ set $ws4 "4"
 set $ws5 "5"
 set $ws6 "6"
 
+assign [class="firefox"] $ws1
+assign [class="Slack"] $ws2
+assign [class="org.wezfurlong.wezterm"] $ws4
+assign [class="obsidian"] $ws5
 
 
 # switch to workspace
@@ -115,8 +119,10 @@ bindsym $mod+Shift+p move container to workspace number $ws5
 bindcode $mod+Shift+34 move container to workspace number $ws6
 
 # gaps
+gaps horizontal -5
+gaps bottom 10
+gaps top -5
 gaps inner 10
-gaps outer 20
 
 # Screen shot
 bindsym Ctrl+Shift+3 exec --no-startup-id maim | xclip -selection clipboard -t image/png
@@ -129,7 +135,8 @@ bindsym $mod+Shift+c reload
 bindsym $mod+Shift+r restart
 bindsym $mod+space exec dmenu_run
 
-bindsym $mod+Shift+x exec "i3lock -c 000000"
+# Workspace assignment
+
 
 mode "resize" {
         bindsym j resize shrink width 10 px or 10 ppt
@@ -159,11 +166,28 @@ exec_always --no-startup-id picom  -b --config ~/.config/picom.conf
 
 
 # Screenshot
-bindsym $mod+Shift+3 exec "scrot -M 1 ~/Captures/Screenshots/$(date '+%FT%H-%M-%S').png -e 'xclip -selection clipboard -target image/png -i $f'"
-bindsym $mod+Shift+4 exec "scrot -M 0 ~/Captures/Screenshots/$(date '+%FT%H-%M-%S').png -e 'xclip -selection clipboard -target image/png -i $f'"
-bindsym $mod+Shift+5 exec "scrot -u ~/Captures/Screenshots/$(date '+%FT%H-%M-%S').png -e 'xclip -selection clipboard -target image/png -i $f'"
-bindsym $mod+Shift+6 exec "sleep 0.2 && scrot -s -f ~/Captures/Screenshots/$(date '+%FT%H-%M-%S').png -e 'xclip -selection clipboard -target image/png -i $f'"
+bindsym $mod+Shift+4 exec "scrot -M 0 - | xclip -selection clipboard -target image/png"
+bindsym $mod+Shift+5 exec "scrot -u - | xclip -selection clipboard -target image/png"
+bindsym $mod+Shift+6 exec "sleep 0.2 && scrot -s - | xclip -selection clipboard -t image/png"
+
+bindsym $mod+4 exec "scrot -M 0 $HOME/Pictures/Screenshot/$(date +%y%m%d%H%M).png"
+
+bindsym $mod+5 exec "scrot -u $HOME/Pictures/Screenshot/$(date +%y%m%d%H%M).png"
+bindsym $mod+6 exec "sleep 0.2 && scrot -s $HOME/Pictures/Screenshot/$(date +%y%m%d%H%M).png"
+
+bindsym $mod+0 exec "tesseract $HOME/Pictures/Screenshot/$(eza --icons=never $HOME/Pictures/Screenshot | sort -r | head -1) - | xclip -selection clipboard"
+
+# Suspend
+bindsym $mod+Shift+S exec "systemctl suspend"
+bindsym $mod+Shift+X exec "i3lock -c 000000"
 
 
 # Notification
+exec_always "eval $(dbus-launch --sh-syntax)"
 exec_always --no-startup-id dunst
+
+exec "xset dpms 0 0 0 & xset -dpms & xset s off & setterm -balnk 0"
+
+exec_always --no-startup-id $HOME/.config/polybar/launch.sh
+
+exec --no-startup-id fcitx5 -d
