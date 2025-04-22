@@ -40,20 +40,20 @@ return {
 			-- Overrides the 'gf' mapping to work on markdown/wiki links within your vault.
 			["gf"] = {
 				action = function()
-					return require("obsidian").util.gf_passthrough()
+					return require("nvim.config.nvim.lua.plugins.obsidian").util.gf_passthrough()
 				end,
 				opts = { noremap = false, expr = true, buffer = true },
 			},
 			-- Toggle check-boxes.
 			["<leader>ch"] = {
 				action = function()
-					return require("obsidian").util.toggle_checkbox()
+					return require("nvim.config.nvim.lua.plugins.obsidian").util.toggle_checkbox()
 				end,
 				opts = { buffer = true },
 			},
 		},
 		templates = {
-			subdir = "Templates",
+			subdir = "3 - Templates",
 			date_format = "%Y-%m-%d",
 			time_format = "%H:%M",
 			-- A map for custom variables, the key should be the variable and the value a function
@@ -140,6 +140,6 @@ return {
 		},
 		dir = "~/Documents/Main",
 		new_notes_location = "notes_subdir",
-		notes_subdir = "Inbox",
+		notes_subdir = "1 - Notes",
 	},
 }
