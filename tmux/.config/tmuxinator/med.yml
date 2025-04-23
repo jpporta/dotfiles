@@ -6,13 +6,7 @@ root: ~/work/avodah-med/
 on_project_start: git fetch origin
 
 windows:
-  - main:
-      layout: main-vertical
-      panes:
-        - editor:
-          - n .
-        - project:
-          - pnpm i
-        - resource:
-          - docker compose -f docker-compose.local.yml up
+  - main: n .
+  - project: pnpm i
+  - resource: docker compose -f docker-compose.local.yml up
         

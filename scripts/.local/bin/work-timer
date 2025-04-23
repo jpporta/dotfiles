@@ -1,16 +1,9 @@
-#!/usr/bin/env node
+#!/usr/bin/env bash
 
-// If cache is expired or doesn't exist
-async function getNewCache(url) {
-  const res = await fetch("https://tool.joaoporta.com/timetracker");
-  /* @type {ReturnType} */
-  const data = await res.json();
-  /*@type {CacheData} */
-  const d = {
-    text: data.TotalToday.split(":").slice(0, -1).join(":"),
-    alt: String(data.IsWorking),
-  };
-  console.log(JSON.stringify(d));
-}
-
-getNewCache();
+res=$(curl https://tool.joaoporta.com/timetracker -s)
+is_working=$(echo $res | jq .IsWorking)
+if [ $is_working = "true" ]; then 
+		echo $(date -d "$(echo $res | jq .TotalToday -r)" +%H:%M)
+		exit 0
+fi
+exit 1

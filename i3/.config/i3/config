@@ -190,4 +190,4 @@ exec "xset dpms 0 0 0 & xset -dpms & xset s off & setterm -balnk 0"
 
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 
-exec --no-startup-id fcitx5 -d
+exec_always --no-startup-id fcitx5
