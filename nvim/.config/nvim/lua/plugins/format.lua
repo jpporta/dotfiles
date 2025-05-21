@@ -4,6 +4,12 @@ return {
 	config = function()
 		local conform = require("conform")
 		conform.setup({
+			formatters = {
+				csharpier = {
+					command = "csharpier",
+					args = { "format" },
+				},
+			},
 			formatters_by_ft = {
 				lua = { "stylua" },
 				javascript = { "prettierd", "prettier", stop_after_first = true },
@@ -15,6 +21,7 @@ return {
 				go = { "gofmt" },
 				nix = { "nixfmt" },
 				templ = { "gofmt" },
+				cs = { "csharpier" },
 			},
 			format_on_save = {
 				timeout_ms = 500,

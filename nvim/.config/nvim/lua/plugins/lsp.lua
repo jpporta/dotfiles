@@ -47,7 +47,9 @@ return {
 		local cmp_nvim_lsp = require("cmp_nvim_lsp")
 		local capabilities = cmp_nvim_lsp.default_capabilities()
 		local servers = {
-			html = {},
+			html = {
+				"emmet-ls",
+			},
 			ts_ls = {
 				filetypes = {
 					"html",
@@ -56,7 +58,7 @@ return {
 					"typescript",
 					"typescriptreact",
 					"javascriptreact",
-				}
+				},
 			},
 			tailwindcss = {
 				filetypes = {
@@ -84,6 +86,13 @@ return {
 					diagnostics = { globals = { "vim" } },
 				},
 			},
+			csharp_ls = {
+				cmd = { "csharp-ls" },
+				filetypes = {
+					"cs",
+					"csproj",
+				},
+			},
 		}
 
 		for server, settings in pairs(servers) do
@@ -94,13 +103,5 @@ return {
 				filetypes = (settings or {}).filetypes,
 			})
 		end
-
-		lspconfig.eslint.setup({
-			capabilities = capabilities,
-			on_attach = function(client, bufnr)
-				on_attach(client, bufnr)
-			end,
-		})
-
 	end,
 }

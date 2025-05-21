@@ -158,6 +158,9 @@ mode "resize" {
 
 bindsym $mod+r mode "resize"
 
+default_border pixel 1
+default_floating_border pixel 1
+
 exec_always --no-startup-id setxkbmap -layout "us,us" -variant ",intl" -option 'grp:alt_shift_toggle'
 
 exec_always "feh --bg-center --bg-fill $HOME/Documents/Wallpapers/$(ls $HOME/Documents/Wallpapers | shuf -n 1)"
@@ -190,4 +193,4 @@ exec "xset dpms 0 0 0 & xset -dpms & xset s off & setterm -balnk 0"
 
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 
-exec_always --no-startup-id fcitx5
+exec_always fcitx5 

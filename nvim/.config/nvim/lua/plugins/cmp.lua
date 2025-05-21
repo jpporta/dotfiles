@@ -8,6 +8,7 @@ return {
 		"saadparwaiz1/cmp_luasnip",
 		"rafamadriz/friendly-snippets",
 		"onsails/lspkind.nvim",
+		"mattn/emmet-vim",
 		"roobert/tailwindcss-colorizer-cmp.nvim",
 
 		-- "hrsh7th/cmp-nvim-lsp",
