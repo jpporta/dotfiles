@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+
+file="$(find ~/Music -type f | dmenu -i -l 10)" || exit 0
+notify-send "Playing $file" && mpv --no-video "$file" >/dev/null

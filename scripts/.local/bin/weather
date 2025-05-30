@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 
-COLUMNS="%l+%t+%h+%u+%p+%c"
+# COLUMNS="%l+%t+%h+%u+%p+%c"
+COLUMNS="%t+%h+%u+%p"
 HEADER=$'Location\tTemp\tHum\tUV\tPrec\t'
 BASE="wttr.in/"
 
@@ -10,9 +11,9 @@ then
 else
 		RES=$"$(curl -s "$BASE{$1}?format=$COLUMNS\n")"
 fi
-echo "$HEADER"
+# echo "$HEADER"
 while IFS= read -r line; do
-		PAR=$(echo $line | awk -v OFS="\t" '$1=$1')
+		PAR=$(echo $line)
 		echo "${PAR/_/ }"
 
 done <<< "$RES"

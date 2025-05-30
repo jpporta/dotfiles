@@ -70,7 +70,7 @@ bindsym $mod+e layout toggle split
 bindsym $mod+Shift+space floating toggle
 
 # change focus between tiling / floating windows
-bindsym $mod+m focus mode_toggle
+# bindsym $mod+m focus mode_toggle
 # focus the parent container
 bindsym $mod+a focus parent
 
@@ -194,3 +194,6 @@ exec "xset dpms 0 0 0 & xset -dpms & xset s off & setterm -balnk 0"
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 
 exec_always fcitx5 
+
+bindsym $mod+t exec "$HOME/.local/bin/temp_converter"
+bindsym $mod+m exec "$HOME/.local/bin/music_picker"
