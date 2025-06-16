@@ -1,0 +1,1 @@
+17:21:41.854  INFO   wezterm_gui::termwindow > clicking https://github.com/Avodah-Inc/avodah-med/pull/new/med-3226-make-sure-quick-start-we-take-user-specialty-if-preferred

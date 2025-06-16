@@ -1,4 +1,5 @@
 vim.api.nvim_create_autocmd("FileType", { pattern = "markdown", command = "set spell" })
+vim.api.nvim_create_autocmd({"BufRead", "BufNewFile"}, { pattern = "*.norg", command = "set ft=norg" })
 vim.api.nvim_create_autocmd({"BufRead", "BufNewFile"}, { pattern = "*.http", command = "set ft=http" })
 vim.api.nvim_create_autocmd({"BufRead", "BufNewFile"}, { pattern = "*.templ", command = "set ft=templ" })
 
