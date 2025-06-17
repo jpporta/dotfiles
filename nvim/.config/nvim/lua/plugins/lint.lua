@@ -10,11 +10,11 @@ return {
 		linters = {
 			eslint_d = {
 				args = {
-					'--no-warn-ignored', -- <-- this is the key argument
-					'--format',
-					'json',
-					'--stdin',
-					'--stdin-filename',
+					"--no-warn-ignored", -- <-- this is the key argument
+					"--format",
+					"json",
+					"--stdin",
+					"--stdin-filename",
 					function()
 						return vim.api.nvim_buf_get_name(0)
 					end,
@@ -23,15 +23,14 @@ return {
 		},
 	},
 
-
 	config = function()
 		local lint = require("lint")
 		lint.linters_by_ft = {
-			javascript = { "eslint_d" },
-			typescript = { "eslint_d" },
-			javascriptreact = { "eslint_d" },
-			typescriptreact = { "eslint_d" },
-			json = { "eslint_d" },
+			javascript = { "eslint" },
+			typescript = { "eslint" },
+			javascriptreact = { "eslint" },
+			typescriptreact = { "eslint" },
+			json = { "eslint" },
 			lua = { "luac" },
 			go = { "golangcilint" },
 			templ = { "golangcilint" },

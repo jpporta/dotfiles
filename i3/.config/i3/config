@@ -170,6 +170,7 @@ exec_always "eval $(dbus-launch --sh-syntax)"
 exec_always --no-startup-id dunst
 
 # exec "xset dpms 0 0 0 & xset -dpms & xset s off & setterm -balnk 0"
+exec_always "feh --bg-center --bg-fill $HOME/Documents/Wallpapers/$(eza --icons=never $HOME/Documents/Wallpapers | shuf -n 1)"
 
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 
@@ -187,3 +188,6 @@ bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOU
 bindsym XF86AudioPause exec playerctl play-pause
 bindsym XF86AudioNext exec playerctl next
 bindsym XF86AudioPrev exec playerctl previous
+
+# PIP sticky
+for_window [title="Picture-in-Picture"] sticky enable
