@@ -1,0 +1,818 @@
+2025-01-27 21:20:24[ERROR] Formatter 'gofmt' error: <standard input>:4:13: expected type, found ']'
+
+2025-02-14 15:07:21[WARN] Formatter 'prettier' timeout
+2025-02-14 15:07:22[WARN] Formatter 'prettier' timeout
+2025-02-14 15:07:35[ERROR] Formatter 'prettier' error: [error] /Users/jpporta/work/avodah-med/apps/summary-service/src/summary-processor/raw-summary-to-record.ts: SyntaxError: Unexpected token (24:0)
+
+2025-02-14 15:09:28[WARN] Formatter 'prettier' timeout
+2025-02-14 15:09:52[WARN] Formatter 'prettier' timeout
+2025-02-14 15:22:26[WARN] Formatter 'gofmt' timeout
+2025-02-14 16:59:27[ERROR] Formatter 'gofmt' error: <standard input>:52:23: expected '{', found newline
+<standard input>:118:6: expected '(', found handler
+<standard input>:144:6: expected '(', found loadEnvs
+
+2025-02-14 16:59:47[ERROR] Formatter 'gofmt' error: <standard input>:48:40: expected '{', found newline
+<standard input>:118:6: expected '(', found handler
+<standard input>:144:6: expected '(', found loadEnvs
+
+2025-02-14 17:18:56[ERROR] Formatter 'gofmt' error: <standard input>:54:20: expected operand, found ','
+<standard input>:56:7: missing ',' in composite literal
+<standard input>:57:9: expected operand, found 'return'
+<standard input>:58:8: missing ',' before newline in composite literal
+<standard input>:59:6: missing ',' before newline in argument list
+<standard input>:60:16: missing ',' before newline in argument list
+<standard input>:61:3: expected operand, found '}'
+<standard input>:63:2: missing ',' in argument list
+<standard input>:64:1: expected operand, found '}'
+<standard input>:68:2: missing ',' in argument list
+<standard input>:70:2: missing ',' in argument list
+
+2025-02-14 17:47:33[ERROR] Formatter 'gofmt' error: <standard input>:78:13: expected operand, found ','
+<standard input>:85:2: missing ',' in composite literal
+<standard input>:86:3: missing ',' in composite literal
+<standard input>:87:13: missing ',' in composite literal
+<standard input>:90:6: missing ',' before newline in composite literal
+<standard input>:91:4: expected operand, found 'if'
+<standard input>:92:5: expected operand, found 'return'
+<standard input>:93:5: missing ',' before newline in composite literal
+<standard input>:94:18: expected '==', found '='
+<standard input>:97:5: missing ',' before newline in composite literal
+<standard input>:98:5: expected ';', found 'else'
+
+2025-02-14 18:37:08[ERROR] Formatter 'gofmt' error: <standard input>:67:10: expected ';', found csvBuffer
+
+2025-02-14 18:44:13[ERROR] Formatter 'gofmt' error: <standard input>:19:1: expected declaration, found dtos
+<standard input>:65:2: expected declaration, found err
+<standard input>:77:2: expected declaration, found err
+
+2025-02-14 18:45:03[ERROR] Formatter 'gofmt' error: <standard input>:19:1: expected declaration, found dtos
+<standard input>:65:2: expected declaration, found err
+<standard input>:77:2: expected declaration, found err
+
+2025-02-14 19:11:47[ERROR] Formatter 'gofmt' error: <standard input>:13:81: expected ']', found newline
+
+2025-02-14 19:13:54[ERROR] Formatter 'gofmt' error: <standard input>:34:32: missing ',' before newline in composite literal
+
+2025-04-11 09:19:42[WARN] Formatter 'prettier' timeout
+2025-04-11 09:22:04[WARN] Formatter 'prettier' timeout
+2025-04-11 09:22:09[WARN] Formatter 'prettier' timeout
+2025-04-11 09:25:43[WARN] Formatter 'prettier' timeout
+2025-04-11 09:29:05[WARN] Formatter 'prettier' timeout
+2025-04-11 09:29:46[ERROR] Formatter 'prettier' error: [error] /Users/jpporta/work/avodah-med/lambdas/daily-document-generation/aggregate-historical-data/index.ts: SyntaxError: Missing initializer in const declaration. (3:9)
+
+2025-04-11 09:34:01[WARN] Formatter 'prettier' timeout
+2025-04-11 09:41:44[ERROR] Formatter 'prettier' error: [error] /Users/jpporta/work/avodah-med/packages/s3/src/list.ts: SyntaxError: Unexpected token (32:28)
+
+2025-04-11 09:46:27[WARN] Formatter 'prettier' timeout
+2025-04-11 09:47:10[WARN] Formatter 'prettier' timeout
+2025-04-11 09:48:07[WARN] Formatter 'prettier' timeout
+2025-04-11 09:48:57[ERROR] Formatter 'prettier' error: [error] /Users/jpporta/work/avodah-med/lambdas/daily-document-generation/aggregate-historical-data/index.ts: SyntaxError: Unexpected reserved word 'await'. (9:22)
+
+2025-04-11 09:49:21[ERROR] Formatter 'prettier' error: [error] /Users/jpporta/work/avodah-med/lambdas/daily-document-generation/aggregate-historical-data/index.ts: SyntaxError: Unexpected token, expected "(" (6:15)
+
+2025-04-11 09:49:40[ERROR] Formatter 'prettier' error: [error] /Users/jpporta/work/avodah-med/lambdas/daily-document-generation/aggregate-historical-data/index.ts: SyntaxError: Unexpected token, expected "(" (6:15)
+
+2025-04-11 09:53:29[WARN] Formatter 'prettier' timeout
+2025-04-11 09:57:39[WARN] Formatter 'prettier' timeout
+2025-04-11 10:11:30[WARN] Formatter 'prettier' timeout
+2025-04-18 15:19:23[ERROR] Formatter 'gofmt' error: <standard input>:11:30: expected operand, found '{'
+<standard input>:14:3: missing ',' in argument list
+
+2025-04-18 15:19:25[ERROR] Formatter 'gofmt' error: <standard input>:11:30: expected operand, found '{'
+<standard input>:14:3: missing ',' in argument list
+
+2025-04-18 15:19:30[ERROR] Formatter 'gofmt' error: <standard input>:12:5: expected ';', found ':'
+<standard input>:14:3: expected '}', found 'EOF'
+
+2025-04-18 15:19:35[ERROR] Formatter 'gofmt' error: <standard input>:12:5: expected ';', found '='
+<standard input>:14:3: expected '}', found 'EOF'
+
+2025-04-18 15:19:38[ERROR] Formatter 'gofmt' error: <standard input>:12:5: expected ';', found ':'
+<standard input>:14:3: expected '}', found 'EOF'
+
+2025-04-18 15:20:24[ERROR] Formatter 'gofmt' error: <standard input>:12:6: expected ';', found bool
+<standard input>:14:3: expected '}', found 'EOF'
+
+2025-04-18 15:20:29[ERROR] Formatter 'gofmt' error: <standard input>:12:6: expected ';', found bool
+<standard input>:14:3: expected '}', found 'EOF'
+
+2025-04-18 15:20:38[ERROR] Formatter 'gofmt' error: <standard input>:12:6: expected ';', found bool
+<standard input>:14:3: expected '}', found 'EOF'
+
+2025-04-18 15:22:05[ERROR] Formatter 'gofmt' error: <standard input>:12:6: expected ';', found bool
+<standard input>:14:3: expected '}', found 'EOF'
+
+2025-04-18 16:05:05[ERROR] Formatter 'gofmt' error: <standard input>:10:151: missing ',' in parameter list
+<standard input>:11:2: expected ')', found 'return'
+<standard input>:14:1: expected declaration, found '}'
+
+2025-04-18 16:18:33[ERROR] Formatter 'gofmt' error: <standard input>:12:61: expected type argument list
+
+2025-04-18 19:31:52[ERROR] Formatter 'gofmt' error: <standard input>:65:16: expected operand, found ','
+<standard input>:69:3: missing ',' in composite literal
+
+2025-04-18 19:32:33[ERROR] Formatter 'gofmt' error: <standard input>:65:16: expected operand, found ','
+<standard input>:69:3: missing ',' in composite literal
+
+2025-04-18 19:34:27[ERROR] Formatter 'gofmt' error: <standard input>:67:16: expected operand, found ','
+<standard input>:71:3: missing ',' in composite literal
+
+2025-04-18 19:34:29[ERROR] Formatter 'gofmt' error: <standard input>:67:16: expected operand, found ','
+<standard input>:71:3: missing ',' in composite literal
+
+2025-04-18 19:34:32[ERROR] Formatter 'gofmt' error: <standard input>:67:16: expected operand, found ','
+<standard input>:71:3: missing ',' in composite literal
+
+2025-04-18 22:20:17[ERROR] Formatter 'gofmt' error: <standard input>:15:61: expected ')', found ','
+
+2025-04-18 22:20:27[ERROR] Formatter 'gofmt' error: <standard input>:15:61: expected ')', found ','
+
+2025-04-18 22:31:19[ERROR] Formatter 'gofmt' error: <standard input>:50:32: missing ',' before newline in composite literal
+
+2025-04-18 22:31:20[ERROR] Formatter 'gofmt' error: <standard input>:50:32: missing ',' before newline in composite literal
+
+2025-04-18 22:34:21[ERROR] Formatter 'gofmt' error: <standard input>:56:19: expected type, found newline
+
+2025-04-18 22:34:29[ERROR] Formatter 'gofmt' error: <standard input>:56:19: expected type, found newline
+
+2025-04-18 22:38:23[ERROR] Formatter 'gofmt' error: <standard input>:62:52: expected operand, found '}'
+<standard input>:64:3: missing ',' in composite literal
+
+2025-04-18 22:39:33[ERROR] Formatter 'gofmt' error: <standard input>:69:36: missing ',' before newline in composite literal
+
+2025-04-18 22:44:57[ERROR] Formatter 'gofmt' error: <standard input>:59:19: expected type, found ')'
+
+2025-04-18 22:46:38[ERROR] Formatter 'gofmt' error: <standard input>:70:48: missing ',' before newline in composite literal
+
+2025-04-18 22:46:51[ERROR] Formatter 'gofmt' error: <standard input>:70:63: missing ',' before newline in composite literal
+
+2025-04-18 23:14:11[ERROR] Formatter 'gofmt' error: <standard input>:42:4: expression in go must be function call
+
+2025-04-18 23:14:19[ERROR] Formatter 'gofmt' error: <standard input>:43:4: expression in go must be function call
+
+2025-04-18 23:15:42[ERROR] Formatter 'gofmt' error: <standard input>:44:4: expression in go must be function call
+
+2025-04-18 23:16:25[ERROR] Formatter 'gofmt' error: <standard input>:51:4: expression in go must be function call
+
+2025-04-18 23:24:23[ERROR] Formatter 'gofmt' error: <standard input>:82:25: expected '{', found newline
+<standard input>:83:3: expected '}', found 'EOF'
+
+2025-04-18 23:24:27[ERROR] Formatter 'gofmt' error: <standard input>:82:25: expected '{', found newline
+<standard input>:83:3: expected '}', found 'EOF'
+
+2025-04-18 23:24:29[ERROR] Formatter 'gofmt' error: <standard input>:82:25: expected '{', found newline
+<standard input>:83:3: expected '}', found 'EOF'
+
+2025-04-18 23:25:08[ERROR] Formatter 'gofmt' error: <standard input>:82:25: expected '{', found newline
+<standard input>:83:3: expected '}', found 'EOF'
+
+2025-04-18 23:25:55[ERROR] Formatter 'gofmt' error: <standard input>:84:25: expected '{', found newline
+<standard input>:85:3: expected '}', found 'EOF'
+
+2025-04-18 23:26:06[ERROR] Formatter 'gofmt' error: <standard input>:87:25: expected '{', found newline
+<standard input>:88:3: expected '}', found 'EOF'
+
+2025-04-18 23:37:05[ERROR] Formatter 'gofmt' error: <standard input>:92:13: expected operand, found ','
+<standard input>:98:2: missing ',' in composite literal
+<standard input>:101:3: missing ',' in composite literal
+
+2025-04-18 23:37:57[ERROR] Formatter 'gofmt' error: <standard input>:92:19: missing ',' before newline in composite literal
+
+2025-04-18 23:38:03[ERROR] Formatter 'gofmt' error: <standard input>:91:16: missing ',' before newline in composite literal
+<standard input>:92:19: missing ',' before newline in composite literal
+
+2025-04-18 23:38:35[ERROR] Formatter 'gofmt' error: <standard input>:91:16: missing ',' before newline in composite literal
+<standard input>:92:19: missing ',' before newline in composite literal
+
+2025-04-18 23:51:52[ERROR] Formatter 'gofmt' error: <standard input>:77:48: missing ',' before newline in composite literal
+
+2025-04-18 23:52:03[ERROR] Formatter 'gofmt' error: <standard input>:77:48: missing ',' before newline in composite literal
+
+2025-04-18 23:52:42[ERROR] Formatter 'gofmt' error: <standard input>:77:86: missing ',' in composite literal
+<standard input>:78:3: missing ',' in composite literal
+
+2025-04-18 23:52:44[ERROR] Formatter 'gofmt' error: <standard input>:77:86: missing ',' in composite literal
+<standard input>:78:3: missing ',' in composite literal
+
+2025-04-18 23:53:11[ERROR] Formatter 'gofmt' error: <standard input>:77:86: missing ',' in composite literal
+<standard input>:78:3: missing ',' in composite literal
+
+2025-04-18 23:53:19[ERROR] Formatter 'gofmt' error: <standard input>:77:87: expected operand, found ')'
+<standard input>:78:3: missing ',' in composite literal
+
+2025-04-18 23:53:20[ERROR] Formatter 'gofmt' error: <standard input>:77:87: expected operand, found ')'
+<standard input>:78:3: missing ',' in composite literal
+
+2025-04-18 23:53:23[ERROR] Formatter 'gofmt' error: <standard input>:78:3: expected operand, found ')'
+<standard input>:79:3: missing ',' in composite literal
+
+2025-04-18 23:53:25[ERROR] Formatter 'gofmt' error: <standard input>:78:3: expected operand, found ')'
+<standard input>:79:3: missing ',' in composite literal
+
+2025-04-18 23:53:57[ERROR] Formatter 'gofmt' error: <standard input>:78:3: expected operand, found ')'
+<standard input>:79:3: missing ',' in composite literal
+
+2025-04-18 23:54:12[ERROR] Formatter 'gofmt' error: <standard input>:77:87: missing ',' before newline in composite literal
+<standard input>:78:3: expected operand, found ')'
+<standard input>:79:3: missing ',' in composite literal
+
+2025-04-18 23:54:51[ERROR] Formatter 'gofmt' error: <standard input>:99:4: expression in go must be function call
+
+2025-04-19 12:16:44[ERROR] Formatter 'gofmt' error: <standard input>:8:19: missing ',' before newline in argument list
+
+2025-04-19 12:16:45[ERROR] Formatter 'gofmt' error: <standard input>:8:19: missing ',' before newline in argument list
+
+2025-06-09 09:42:57[WARN] Formatter 'prettier' timeout
+2025-06-09 09:44:09[WARN] Formatter 'prettier' timeout
+2025-06-09 09:44:41[WARN] Formatter 'prettier' timeout
+2025-06-09 09:44:57[WARN] Formatter 'prettier' timeout
+2025-06-09 09:46:09[WARN] Formatter 'prettier' timeout
+2025-06-09 10:19:57[WARN] Formatter 'prettier' timeout
+2025-06-09 10:46:36[WARN] Formatter 'prettier' timeout
+2025-06-09 10:47:59[WARN] Formatter 'prettier' timeout
+2025-06-09 10:51:08[WARN] Formatter 'prettier' timeout
+2025-06-09 10:56:59[WARN] Formatter 'prettier' timeout
+2025-06-09 11:17:12[WARN] Formatter 'prettier' timeout
+2025-06-09 11:18:01[WARN] Formatter 'prettier' timeout
+2025-06-09 11:20:42[WARN] Formatter 'prettier' timeout
+2025-06-09 11:20:54[WARN] Formatter 'prettier' timeout
+2025-06-09 11:21:18[WARN] Formatter 'prettier' timeout
+2025-06-09 11:22:06[WARN] Formatter 'prettier' timeout
+2025-06-09 11:22:22[WARN] Formatter 'prettier' timeout
+2025-06-09 11:22:53[WARN] Formatter 'prettier' timeout
+2025-06-09 11:23:17[WARN] Formatter 'prettier' timeout
+2025-06-09 11:25:25[WARN] Formatter 'prettier' timeout
+2025-06-09 12:43:01[WARN] Formatter 'prettier' timeout
+2025-06-09 12:46:13[WARN] Formatter 'prettier' timeout
+2025-06-09 12:57:36[WARN] Formatter 'prettier' timeout
+2025-06-09 12:57:42[WARN] Formatter 'prettier' timeout
+2025-06-09 12:57:44[WARN] Formatter 'prettier' timeout
+2025-06-09 12:57:46[WARN] Formatter 'prettier' timeout
+2025-06-09 12:58:25[WARN] Formatter 'prettier' timeout
+2025-06-09 12:58:51[WARN] Formatter 'prettier' timeout
+2025-06-09 12:59:09[WARN] Formatter 'prettier' timeout
+2025-06-09 12:59:18[WARN] Formatter 'prettier' timeout
+2025-06-09 12:59:52[WARN] Formatter 'prettier' timeout
+2025-06-09 13:01:23[WARN] Formatter 'prettier' timeout
+2025-06-09 13:01:39[WARN] Formatter 'prettier' timeout
+2025-06-09 13:04:39[WARN] Formatter 'prettier' timeout
+2025-06-09 13:04:57[WARN] Formatter 'prettier' timeout
+2025-06-09 13:05:43[WARN] Formatter 'prettier' timeout
+2025-06-09 13:08:47[WARN] Formatter 'prettier' timeout
+2025-06-09 13:08:49[WARN] Formatter 'prettier' timeout
+2025-06-09 13:09:16[WARN] Formatter 'prettier' timeout
+2025-06-09 13:09:17[WARN] Formatter 'prettier' timeout
+2025-06-09 13:09:19[WARN] Formatter 'prettier' timeout
+2025-06-09 13:42:28[WARN] Formatter 'prettier' timeout
+2025-06-09 13:42:45[WARN] Formatter 'prettier' timeout
+2025-06-09 13:43:47[WARN] Formatter 'prettier' timeout
+2025-06-09 13:44:19[WARN] Formatter 'prettier' timeout
+2025-06-09 13:44:25[WARN] Formatter 'prettier' timeout
+2025-06-09 13:44:41[ERROR] Formatter 'prettier' error: [error] /Users/jpporta/work/avodah-med/apps/nsight-web/src/app/(private)/sessions/[id]/standard-session/_steps-content/documentation/documentation-tab.tsx: SyntaxError: Expected corresponding JSX closing tag for <h2>. (285:47)
+
+2025-06-09 13:45:01[WARN] Formatter 'prettier' timeout
+2025-06-09 13:53:41[WARN] Formatter 'prettier' timeout
+2025-06-09 13:54:04[WARN] Formatter 'prettier' timeout
+2025-06-09 13:55:11[WARN] Formatter 'prettier' timeout
+2025-06-09 13:56:51[WARN] Formatter 'prettier' timeout
+2025-06-09 14:01:51[WARN] Formatter 'prettier' timeout
+2025-06-09 14:01:53[WARN] Formatter 'prettier' timeout
+2025-06-09 14:04:13[WARN] Formatter 'prettier' timeout
+2025-06-09 14:16:03[WARN] Formatter 'prettier' timeout
+2025-06-09 14:16:40[WARN] Formatter 'prettier' timeout
+2025-06-09 14:17:40[WARN] Formatter 'prettier' timeout
+2025-06-09 14:17:54[WARN] Formatter 'prettier' timeout
+2025-06-09 14:18:36[WARN] Formatter 'prettier' timeout
+2025-06-09 14:20:14[WARN] Formatter 'prettier' timeout
+2025-06-09 14:20:26[WARN] Formatter 'prettier' timeout
+2025-06-09 14:22:21[WARN] Formatter 'prettier' timeout
+2025-06-09 14:22:31[WARN] Formatter 'prettier' timeout
+2025-06-09 14:22:58[WARN] Formatter 'prettier' timeout
+2025-06-09 14:23:29[WARN] Formatter 'prettier' timeout
+2025-06-09 14:23:50[ERROR] Formatter 'prettier' error: [error] /Users/jpporta/work/avodah-med/apps/nsight-web/src/app/(private)/sessions/[id]/standard-session/_steps-content/documentation/documentation-tab.tsx: SyntaxError: Unexpected token, expected "," (123:22)
+
+2025-06-09 14:23:51[ERROR] Formatter 'prettier' error: [error] /Users/jpporta/work/avodah-med/apps/nsight-web/src/app/(private)/sessions/[id]/standard-session/_steps-content/documentation/documentation-tab.tsx: SyntaxError: Unexpected token, expected "," (123:22)
+
+2025-06-09 14:23:55[WARN] Formatter 'prettier' timeout
+2025-06-09 14:24:17[WARN] Formatter 'prettier' timeout
+2025-06-09 14:25:07[WARN] Formatter 'prettier' timeout
+2025-06-09 14:25:56[WARN] Formatter 'prettier' timeout
+2025-06-09 14:27:59[WARN] Formatter 'prettier' timeout
+2025-06-09 14:28:23[WARN] Formatter 'prettier' timeout
+2025-06-09 14:28:40[WARN] Formatter 'prettier' timeout
+2025-06-09 14:30:47[WARN] Formatter 'prettier' timeout
+2025-06-09 14:46:13[WARN] Formatter 'prettier' timeout
+2025-06-09 14:48:13[WARN] Formatter 'prettier' timeout
+2025-06-09 14:49:33[WARN] Formatter 'prettier' timeout
+2025-06-09 14:50:42[WARN] Formatter 'prettier' timeout
+2025-06-09 14:51:22[WARN] Formatter 'prettier' timeout
+2025-06-09 14:52:10[WARN] Formatter 'prettier' timeout
+2025-06-09 14:52:35[WARN] Formatter 'prettier' timeout
+2025-06-09 14:54:02[WARN] Formatter 'prettier' timeout
+2025-06-09 14:54:59[WARN] Formatter 'prettier' timeout
+2025-06-09 14:56:27[WARN] Formatter 'prettier' timeout
+2025-06-09 15:04:58[WARN] Formatter 'prettier' timeout
+2025-06-09 15:06:06[WARN] Formatter 'prettier' timeout
+2025-06-09 15:07:41[WARN] Formatter 'prettier' timeout
+2025-06-09 15:07:52[WARN] Formatter 'prettier' timeout
+2025-06-09 15:09:37[WARN] Formatter 'prettier' timeout
+2025-06-09 15:11:13[WARN] Formatter 'prettier' timeout
+2025-06-09 15:11:53[WARN] Formatter 'prettier' timeout
+2025-06-09 15:12:43[WARN] Formatter 'prettier' timeout
+2025-06-09 15:13:37[WARN] Formatter 'prettier' timeout
+2025-06-09 15:13:55[WARN] Formatter 'prettier' timeout
+2025-06-09 15:15:06[WARN] Formatter 'prettier' timeout
+2025-06-09 15:16:12[WARN] Formatter 'prettier' timeout
+2025-06-09 15:17:08[WARN] Formatter 'prettier' timeout
+2025-06-09 15:20:18[WARN] Formatter 'prettier' timeout
+2025-06-09 15:20:58[WARN] Formatter 'prettier' timeout
+2025-06-09 15:22:26[WARN] Formatter 'prettier' timeout
+2025-06-09 15:22:44[WARN] Formatter 'prettier' timeout
+2025-06-09 15:23:15[WARN] Formatter 'prettier' timeout
+2025-06-09 15:23:35[WARN] Formatter 'prettier' timeout
+2025-06-09 15:25:06[WARN] Formatter 'prettier' timeout
+2025-06-09 15:29:02[WARN] Formatter 'prettier' timeout
+2025-06-09 15:30:33[WARN] Formatter 'prettier' timeout
+2025-06-09 15:32:07[WARN] Formatter 'prettier' timeout
+2025-06-09 15:34:29[WARN] Formatter 'prettier' timeout
+2025-06-09 15:35:06[WARN] Formatter 'prettier' timeout
+2025-06-09 15:35:52[WARN] Formatter 'prettier' timeout
+2025-06-09 15:36:25[WARN] Formatter 'prettier' timeout
+2025-06-09 15:36:35[WARN] Formatter 'prettier' timeout
+2025-06-09 15:37:13[WARN] Formatter 'prettier' timeout
+2025-06-09 15:37:20[WARN] Formatter 'prettier' timeout
+2025-06-09 15:40:04[WARN] Formatter 'prettier' timeout
+2025-06-09 15:40:20[WARN] Formatter 'prettier' timeout
+2025-06-09 15:40:30[WARN] Formatter 'prettier' timeout
+2025-06-09 15:41:01[WARN] Formatter 'prettier' timeout
+2025-06-09 15:41:44[WARN] Formatter 'prettier' timeout
+2025-06-09 15:42:07[WARN] Formatter 'prettier' timeout
+2025-06-09 15:43:19[ERROR] Formatter 'prettier' error: [error] /Users/jpporta/work/avodah-med/packages/document-tranformer/utils/src/type.ts: SyntaxError: Unexpected token, expected ")" (13:10)
+
+2025-06-09 15:43:38[WARN] Formatter 'prettier' timeout
+2025-06-09 15:43:51[WARN] Formatter 'prettier' timeout
+2025-06-09 15:44:08[WARN] Formatter 'prettier' timeout
+2025-06-09 15:44:43[WARN] Formatter 'prettier' timeout
+2025-06-09 15:48:44[ERROR] Formatter 'prettier' error: [error] /Users/jpporta/work/avodah-med/packages/document-tranformer/ui/src/ui/renderer.tsx: SyntaxError: JSX attributes must only be assigned a non-empty expression. (55:47)
+
+2025-06-09 15:50:03[ERROR] Formatter 'prettier' error: [error] /Users/jpporta/work/avodah-med/packages/document-tranformer/ui/src/ui/renderer.tsx: SyntaxError: JSX attributes must only be assigned a non-empty expression. (57:27)
+
+2025-06-09 15:52:25[WARN] Formatter 'prettier' timeout
+2025-06-09 15:52:50[WARN] Formatter 'prettier' timeout
+2025-06-09 15:53:50[WARN] Formatter 'prettier' timeout
+2025-06-09 15:54:04[WARN] Formatter 'prettier' timeout
+2025-06-09 15:54:23[WARN] Formatter 'prettier' timeout
+2025-06-09 16:09:15[WARN] Formatter 'prettier' timeout
+2025-06-09 16:09:37[WARN] Formatter 'prettier' timeout
+2025-06-09 16:12:35[WARN] Formatter 'prettier' timeout
+2025-06-09 16:12:56[WARN] Formatter 'prettier' timeout
+2025-06-09 16:14:13[WARN] Formatter 'prettier' timeout
+2025-06-09 16:15:00[WARN] Formatter 'prettier' timeout
+2025-06-09 16:16:46[ERROR] Formatter 'prettier' error: [error] /Users/jpporta/work/avodah-med/packages/document-tranformer/ui/src/ui/renderer.tsx: SyntaxError: JSX attributes must only be assigned a non-empty expression. (110:17)
+
+2025-06-09 16:17:01[ERROR] Formatter 'prettier' error: [error] /Users/jpporta/work/avodah-med/packages/document-tranformer/ui/src/ui/renderer.tsx: SyntaxError: JSX attributes must only be assigned a non-empty expression. (110:17)
+
+2025-06-09 16:19:03[ERROR] Formatter 'prettier' error: [error] /Users/jpporta/work/avodah-med/packages/document-tranformer/ui/src/ui/renderer.tsx: SyntaxError: Unexpected token, expected ";" (44:11)
+
+2025-06-09 16:20:01[ERROR] Formatter 'prettier' error: [error] /Users/jpporta/work/avodah-med/packages/document-tranformer/ui/src/ui/renderer.tsx: SyntaxError: Unexpected token, expected ";" (44:11)
+
+2025-06-09 16:20:32[ERROR] Formatter 'prettier' error: [error] /Users/jpporta/work/avodah-med/packages/document-tranformer/ui/src/ui/renderer.tsx: SyntaxError: JSX attributes must only be assigned a non-empty expression. (51:17)
+
+2025-06-09 16:25:18[ERROR] Formatter 'prettier' error: [error] /Users/jpporta/work/avodah-med/packages/document-tranformer/ui/src/ui/renderer.tsx: SyntaxError: JSX attributes must only be assigned a non-empty expression. (130:17)
+
+2025-06-09 16:25:22[ERROR] Formatter 'prettier' error: [error] /Users/jpporta/work/avodah-med/packages/document-tranformer/ui/src/ui/renderer.tsx: SyntaxError: JSX attributes must only be assigned a non-empty expression. (130:17)
+
+2025-06-09 16:25:23[ERROR] Formatter 'prettier' error: [error] /Users/jpporta/work/avodah-med/packages/document-tranformer/ui/src/ui/renderer.tsx: SyntaxError: JSX attributes must only be assigned a non-empty expression. (130:17)
+
+2025-06-09 16:25:27[ERROR] Formatter 'prettier' error: [error] /Users/jpporta/work/avodah-med/packages/document-tranformer/ui/src/ui/renderer.tsx: SyntaxError: JSX attributes must only be assigned a non-empty expression. (128:17)
+
+2025-06-09 16:25:33[ERROR] Formatter 'prettier' error: [error] /Users/jpporta/work/avodah-med/packages/document-tranformer/ui/src/ui/renderer.tsx: SyntaxError: JSX attributes must only be assigned a non-empty expression. (127:17)
+
+2025-06-09 16:26:08[WARN] Formatter 'prettier' timeout
+2025-06-09 16:26:47[WARN] Formatter 'prettier' timeout
+2025-06-09 16:27:52[WARN] Formatter 'prettier' timeout
+2025-06-09 16:29:33[WARN] Formatter 'prettier' timeout
+2025-06-09 16:30:16[WARN] Formatter 'prettier' timeout
+2025-06-09 16:30:55[WARN] Formatter 'prettier' timeout
+2025-06-09 16:31:27[WARN] Formatter 'prettier' timeout
+2025-06-09 16:32:13[WARN] Formatter 'prettier' timeout
+2025-06-09 16:33:07[WARN] Formatter 'prettier' timeout
+2025-06-09 16:33:53[WARN] Formatter 'prettier' timeout
+2025-06-09 16:34:19[WARN] Formatter 'prettier' timeout
+2025-06-09 16:36:04[WARN] Formatter 'prettier' timeout
+2025-06-09 16:36:33[WARN] Formatter 'prettier' timeout
+2025-06-09 16:36:53[WARN] Formatter 'prettier' timeout
+2025-06-09 16:37:41[WARN] Formatter 'prettier' timeout
+2025-06-09 16:38:25[ERROR] Formatter 'prettier' error: [error] /Users/jpporta/work/avodah-med/packages/document-tranformer/utils/src/default-layouts/clinical.ts: SyntaxError: Unexpected token (18:14)
+
+2025-06-09 16:38:47[WARN] Formatter 'prettier' timeout
+2025-06-09 16:39:09[WARN] Formatter 'prettier' timeout
+2025-06-09 16:39:26[WARN] Formatter 'prettier' timeout
+2025-06-09 16:39:44[WARN] Formatter 'prettier' timeout
+2025-06-09 16:39:58[WARN] Formatter 'prettier' timeout
+2025-06-09 16:40:13[WARN] Formatter 'prettier' timeout
+2025-06-09 16:40:33[WARN] Formatter 'prettier' timeout
+2025-06-09 16:41:03[WARN] Formatter 'prettier' timeout
+2025-06-09 16:41:23[WARN] Formatter 'prettier' timeout
+2025-06-09 16:41:36[WARN] Formatter 'prettier' timeout
+2025-06-09 16:42:07[WARN] Formatter 'prettier' timeout
+2025-06-09 16:42:54[WARN] Formatter 'prettier' timeout
+2025-06-09 16:43:05[WARN] Formatter 'prettier' timeout
+2025-06-09 16:43:27[WARN] Formatter 'prettier' timeout
+2025-06-09 16:43:43[WARN] Formatter 'prettier' timeout
+2025-06-09 16:43:57[WARN] Formatter 'prettier' timeout
+2025-06-09 16:44:12[WARN] Formatter 'prettier' timeout
+2025-06-09 16:45:10[WARN] Formatter 'prettier' timeout
+2025-06-09 16:45:12[WARN] Formatter 'prettier' timeout
+2025-06-09 16:46:14[WARN] Formatter 'prettier' timeout
+2025-06-09 16:46:15[WARN] Formatter 'prettier' timeout
+2025-06-09 16:46:40[WARN] Formatter 'prettier' timeout
+2025-06-09 16:50:56[WARN] Formatter 'prettier' timeout
+2025-06-09 16:53:44[WARN] Formatter 'prettier' timeout
+2025-06-09 16:53:45[WARN] Formatter 'prettier' timeout
+2025-06-09 16:54:54[WARN] Formatter 'prettier' timeout
+2025-06-09 16:58:09[WARN] Formatter 'prettier' timeout
+2025-06-09 16:58:54[WARN] Formatter 'prettier' timeout
+2025-06-09 17:04:00[WARN] Formatter 'prettier' timeout
+2025-06-09 17:06:05[WARN] Formatter 'prettier' timeout
+2025-06-09 17:06:46[WARN] Formatter 'prettier' timeout
+2025-06-09 17:07:34[WARN] Formatter 'prettier' timeout
+2025-06-09 17:07:43[WARN] Formatter 'prettier' timeout
+2025-06-09 17:09:11[WARN] Formatter 'prettier' timeout
+2025-06-09 17:10:23[WARN] Formatter 'prettier' timeout
+2025-06-09 17:10:35[WARN] Formatter 'prettier' timeout
+2025-06-09 17:12:25[WARN] Formatter 'prettier' timeout
+2025-06-09 17:16:52[WARN] Formatter 'prettier' timeout
+2025-06-09 17:17:57[WARN] Formatter 'prettier' timeout
+2025-06-10 09:06:17[WARN] Formatter 'prettier' timeout
+2025-06-10 09:49:00[WARN] Formatter 'prettier' timeout
+2025-06-10 10:57:14[WARN] Formatter 'prettier' timeout
+2025-06-10 11:08:32[WARN] Formatter 'prettier' timeout
+2025-06-10 11:10:44[ERROR] Formatter 'prettier' error: [error] /Users/jpporta/work/avodah-med/apps/transcription-websocket/src/modules/live-audio-transcription/awstranscribe-sdk/awstranscribe-sdk.service.ts: SyntaxError: Unexpected token, expected "," (115:8)
+
+2025-06-10 11:10:45[ERROR] Formatter 'prettier' error: [error] /Users/jpporta/work/avodah-med/apps/transcription-websocket/src/modules/live-audio-transcription/awstranscribe-sdk/awstranscribe-sdk.service.ts: SyntaxError: Invalid shorthand property initializer. (114:23)
+
+2025-06-10 11:10:46[ERROR] Formatter 'prettier' error: [error] /Users/jpporta/work/avodah-med/apps/transcription-websocket/src/modules/live-audio-transcription/awstranscribe-sdk/awstranscribe-sdk.service.ts: SyntaxError: Invalid shorthand property initializer. (114:23)
+
+2025-06-10 13:25:44[ERROR] Formatter 'prettier' error: [error] /Users/jpporta/work/avodah-med/packages/document-tranformer/utils/src/subset/index.ts: SyntaxError: Unexpected token (16:44)
+
+2025-06-10 13:26:08[ERROR] Formatter 'prettier' error: [error] /Users/jpporta/work/avodah-med/packages/document-tranformer/utils/src/subset/index.ts: SyntaxError: Unexpected token (16:51)
+
+2025-06-10 13:26:13[ERROR] Formatter 'prettier' error: [error] /Users/jpporta/work/avodah-med/packages/document-tranformer/utils/src/subset/index.ts: SyntaxError: Unexpected token (18:0)
+
+2025-06-10 13:27:52[ERROR] Formatter 'prettier' error: [error] /Users/jpporta/work/avodah-med/packages/document-tranformer/utils/src/subset/index.ts: SyntaxError: Unexpected token, expected "{" (23:8)
+
+2025-06-10 13:28:14[WARN] Formatter 'prettier' timeout
+2025-06-10 13:28:24[WARN] Formatter 'prettier' timeout
+2025-06-10 13:31:52[WARN] Formatter 'prettier' timeout
+2025-06-10 13:48:21[WARN] Formatter 'prettier' timeout
+2025-06-10 13:49:22[WARN] Formatter 'prettier' timeout
+2025-06-10 13:50:17[WARN] Formatter 'prettier' timeout
+2025-06-10 13:50:35[WARN] Formatter 'prettier' timeout
+2025-06-10 13:51:43[WARN] Formatter 'prettier' timeout
+2025-06-10 13:57:02[WARN] Formatter 'prettier' timeout
+2025-06-10 14:08:47[WARN] Formatter 'prettier' timeout
+2025-06-10 14:09:07[WARN] Formatter 'prettier' timeout
+2025-06-10 14:09:34[WARN] Formatter 'prettier' timeout
+2025-06-10 14:10:13[WARN] Formatter 'prettier' timeout
+2025-06-10 14:12:47[WARN] Formatter 'prettier' timeout
+2025-06-10 14:15:49[WARN] Formatter 'prettier' timeout
+2025-06-10 14:17:27[WARN] Formatter 'prettier' timeout
+2025-06-10 14:18:47[WARN] Formatter 'prettier' timeout
+2025-06-10 14:19:48[WARN] Formatter 'prettier' timeout
+2025-06-10 14:19:57[WARN] Formatter 'prettier' timeout
+2025-06-10 14:20:03[WARN] Formatter 'prettier' timeout
+2025-06-10 14:20:27[ERROR] Formatter 'prettier' error: [error] /Users/jpporta/work/avodah-med/packages/document-tranformer/utils/src/subset/index.ts: SyntaxError: Unexpected token (18:6)
+
+2025-06-10 14:20:43[ERROR] Formatter 'prettier' error: [error] /Users/jpporta/work/avodah-med/packages/document-tranformer/utils/src/subset/index.ts: SyntaxError: Unexpected token, expected "]" (31:19)
+
+2025-06-10 14:20:46[ERROR] Formatter 'prettier' error: [error] /Users/jpporta/work/avodah-med/packages/document-tranformer/utils/src/subset/index.ts: SyntaxError: Unexpected token, expected "]" (31:19)
+
+2025-06-10 14:21:08[ERROR] Formatter 'prettier' error: [error] /Users/jpporta/work/avodah-med/packages/document-tranformer/utils/src/subset/index.ts: SyntaxError: Unexpected token (18:6)
+
+2025-06-10 14:21:48[WARN] Formatter 'prettier' timeout
+2025-06-10 14:22:50[WARN] Formatter 'prettier' timeout
+2025-06-10 14:26:45[WARN] Formatter 'prettier' timeout
+2025-06-10 14:29:10[WARN] Formatter 'prettier' timeout
+2025-06-10 14:29:36[WARN] Formatter 'prettier' timeout
+2025-06-10 14:30:25[WARN] Formatter 'prettier' timeout
+2025-06-10 14:39:35[WARN] Formatter 'prettier' timeout
+2025-06-10 14:39:48[WARN] Formatter 'prettier' timeout
+2025-06-10 14:40:02[WARN] Formatter 'prettier' timeout
+2025-06-10 14:40:19[WARN] Formatter 'prettier' timeout
+2025-06-10 14:40:36[WARN] Formatter 'prettier' timeout
+2025-06-10 14:41:39[WARN] Formatter 'prettier' timeout
+2025-06-10 14:42:39[WARN] Formatter 'prettier' timeout
+2025-06-10 14:43:01[WARN] Formatter 'prettier' timeout
+2025-06-10 14:43:14[WARN] Formatter 'prettier' timeout
+2025-06-10 14:57:39[WARN] Formatter 'prettier' timeout
+2025-06-10 14:59:02[WARN] Formatter 'prettier' timeout
+2025-06-10 15:00:12[WARN] Formatter 'prettier' timeout
+2025-06-10 15:02:38[WARN] Formatter 'prettier' timeout
+2025-06-10 15:06:22[WARN] Formatter 'prettier' timeout
+2025-06-10 15:06:40[WARN] Formatter 'prettier' timeout
+2025-06-10 15:06:52[WARN] Formatter 'prettier' timeout
+2025-06-10 15:13:04[WARN] Formatter 'prettier' timeout
+2025-06-10 15:14:08[WARN] Formatter 'prettier' timeout
+2025-06-10 15:15:22[WARN] Formatter 'prettier' timeout
+2025-06-10 15:15:43[WARN] Formatter 'prettier' timeout
+2025-06-10 15:17:41[WARN] Formatter 'prettier' timeout
+2025-06-10 15:17:54[WARN] Formatter 'prettier' timeout
+2025-06-10 15:18:09[WARN] Formatter 'prettier' timeout
+2025-06-10 15:21:11[WARN] Formatter 'prettier' timeout
+2025-06-10 15:22:35[ERROR] Formatter 'prettier' error: [error] /Users/jpporta/work/avodah-med/packages/document-tranformer/utils/src/subset/index.ts: SyntaxError: Unexpected token, expected ")" (24:124)
+
+2025-06-10 15:22:36[ERROR] Formatter 'prettier' error: [error] /Users/jpporta/work/avodah-med/packages/document-tranformer/utils/src/subset/index.ts: SyntaxError: Unexpected token, expected ")" (24:124)
+
+2025-06-10 15:22:38[ERROR] Formatter 'prettier' error: [error] /Users/jpporta/work/avodah-med/packages/document-tranformer/utils/src/subset/index.ts: SyntaxError: Unexpected token, expected ")" (24:124)
+
+2025-06-10 15:23:17[WARN] Formatter 'prettier' timeout
+2025-06-10 15:25:57[WARN] Formatter 'prettier' timeout
+2025-06-10 15:32:38[WARN] Formatter 'prettier' timeout
+2025-06-10 15:32:49[WARN] Formatter 'prettier' timeout
+2025-06-10 15:33:59[WARN] Formatter 'prettier' timeout
+2025-06-10 15:41:01[WARN] Formatter 'prettier' timeout
+2025-06-10 15:44:56[WARN] Formatter 'prettier' timeout
+2025-06-10 15:45:53[WARN] Formatter 'prettier' timeout
+2025-06-10 15:48:21[WARN] Formatter 'prettier' timeout
+2025-06-10 15:49:00[WARN] Formatter 'prettier' timeout
+2025-06-10 15:49:02[WARN] Formatter 'prettier' timeout
+2025-06-10 15:49:03[WARN] Formatter 'prettier' timeout
+2025-06-10 15:49:05[WARN] Formatter 'prettier' timeout
+2025-06-10 15:53:40[WARN] Formatter 'prettier' timeout
+2025-06-10 15:54:01[WARN] Formatter 'prettier' timeout
+2025-06-10 15:57:34[WARN] Formatter 'prettier' timeout
+2025-06-10 15:57:39[WARN] Formatter 'prettier' timeout
+2025-06-10 15:59:59[WARN] Formatter 'prettier' timeout
+2025-06-10 16:01:03[WARN] Formatter 'prettier' timeout
+2025-06-10 16:01:24[WARN] Formatter 'prettier' timeout
+2025-06-10 16:01:37[WARN] Formatter 'prettier' timeout
+2025-06-10 16:02:03[WARN] Formatter 'prettier' timeout
+2025-06-10 16:02:56[WARN] Formatter 'prettier' timeout
+2025-06-10 16:11:32[WARN] Formatter 'prettier' timeout
+2025-06-10 16:15:39[WARN] Formatter 'prettier' timeout
+2025-06-10 16:16:13[WARN] Formatter 'prettier' timeout
+2025-06-10 16:17:14[WARN] Formatter 'prettier' timeout
+2025-06-10 16:18:15[WARN] Formatter 'prettier' timeout
+2025-06-10 16:18:23[WARN] Formatter 'prettier' timeout
+2025-06-10 16:18:32[WARN] Formatter 'prettier' timeout
+2025-06-10 16:19:18[WARN] Formatter 'prettier' timeout
+2025-06-10 16:19:52[WARN] Formatter 'prettier' timeout
+2025-06-10 16:21:23[WARN] Formatter 'prettier' timeout
+2025-06-10 16:22:37[ERROR] Formatter 'prettier' error: [error] /Users/jpporta/work/avodah-med/apps/nsight-web/src/app/(private)/sessions/[id]/standard-session/_steps-content/documentation/documentation-tab.tsx: SyntaxError: Unexpected token, expected "," (177:48)
+
+2025-06-10 16:22:39[ERROR] Formatter 'prettier' error: [error] /Users/jpporta/work/avodah-med/apps/nsight-web/src/app/(private)/sessions/[id]/standard-session/_steps-content/documentation/documentation-tab.tsx: SyntaxError: Unexpected token, expected "," (177:48)
+
+2025-06-10 16:22:40[ERROR] Formatter 'prettier' error: [error] /Users/jpporta/work/avodah-med/apps/nsight-web/src/app/(private)/sessions/[id]/standard-session/_steps-content/documentation/documentation-tab.tsx: SyntaxError: Unexpected token, expected "," (177:48)
+
+2025-06-10 16:23:07[ERROR] Formatter 'prettier' error: [error] /Users/jpporta/work/avodah-med/apps/nsight-web/src/app/(private)/sessions/[id]/standard-session/_steps-content/documentation/documentation-tab.tsx: SyntaxError: Unexpected token, expected "," (177:48)
+
+2025-06-10 16:23:19[ERROR] Formatter 'prettier' error: [error] /Users/jpporta/work/avodah-med/apps/nsight-web/src/app/(private)/sessions/[id]/standard-session/_steps-content/documentation/documentation-tab.tsx: SyntaxError: Unexpected token, expected "," (177:48)
+
+2025-06-10 16:23:20[ERROR] Formatter 'prettier' error: [error] /Users/jpporta/work/avodah-med/apps/nsight-web/src/app/(private)/sessions/[id]/standard-session/_steps-content/documentation/documentation-tab.tsx: SyntaxError: Unexpected token, expected "," (177:48)
+
+2025-06-10 16:23:21[ERROR] Formatter 'prettier' error: [error] /Users/jpporta/work/avodah-med/apps/nsight-web/src/app/(private)/sessions/[id]/standard-session/_steps-content/documentation/documentation-tab.tsx: SyntaxError: Unexpected token, expected "," (177:48)
+
+2025-06-10 16:23:24[ERROR] Formatter 'prettier' error: [error] /Users/jpporta/work/avodah-med/apps/nsight-web/src/app/(private)/sessions/[id]/standard-session/_steps-content/documentation/documentation-tab.tsx: SyntaxError: Unexpected token, expected "," (177:48)
+
+2025-06-10 16:23:24[ERROR] Formatter 'prettier' error: [error] /Users/jpporta/work/avodah-med/apps/nsight-web/src/app/(private)/sessions/[id]/standard-session/_steps-content/documentation/documentation-tab.tsx: SyntaxError: Unexpected token, expected "," (177:48)
+
+2025-06-10 16:23:24[ERROR] Formatter 'prettier' error: [error] /Users/jpporta/work/avodah-med/apps/nsight-web/src/app/(private)/sessions/[id]/standard-session/_steps-content/documentation/documentation-tab.tsx: SyntaxError: Unexpected token, expected "," (177:48)
+
+2025-06-10 16:23:32[ERROR] Formatter 'prettier' error: [error] /Users/jpporta/work/avodah-med/apps/nsight-web/src/app/(private)/sessions/[id]/standard-session/_steps-content/documentation/documentation-tab.tsx: SyntaxError: Unexpected token, expected "," (177:48)
+
+2025-06-10 16:23:34[ERROR] Formatter 'prettier' error: [error] /Users/jpporta/work/avodah-med/apps/nsight-web/src/app/(private)/sessions/[id]/standard-session/_steps-content/documentation/documentation-tab.tsx: SyntaxError: Unexpected token, expected "," (177:48)
+
+2025-06-10 16:25:58[WARN] Formatter 'prettier' timeout
+2025-06-10 16:26:09[WARN] Formatter 'prettier' timeout
+2025-06-10 16:28:37[WARN] Formatter 'prettier' timeout
+2025-06-10 16:29:05[WARN] Formatter 'prettier' timeout
+2025-06-10 16:31:21[WARN] Formatter 'prettier' timeout
+2025-06-10 16:33:47[WARN] Formatter 'prettier' timeout
+2025-06-10 16:34:04[WARN] Formatter 'prettier' timeout
+2025-06-10 16:34:41[WARN] Formatter 'prettier' timeout
+2025-06-10 16:34:58[WARN] Formatter 'prettier' timeout
+2025-06-10 16:35:45[WARN] Formatter 'prettier' timeout
+2025-06-10 16:36:29[WARN] Formatter 'prettier' timeout
+2025-06-10 16:36:31[WARN] Formatter 'prettier' timeout
+2025-06-10 16:37:18[WARN] Formatter 'prettier' timeout
+2025-06-10 16:38:16[WARN] Formatter 'prettier' timeout
+2025-06-10 16:39:20[WARN] Formatter 'prettier' timeout
+2025-06-10 16:41:07[ERROR] Formatter 'prettier' error: [error] /Users/jpporta/work/avodah-med/apps/nsight-web/src/app/(private)/sessions/[id]/standard-session/_steps-content/documentation/documentation-tab.tsx: SyntaxError: Unexpected token, expected "," (57:40)
+
+2025-06-10 16:41:15[ERROR] Formatter 'prettier' error: [error] /Users/jpporta/work/avodah-med/apps/nsight-web/src/app/(private)/sessions/[id]/standard-session/_steps-content/documentation/documentation-tab.tsx: SyntaxError: Unexpected token, expected "," (57:40)
+
+2025-06-10 16:42:01[ERROR] Formatter 'prettier' error: [error] /Users/jpporta/work/avodah-med/apps/nsight-web/src/app/(private)/sessions/[id]/standard-session/_steps-content/documentation/documentation-tab.tsx: SyntaxError: Unexpected token, expected "," (60:40)
+
+2025-06-10 16:42:02[ERROR] Formatter 'prettier' error: [error] /Users/jpporta/work/avodah-med/apps/nsight-web/src/app/(private)/sessions/[id]/standard-session/_steps-content/documentation/documentation-tab.tsx: SyntaxError: Unexpected token, expected "," (60:40)
+
+2025-06-10 16:42:03[ERROR] Formatter 'prettier' error: [error] /Users/jpporta/work/avodah-med/apps/nsight-web/src/app/(private)/sessions/[id]/standard-session/_steps-content/documentation/documentation-tab.tsx: SyntaxError: Unexpected token, expected "," (60:40)
+
+2025-06-10 16:42:05[ERROR] Formatter 'prettier' error: [error] /Users/jpporta/work/avodah-med/apps/nsight-web/src/app/(private)/sessions/[id]/standard-session/_steps-content/documentation/documentation-tab.tsx: SyntaxError: Unexpected token, expected "," (60:40)
+
+2025-06-10 16:42:57[ERROR] Formatter 'prettier' error: [error] /Users/jpporta/work/avodah-med/apps/nsight-web/src/app/(private)/sessions/[id]/standard-session/_steps-content/documentation/documentation-tab.tsx: SyntaxError: Missing semicolon. (60:88)
+
+2025-06-10 16:43:05[WARN] Formatter 'prettier' timeout
+2025-06-10 16:43:45[WARN] Formatter 'prettier' timeout
+2025-06-10 16:43:51[WARN] Formatter 'prettier' timeout
+2025-06-10 16:45:27[WARN] Formatter 'prettier' timeout
+2025-06-11 09:53:07[WARN] Formatter 'prettier' timeout
+2025-06-11 09:54:22[WARN] Formatter 'prettier' timeout
+2025-06-11 09:55:12[WARN] Formatter 'prettier' timeout
+2025-06-11 09:58:26[WARN] Formatter 'prettier' timeout
+2025-06-11 09:58:52[WARN] Formatter 'prettier' timeout
+2025-06-11 10:06:00[ERROR] Formatter 'prettier' error: [error] /Users/jpporta/work/avodah-med/packages/document-tranformer/ui/src/ui/renderer.tsx: SyntaxError: Unexpected token, expected "," (208:51)
+
+2025-06-11 10:06:31[WARN] Formatter 'prettier' timeout
+2025-06-11 10:08:57[WARN] Formatter 'prettier' timeout
+2025-06-11 10:09:56[WARN] Formatter 'prettier' timeout
+2025-06-11 10:13:29[WARN] Formatter 'prettier' timeout
+2025-06-11 10:17:31[WARN] Formatter 'prettier' timeout
+2025-06-11 10:17:53[WARN] Formatter 'prettier' timeout
+2025-06-11 10:19:35[WARN] Formatter 'prettier' timeout
+2025-06-11 10:20:01[WARN] Formatter 'prettier' timeout
+2025-06-11 10:20:20[WARN] Formatter 'prettier' timeout
+2025-06-11 10:21:52[WARN] Formatter 'prettier' timeout
+2025-06-11 10:24:44[WARN] Formatter 'prettier' timeout
+2025-06-11 10:26:47[WARN] Formatter 'prettier' timeout
+2025-06-11 10:29:17[WARN] Formatter 'prettier' timeout
+2025-06-11 10:29:44[ERROR] Formatter 'prettier' error: [error] /Users/jpporta/work/avodah-med/apps/nsight-web/src/app/(private)/sessions/[id]/standard-session/_steps-content/documentation/documentation-tab.tsx: SyntaxError: Unexpected token (213:2)
+
+2025-06-11 10:30:10[WARN] Formatter 'prettier' timeout
+2025-06-11 10:30:24[WARN] Formatter 'prettier' timeout
+2025-06-11 10:30:58[WARN] Formatter 'prettier' timeout
+2025-06-11 10:31:36[WARN] Formatter 'prettier' timeout
+2025-06-11 10:32:31[WARN] Formatter 'prettier' timeout
+2025-06-11 10:33:00[WARN] Formatter 'prettier' timeout
+2025-06-11 10:33:47[WARN] Formatter 'prettier' timeout
+2025-06-11 10:34:19[WARN] Formatter 'prettier' timeout
+2025-06-11 10:34:29[WARN] Formatter 'prettier' timeout
+2025-06-11 10:35:23[WARN] Formatter 'prettier' timeout
+2025-06-11 10:39:28[WARN] Formatter 'prettier' timeout
+2025-06-11 10:40:01[WARN] Formatter 'prettier' timeout
+2025-06-11 10:42:34[WARN] Formatter 'prettier' timeout
+2025-06-11 10:48:39[WARN] Formatter 'prettier' timeout
+2025-06-11 10:49:04[WARN] Formatter 'prettier' timeout
+2025-06-11 10:50:58[WARN] Formatter 'prettier' timeout
+2025-06-11 10:52:32[WARN] Formatter 'prettier' timeout
+2025-06-11 10:54:59[WARN] Formatter 'prettier' timeout
+2025-06-11 10:55:30[WARN] Formatter 'prettier' timeout
+2025-06-11 10:55:59[WARN] Formatter 'prettier' timeout
+2025-06-11 10:56:01[WARN] Formatter 'prettier' timeout
+2025-06-11 10:57:02[WARN] Formatter 'prettier' timeout
+2025-06-11 10:57:03[WARN] Formatter 'prettier' timeout
+2025-06-11 10:57:19[WARN] Formatter 'prettier' timeout
+2025-06-11 10:57:31[WARN] Formatter 'prettier' timeout
+2025-06-11 10:58:04[WARN] Formatter 'prettier' timeout
+2025-06-11 10:58:05[WARN] Formatter 'prettier' timeout
+2025-06-11 10:58:21[WARN] Formatter 'prettier' timeout
+2025-06-11 10:58:28[ERROR] Formatter 'prettier' error: [error] /Users/jpporta/work/avodah-med/apps/nsight-web/src/app/(private)/sessions/[id]/standard-session/_steps-content/documentation/documentation-tab.tsx: SyntaxError: Unexpected token, expected "]" (90:51)
+
+2025-06-11 10:58:37[WARN] Formatter 'prettier' timeout
+2025-06-11 10:58:51[WARN] Formatter 'prettier' timeout
+2025-06-11 10:58:58[WARN] Formatter 'prettier' timeout
+2025-06-11 10:59:23[WARN] Formatter 'prettier' timeout
+2025-06-11 10:59:41[WARN] Formatter 'prettier' timeout
+2025-06-11 11:00:07[WARN] Formatter 'prettier' timeout
+2025-06-11 11:00:34[WARN] Formatter 'prettier' timeout
+2025-06-11 11:01:10[WARN] Formatter 'prettier' timeout
+2025-06-11 11:02:02[WARN] Formatter 'prettier' timeout
+2025-06-11 11:02:15[WARN] Formatter 'prettier' timeout
+2025-06-11 12:25:29[WARN] Formatter 'prettier' timeout
+2025-06-11 12:25:30[WARN] Formatter 'prettier' timeout
+2025-06-11 12:26:48[WARN] Formatter 'prettier' timeout
+2025-06-11 12:27:24[WARN] Formatter 'prettier' timeout
+2025-06-11 12:27:30[WARN] Formatter 'prettier' timeout
+2025-06-11 12:27:46[WARN] Formatter 'prettier' timeout
+2025-06-11 12:30:36[WARN] Formatter 'prettier' timeout
+2025-06-11 12:31:01[WARN] Formatter 'prettier' timeout
+2025-06-11 12:31:41[WARN] Formatter 'prettier' timeout
+2025-06-11 12:32:01[WARN] Formatter 'prettier' timeout
+2025-06-11 12:32:26[WARN] Formatter 'prettier' timeout
+2025-06-11 12:32:40[WARN] Formatter 'prettier' timeout
+2025-06-11 12:33:33[WARN] Formatter 'prettier' timeout
+2025-06-11 14:24:49[WARN] Formatter 'prettier' timeout
+2025-06-11 14:25:53[WARN] Formatter 'prettier' timeout
+2025-06-11 14:26:12[WARN] Formatter 'prettier' timeout
+2025-06-11 14:27:00[WARN] Formatter 'prettier' timeout
+2025-06-11 14:28:59[WARN] Formatter 'prettier' timeout
+2025-06-11 14:31:30[WARN] Formatter 'prettier' timeout
+2025-06-11 14:35:29[WARN] Formatter 'prettier' timeout
+2025-06-11 14:36:15[WARN] Formatter 'prettier' timeout
+2025-06-11 14:37:23[WARN] Formatter 'prettier' timeout
+2025-06-11 14:45:58[WARN] Formatter 'prettier' timeout
+2025-06-11 14:47:38[WARN] Formatter 'prettier' timeout
+2025-06-11 14:48:54[WARN] Formatter 'prettier' timeout
+2025-06-11 14:50:52[WARN] Formatter 'prettier' timeout
+2025-06-11 14:51:07[WARN] Formatter 'prettier' timeout
+2025-06-11 14:52:28[ERROR] Formatter 'prettier' error: [error] /Users/jpporta/work/avodah-med/packages/types/src/document-facings.ts: SyntaxError: Unexpected token, expected "," (39:138)
+
+2025-06-11 14:52:29[ERROR] Formatter 'prettier' error: [error] /Users/jpporta/work/avodah-med/packages/types/src/document-facings.ts: SyntaxError: Unexpected token, expected "," (39:138)
+
+2025-06-11 14:53:04[WARN] Formatter 'prettier' timeout
+2025-06-11 14:53:56[WARN] Formatter 'prettier' timeout
+2025-06-11 14:55:36[ERROR] Formatter 'prettier' error: [error] /Users/jpporta/work/avodah-med/packages/types/src/document-facings.ts: SyntaxError: Unexpected reserved word 'static'. (44:4)
+
+2025-06-11 14:57:06[WARN] Formatter 'prettier' timeout
+2025-06-11 14:58:44[WARN] Formatter 'prettier' timeout
+2025-06-11 15:00:27[WARN] Formatter 'prettier' timeout
+2025-06-11 15:04:37[WARN] Formatter 'prettier' timeout
+2025-06-11 15:10:30[ERROR] Formatter 'prettier' error: [error] /Users/jpporta/work/avodah-med/packages/db/src/seeding/document-facing.ts: SyntaxError: Unexpected token (43:0)
+
+2025-06-11 15:10:54[WARN] Formatter 'prettier' timeout
+2025-06-11 15:12:49[WARN] Formatter 'prettier' timeout
+2025-06-11 15:14:30[WARN] Formatter 'prettier' timeout
+2025-06-11 15:15:52[WARN] Formatter 'prettier' timeout
+2025-06-11 15:16:03[WARN] Formatter 'prettier' timeout
+2025-06-11 15:17:02[WARN] Formatter 'prettier' timeout
+2025-06-11 15:18:52[WARN] Formatter 'prettier' timeout
+2025-06-11 15:19:38[WARN] Formatter 'prettier' timeout
+2025-06-11 15:20:06[WARN] Formatter 'prettier' timeout
+2025-06-11 15:20:20[WARN] Formatter 'prettier' timeout
+2025-06-11 15:42:22[ERROR] Formatter 'prettier' error: [error] /Users/jpporta/work/avodah-med/packages/db/src/seeding/document-facing/index.ts: SyntaxError: Unexpected token (46:25)
+
+2025-06-11 15:43:13[ERROR] Formatter 'prettier' error: [error] /Users/jpporta/work/avodah-med/packages/db/src/seeding/document-facing/index.ts: SyntaxError: Unexpected token (49:27)
+
+2025-06-11 15:43:28[WARN] Formatter 'prettier' timeout
+2025-06-11 15:44:30[WARN] Formatter 'prettier' timeout
+2025-06-11 15:48:10[ERROR] Formatter 'prettier' error: [error] /Users/jpporta/work/avodah-med/packages/db/src/seeding/document-facing/index.ts: SyntaxError: Unexpected token (60:25)
+
+2025-06-11 15:49:02[ERROR] Formatter 'prettier' error: [error] /Users/jpporta/work/avodah-med/packages/db/src/seeding/document-facing/index.ts: SyntaxError: Unexpected token (60:25)
+
+2025-06-11 15:49:09[ERROR] Formatter 'prettier' error: [error] /Users/jpporta/work/avodah-med/packages/db/src/seeding/document-facing/index.ts: SyntaxError: Unexpected token (60:25)
+
+2025-06-11 16:05:17[WARN] Formatter 'prettier' timeout
+2025-06-11 16:06:11[WARN] Formatter 'prettier' timeout
+2025-06-11 16:08:28[WARN] Formatter 'prettier' timeout
+2025-06-11 16:09:07[ERROR] Formatter 'prettier' error: [error] /Users/jpporta/work/avodah-med/packages/db/src/seeding/document-facing/index.ts: SyntaxError: Unexpected token (93:2)
+
+2025-06-11 16:09:08[ERROR] Formatter 'prettier' error: [error] /Users/jpporta/work/avodah-med/packages/db/src/seeding/document-facing/index.ts: SyntaxError: Unexpected token (93:2)
+
+2025-06-11 16:09:22[WARN] Formatter 'prettier' timeout
+2025-06-11 16:09:39[WARN] Formatter 'prettier' timeout
+2025-06-11 16:25:28[WARN] Formatter 'prettier' timeout
+2025-06-11 16:26:20[WARN] Formatter 'prettier' timeout
+2025-06-11 16:27:03[WARN] Formatter 'prettier' timeout
+2025-06-11 16:27:21[WARN] Formatter 'prettier' timeout
+2025-06-11 16:28:29[WARN] Formatter 'prettier' timeout
+2025-06-11 16:28:35[WARN] Formatter 'prettier' timeout
+2025-06-11 16:29:22[WARN] Formatter 'prettier' timeout
+2025-06-11 16:29:31[WARN] Formatter 'prettier' timeout
+2025-06-11 16:31:58[WARN] Formatter 'prettier' timeout
+2025-06-11 16:34:32[WARN] Formatter 'prettier' timeout
+2025-06-11 16:40:35[ERROR] Formatter 'prettier' error: [error] /Users/jpporta/work/avodah-med/apps/trpc-gateway/src/api/document/queries.ts: SyntaxError: Unexpected token, expected "," (132:2)
+
+2025-06-11 16:40:43[ERROR] Formatter 'prettier' error: [error] /Users/jpporta/work/avodah-med/apps/trpc-gateway/src/api/document/queries.ts: SyntaxError: Unexpected token, expected "," (132:2)
+
+2025-06-11 16:40:44[ERROR] Formatter 'prettier' error: [error] /Users/jpporta/work/avodah-med/apps/trpc-gateway/src/api/document/queries.ts: SyntaxError: Unexpected token, expected "," (132:2)
+
+2025-06-11 16:40:52[ERROR] Formatter 'prettier' error: [error] /Users/jpporta/work/avodah-med/apps/trpc-gateway/src/api/document/queries.ts: SyntaxError: Unexpected token, expected "," (134:2)
+
+2025-06-11 16:40:53[ERROR] Formatter 'prettier' error: [error] /Users/jpporta/work/avodah-med/apps/trpc-gateway/src/api/document/queries.ts: SyntaxError: Unexpected token, expected "," (134:2)
+
+2025-06-11 16:40:55[ERROR] Formatter 'prettier' error: [error] /Users/jpporta/work/avodah-med/apps/trpc-gateway/src/api/document/queries.ts: SyntaxError: Unexpected token, expected "," (134:2)
+
+2025-06-11 16:40:56[ERROR] Formatter 'prettier' error: [error] /Users/jpporta/work/avodah-med/apps/trpc-gateway/src/api/document/queries.ts: SyntaxError: Unexpected token, expected "," (134:2)
+
+2025-06-11 16:41:02[ERROR] Formatter 'prettier' error: [error] /Users/jpporta/work/avodah-med/apps/trpc-gateway/src/api/document/queries.ts: SyntaxError: Unexpected token, expected "," (134:2)
+
+2025-06-11 16:41:03[ERROR] Formatter 'prettier' error: [error] /Users/jpporta/work/avodah-med/apps/trpc-gateway/src/api/document/queries.ts: SyntaxError: Unexpected token, expected "," (134:2)
+
+2025-06-11 16:41:04[ERROR] Formatter 'prettier' error: [error] /Users/jpporta/work/avodah-med/apps/trpc-gateway/src/api/document/queries.ts: SyntaxError: Unexpected token, expected "," (134:2)
+
+2025-06-11 16:41:04[ERROR] Formatter 'prettier' error: [error] /Users/jpporta/work/avodah-med/apps/trpc-gateway/src/api/document/queries.ts: SyntaxError: Unexpected token, expected "," (134:2)
+
+2025-06-11 16:41:20[WARN] Formatter 'prettier' timeout
+2025-06-11 16:43:10[WARN] Formatter 'prettier' timeout
+2025-06-11 16:44:42[ERROR] Formatter 'prettier' error: [error] /Users/jpporta/work/avodah-med/apps/trpc-gateway/src/api/document/queries.ts: SyntaxError: Identifier 'layout' has already been declared. (147:9)
+
+2025-06-11 16:44:44[ERROR] Formatter 'prettier' error: [error] /Users/jpporta/work/avodah-med/apps/trpc-gateway/src/api/document/queries.ts: SyntaxError: Identifier 'layout' has already been declared. (147:9)
+
+2025-06-11 16:45:45[ERROR] Formatter 'prettier' error: [error] /Users/jpporta/work/avodah-med/apps/trpc-gateway/src/api/document/queries.ts: SyntaxError: Identifier 'layout' has already been declared. (147:9)
+
+2025-06-11 16:46:03[ERROR] Formatter 'prettier' error: [error] /Users/jpporta/work/avodah-med/apps/trpc-gateway/src/api/document/queries.ts: SyntaxError: Identifier 'layout' has already been declared. (147:9)
+
+2025-06-11 16:46:04[ERROR] Formatter 'prettier' error: [error] /Users/jpporta/work/avodah-med/apps/trpc-gateway/src/api/document/queries.ts: SyntaxError: Identifier 'layout' has already been declared. (147:9)
+
+2025-06-11 16:46:06[ERROR] Formatter 'prettier' error: [error] /Users/jpporta/work/avodah-med/apps/trpc-gateway/src/api/document/queries.ts: SyntaxError: Identifier 'layout' has already been declared. (147:9)
+
+2025-06-11 16:46:08[ERROR] Formatter 'prettier' error: [error] /Users/jpporta/work/avodah-med/apps/trpc-gateway/src/api/document/queries.ts: SyntaxError: Identifier 'layout' has already been declared. (147:9)
+
+2025-06-11 16:46:09[ERROR] Formatter 'prettier' error: [error] /Users/jpporta/work/avodah-med/apps/trpc-gateway/src/api/document/queries.ts: SyntaxError: Identifier 'layout' has already been declared. (147:9)
+
+2025-06-11 16:46:25[ERROR] Formatter 'prettier' error: [error] /Users/jpporta/work/avodah-med/apps/trpc-gateway/src/api/document/queries.ts: SyntaxError: Identifier 'layout' has already been declared. (147:9)
+
+2025-06-11 16:46:54[WARN] Formatter 'prettier' timeout
+2025-06-11 16:48:44[WARN] Formatter 'prettier' timeout
+2025-06-11 16:51:49[WARN] Formatter 'prettier' timeout
+2025-06-11 16:53:38[ERROR] Formatter 'prettier' error: [error] /Users/jpporta/work/avodah-med/apps/trpc-gateway/src/api/document/queries.ts: SyntaxError: Unexpected token, expected "," (149:2)
+
+2025-06-11 16:54:32[WARN] Formatter 'prettier' timeout
+2025-06-11 16:57:54[WARN] Formatter 'prettier' timeout
+2025-06-11 16:58:00[WARN] Formatter 'prettier' timeout
+2025-06-11 17:13:51[WARN] Formatter 'prettier' timeout
+2025-06-11 17:13:52[WARN] Formatter 'prettier' timeout
+2025-06-11 17:14:13[WARN] Formatter 'prettier' timeout
+2025-06-11 17:16:27[WARN] Formatter 'prettier' timeout
+2025-06-11 17:16:53[WARN] Formatter 'prettier' timeout
+2025-06-11 17:20:30[WARN] Formatter 'prettier' timeout

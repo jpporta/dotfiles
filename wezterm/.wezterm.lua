@@ -47,9 +47,8 @@ config.font_rules = {
 		}),
 	},
 }
-config.font_size = 13
+config.font_size = 16
 config.enable_tab_bar = false
-config.window_decorations = "NONE"
 config.window_background_opacity = 0.9
 config.macos_window_background_blur = 20
 return config

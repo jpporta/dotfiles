@@ -1,5 +1,10 @@
 return {
-	-- { "rebelot/kanagawa.nvim", priority = 1000, lazy = true },
+	-- {
+	--      "rebelot/kanagawa.nvim", -- neorg needs a colorscheme with treesitter support
+	--      config = function()
+	--          vim.cmd.colorscheme("kanagawa")
+	--      end,
+	--    },
 	-- {
 	-- 	"shaunsingh/nord.nvim",
 	-- 	priority = 1000, -- Ensure it loads first
@@ -16,10 +21,13 @@ return {
 		"catppuccin/nvim",
 		name = "catppuccin",
 		priority = 1000,
+		config = function()
+			vim.cmd.colorscheme("catppuccin-mocha")
+		end,
 	},
 	-- { "sainnhe/everforest", priority = 1000 },
 	-- { "ellisonleao/gruvbox.nvim", priority = 1000 },
- 	{ "tribela/vim-transparent" },
+	{ "tribela/vim-transparent" },
 	-- {
 	-- 	"fynnfluegge/monet.nvim",
 	-- 	name = "monet",
@@ -56,5 +64,5 @@ return {
 	-- 		vim.cmd("colorscheme cyberdream") -- set the colorscheme
 	-- 	end,
 	-- },
-	{ "rose-pine/neovim", as = "rose-pine" },
+	{ "rose-pine/neovim",       as = "rose-pine" },
 }

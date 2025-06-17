@@ -21,7 +21,6 @@ vim.o.swapfile = false
 vim.o.cursorline = true
 vim.cmd.set("cursorline")
 vim.cmd.set("cursorcolumn")
-vim.cmd.colorscheme("catppuccin-mocha")
 vim.opt.conceallevel = 2
 vim.o.background = "dark"
 vim.opt.colorcolumn = "80"

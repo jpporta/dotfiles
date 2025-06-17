@@ -1,20 +1,16 @@
-if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
-  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
-fi
-
+plugins=(git zsh-autosuggestions zsh-syntax-highlighting fast-syntax-highlighting)
 export ZSH="$HOME/.oh-my-zsh"
+source $ZSH/oh-my-zsh.sh
 
 export TERM=tmux-256color
-plugins=(git zsh-autosuggestions zsh-syntax-highlighting web-search)
 
 eval "$(starship init zsh)" 
 alias tx="tmuxinator"
 alias gup="git add --all && git commmit -m \"$(date)\" && git push"
 alias n="nvim"
 
-# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
-[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 source <(fzf --zsh)
+
 
 export LANG=en_US.utf8
 export LC_COLLATE=$LANG
@@ -68,5 +64,7 @@ function yy() {
 
 alias gnow="git commit --amend --date=\"$(date -R)\""
 export DBUS_SESSION_BUS_ADDRESS="unix:path=$DBUS_LAUNCHD_SESSION_BUS_SOCKET"
+export DOTNET_ROOT="/opt/homebrew/opt/dotnet/libexec"
+export PATH="$PATH:/Users/jpporta/.dotnet/tools"
 
 macchina
