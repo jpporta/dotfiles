@@ -1,7 +1,10 @@
 vim.api.nvim_create_autocmd("FileType", { pattern = "markdown", command = "set spell" })
-vim.api.nvim_create_autocmd({"BufRead", "BufNewFile"}, { pattern = "*.norg", command = "set ft=norg" })
-vim.api.nvim_create_autocmd({"BufRead", "BufNewFile"}, { pattern = "*.http", command = "set ft=http" })
-vim.api.nvim_create_autocmd({"BufRead", "BufNewFile"}, { pattern = "*.templ", command = "set ft=templ" })
+vim.api.nvim_create_autocmd(
+	{ "BufRead", "BufNewFile" },
+	{ pattern = "*.norg", command = "set ft=norg | set foldlevel=0" }
+)
+vim.api.nvim_create_autocmd({ "BufRead", "BufNewFile" }, { pattern = "*.http", command = "set ft=http" })
+vim.api.nvim_create_autocmd({ "BufRead", "BufNewFile" }, { pattern = "*.templ", command = "set ft=templ" })
 
 local highlight_group = vim.api.nvim_create_augroup("YankHighlight", { clear = true })
 vim.api.nvim_create_autocmd("TextYankPost", {
@@ -11,4 +14,3 @@ vim.api.nvim_create_autocmd("TextYankPost", {
 	group = highlight_group,
 	pattern = "*",
 })
-

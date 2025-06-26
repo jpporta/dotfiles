@@ -4,7 +4,7 @@ return {
 	lazy = false,
 	version = "*",
 	config = function()
-		require("neorg").setup {
+		require("neorg").setup({
 			load = {
 				["core.defaults"] = {},
 				["core.concealer"] = {},
@@ -17,9 +17,6 @@ return {
 					},
 				},
 			},
-		}
-
-		vim.wo.foldlevel = 99
-		vim.wo.conceallevel = 2
+		})
 	end,
 }
