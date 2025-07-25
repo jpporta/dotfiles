@@ -3,6 +3,7 @@ export ZSH="$HOME/.oh-my-zsh"
 source $ZSH/oh-my-zsh.sh
 
 export TERM=tmux-256color
+DISABLE_AUTO_TITLE="true"
 
 eval "$(starship init zsh)" 
 alias tx="tmuxinator"
@@ -10,6 +11,8 @@ alias gup="git add --all && git commmit -m \"$(date)\" && git push"
 alias n="nvim"
 
 source <(fzf --zsh)
+
+alias enc="openssl enc -aes-256-cbc -md sha512 -pbkdf2 -iter 1000000 -salt"
 
 
 export LANG=en_US.utf8
@@ -20,6 +23,10 @@ export LC_MONETARY=$LANG
 export LC_NUMERIC=$LANG
 export LC_TIME=$LANG
 export LC_ALL=$LANG
+export GTK_IM_MODULE=fcitx
+export QT_IM_MODULE=fcitx
+export SDL_IM_MODULE=fcitx
+export XMODIFIERS=@im=fcitx
 
 export GPG_TTY=$(tty)
 
@@ -31,15 +38,10 @@ export HOMEBREW_NO_ENV_HINTS=1
 
 export PATH=$PATH:/Users/jpporta/.local/share/nvim/mason/bin
 
-# pnpm
-export PNPM_HOME="/Users/jpporta/Library/pnpm"
-case ":$PATH:" in
-  *":$PNPM_HOME:"*) ;;
-  *) export PATH="$PNPM_HOME:$PATH" ;;
-esac
-# pnpm end
 export EDITOR=nvim
 export PATH="/opt/homebrew/opt/libpq/bin:$PATH"
+
+alias backup="rsync --archive --update --copy-links ~/Documents 192.168.3.200:/home/jpporta/ --info=progress2"
 
 # bun completions
 [ -s "/Users/jpporta/.bun/_bun" ] && source "/Users/jpporta/.bun/_bun"
@@ -63,8 +65,19 @@ function yy() {
 }
 
 alias gnow="git commit --amend --date=\"$(date -R)\""
-export DBUS_SESSION_BUS_ADDRESS="unix:path=$DBUS_LAUNCHD_SESSION_BUS_SOCKET"
 export DOTNET_ROOT="/opt/homebrew/opt/dotnet/libexec"
 export PATH="$PATH:/Users/jpporta/.dotnet/tools"
 
-macchina
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+# pnpm
+export PNPM_HOME="/home/jpporta/.local/share/pnpm"
+case ":$PATH:" in
+  *":$PNPM_HOME:"*) ;;
+  *) export PATH="$PNPM_HOME:$PATH" ;;
+esac
+# pnpm end
+#
+fastfetch

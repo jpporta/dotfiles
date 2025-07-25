@@ -55,72 +55,83 @@ return {
 				keymap.set("n", "<leader>rs", ":LspRestart<CR>", opts)
 			end
 
-			local signs = { Error = " ", Warn = " ", Hint = " ", Info = " " }
-			for type, icon in pairs(signs) do
-				local hl = "DiagnosticSign" .. type
-				vim.fn.sign_define(hl, { text = icon, texthl = hl, numhl = "" })
-			end
+			vim.diagnostic.config({
+				signs = {
+					text = {
+						[vim.diagnostic.severity.ERROR] = " ",
+						[vim.diagnostic.severity.WARN] = " ",
+						[vim.diagnostic.severity.INFO] = " ",
+						[vim.diagnostic.severity.HINT] = "󰠠 ",
+					},
+					linehl = {
+						[vim.diagnostic.severity.ERROR] = "Error",
+						[vim.diagnostic.severity.WARN] = "Warn",
+						[vim.diagnostic.severity.INFO] = "Info",
+						[vim.diagnostic.severity.HINT] = "Hint",
+					},
+				},
+			})
 
 			local lspconfig = require("lspconfig")
 			local cmp_nvim_lsp = require("cmp_nvim_lsp")
 			local capabilities = cmp_nvim_lsp.default_capabilities()
-			local servers = {
-				html = {
-					"emmet-ls",
-				},
-				ts_ls = {
-					filetypes = {
-						"html",
-						"css",
-						"javascript",
-						"typescript",
-						"typescriptreact",
-						"javascriptreact",
-					},
-				},
-				tailwindcss = {
-					filetypes = {
-						"html",
-						"css",
-						"javascript",
-						"typescript",
-						"typescriptreact",
-						"javascriptreact",
-					},
-				},
-				gopls = {
-					cmd = { "gopls" },
-					filetypes = {
-						"go",
-						"gomod",
-						"gowork",
-						"gotmpl",
-					},
-				},
-				lua_ls = {
-					Lua = {
-						workspace = { checkThirdParty = false },
-						telemetry = { enable = false },
-						diagnostics = { globals = { "vim" } },
-					},
-				},
-				csharp_ls = {
-					cmd = { "csharp-ls" },
-					filetypes = {
-						"cs",
-						"csproj",
-					},
-				},
-			}
-
-			for server, settings in pairs(servers) do
-				lspconfig[server].setup({
-					capabilities = capabilities,
-					on_attach = on_attach,
-					settings = settings,
-					filetypes = (settings or {}).filetypes,
-				})
-			end
+			-- local servers = {
+			-- 	html = {
+			-- 		"emmet-ls",
+			-- 	},
+			-- 	ts_ls = {
+			-- 		filetypes = {
+			-- 			"html",
+			-- 			"css",
+			-- 			"javascript",
+			-- 			"typescript",
+			-- 			"typescriptreact",
+			-- 			"javascriptreact",
+			-- 		},
+			-- 	},
+			-- 	tailwindcss = {
+			-- 		filetypes = {
+			-- 			"html",
+			-- 			"css",
+			-- 			"javascript",
+			-- 			"typescript",
+			-- 			"typescriptreact",
+			-- 			"javascriptreact",
+			-- 		},
+			-- 	},
+			-- 	gopls = {
+			-- 		cmd = { "gopls" },
+			-- 		filetypes = {
+			-- 			"go",
+			-- 			"gomod",
+			-- 			"gowork",
+			-- 			"gotmpl",
+			-- 		},
+			-- 	},
+			-- 	lua_ls = {
+			-- 		Lua = {
+			-- 			workspace = { checkThirdParty = false },
+			-- 			telemetry = { enable = false },
+			-- 			diagnostics = { globals = { "vim" } },
+			-- 		},
+			-- 	},
+			-- 	csharp_ls = {
+			-- 		cmd = { "csharp-ls" },
+			-- 		filetypes = {
+			-- 			"cs",
+			-- 			"csproj",
+			-- 		},
+			-- 	},
+			-- }
+			--
+			-- for server, settings in pairs(servers) do
+			-- 	lspconfig[server].setup({
+			-- 		capabilities = capabilities,
+			-- 		on_attach = on_attach,
+			-- 		settings = settings,
+			-- 		filetypes = (settings or {}).filetypes,
+			-- 	})
+			-- end
 		end,
 	},
 }

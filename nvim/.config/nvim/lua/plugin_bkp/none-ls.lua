@@ -16,13 +16,13 @@ return {
 				-- Completion
 				null_ls.builtins.completion.spell,
 				null_ls.builtins.completion.luasnip,
+				null_ls.builtins.completion.nvim_snippets,
 				-- Code Actions
 				require("none-ls.code_actions.eslint_d"),
 				-- Formatters
 				null_ls.builtins.formatting.prettierd,
 				null_ls.builtins.formatting.stylua,
 				-- Diagnostics
-				null_ls.builtins.diagnostics.semgrep,
 				require("none-ls.diagnostics.eslint_d"),
 				null_ls.builtins.diagnostics.golangci_lint,
 			},

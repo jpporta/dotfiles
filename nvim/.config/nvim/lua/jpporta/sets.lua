@@ -37,3 +37,4 @@ vim.api.nvim_create_user_command("CpRelPath", function()
 end, {})
 
 vim.g.neoformat_try_node_exe = 1
+vim.opt.winborder = 'rounded'

@@ -40,14 +40,14 @@ return {
 			-- Overrides the 'gf' mapping to work on markdown/wiki links within your vault.
 			["gf"] = {
 				action = function()
-					return require("nvim.config.nvim.lua.plugins.obsidian").util.gf_passthrough()
+					return require("obsidian").util.gf_passthrough()
 				end,
 				opts = { noremap = false, expr = true, buffer = true },
 			},
 			-- Toggle check-boxes.
 			["<leader>ch"] = {
 				action = function()
-					return require("nvim.config.nvim.lua.plugins.obsidian").util.toggle_checkbox()
+					return require("obsidian").util.toggle_checkbox()
 				end,
 				opts = { buffer = true },
 			},
@@ -97,6 +97,10 @@ return {
 			end
 			return out
 		end,
+		follow_url_func = function(url)
+			-- vim.fn.jobstart({"xdg-open", url})  -- linux
+			vim.ui.open(url) -- need Neovim 0.10.0+
+		end,
 		-- Optional, configure additional syntax highlighting / extmarks.
 		ui = {
 			enable = true, -- set to false to disable all additional syntax features
@@ -138,7 +142,7 @@ return {
 				ObsidianHighlightText = { bg = "#75662e" },
 			},
 		},
-		dir = "~/Documents/Main",
+		dir = "~/Documents/Notes",
 		new_notes_location = "notes_subdir",
 		notes_subdir = "1 - Notes",
 	},

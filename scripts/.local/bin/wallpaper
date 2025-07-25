@@ -1,6 +1,10 @@
-#!/usr/bin/bash
-swww init 2> /dev/null
-swww img $(ls /home/jpporta/Wallpaper/*.png | sort -R | tail -1) 
-sleep 600
-wallpaper
+#!/usr/bin/env bash
 
+WALLPAPER_DIR="$HOME/dotfiles/Wallpaper/"
+CURRENT_WALL=$(hyprctl hyprpaper listloaded)
+
+# Get a random wallpaper that is not the current one
+WALLPAPER=$(find "$WALLPAPER_DIR" -type f ! -name "$(basename "$CURRENT_WALL")" | shuf -n 1)
+
+# Apply the selected wallpaper
+hyprctl hyprpaper reload ,"$WALLPAPER"
