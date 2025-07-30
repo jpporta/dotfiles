@@ -12,6 +12,7 @@ return {
 	},
 	root_markers = {
 		'.eslintrc',
-		'.git'
+		'.git',
+		'package.json'
 	},
 }

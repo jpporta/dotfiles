@@ -24,7 +24,8 @@ return {
 	root_markers = {
 		'.prettierrc',
 		'.prettierrc.json',
-		'.git'
+		'.git',
+		'package.json'
 	},
 	args = "$FILENAME"
 }

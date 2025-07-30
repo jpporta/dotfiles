@@ -3,6 +3,7 @@ vim.lsp.enable('lua_ls')
 vim.lsp.enable('gopls')
 vim.lsp.enable('prettierd')
 vim.lsp.enable('eslint_d')
+vim.lsp.enable('stylua')
 
 
 -- Auto complete
@@ -29,12 +30,33 @@ vim.api.nvim_create_autocmd("LspAttach", {
 				end,
 			})
 			vim.keymap.set("n", "<leader>f", function()
-				vim.lsp.buf.format({ async = true })
-			end, { desc = "Format current buffer" })
+				vim.lsp.buf.format({
+					bufnr = args.buf,
+				})
+			end, {
+				desc = "Format Document",
+			})
 		end
-				vim.keymap.set("n", "gd", function()
-						vim.lsp.buf.type_definition()
-				end)
+		if client.supports_method("textDocument/inlayHint") then
+			vim.lsp.inlay_hint.enable(true)
+
+			vim.keymap.set("n", "gp", function()
+				vim.lsp.inlay_hint.enable(not vim.lsp.inlay_hint.is_enabled())
+			end, {
+				desc = "Toggle Inlay Hints",
+			})
+		end
+
+		vim.keymap.set("n", "gd", function()
+			vim.lsp.buf.type_definition()
+		end, {
+			desc = "Go to Type Definition",
+		})
+		vim.keymap.set("n", "gi", function()
+			vim.lsp.buf.implementation()
+		end, {
+			desc = "Go to Implementation",
+		})
 	end,
 })
 
@@ -48,12 +70,6 @@ vim.diagnostic.config({
 			[vim.diagnostic.severity.WARN] = " ",
 			[vim.diagnostic.severity.INFO] = " ",
 			[vim.diagnostic.severity.HINT] = "󰠠 ",
-		},
-		linehl = {
-			[vim.diagnostic.severity.ERROR] = "Error",
-			[vim.diagnostic.severity.WARN] = "Warn",
-			[vim.diagnostic.severity.INFO] = "Info",
-			[vim.diagnostic.severity.HINT] = "Hint",
 		},
 	},
 	update_in_insert = false,
