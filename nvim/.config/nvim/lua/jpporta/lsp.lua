@@ -1,10 +1,8 @@
 vim.lsp.enable('ts_ls')
 vim.lsp.enable('lua_ls')
 vim.lsp.enable('gopls')
-vim.lsp.enable('prettierd')
 vim.lsp.enable('eslint_d')
 vim.lsp.enable('stylua')
-
 
 -- Auto complete
 vim.api.nvim_create_autocmd("LspAttach", {
@@ -17,7 +15,7 @@ vim.api.nvim_create_autocmd("LspAttach", {
 				vim.lsp.completion.get()
 			end)
 		end
-		if client.supports_method("textDocument/formatting") then
+		if client:supports_method("textDocument/formatting") then
 			local augroup = vim.api.nvim_create_augroup("LspFormatting", {})
 			vim.api.nvim_clear_autocmds({ group = augroup, buffer = args.buf })
 			vim.api.nvim_create_autocmd("BufWritePre", {
@@ -37,7 +35,7 @@ vim.api.nvim_create_autocmd("LspAttach", {
 				desc = "Format Document",
 			})
 		end
-		if client.supports_method("textDocument/inlayHint") then
+		if client:supports_method("textDocument/inlayHint") then
 			vim.lsp.inlay_hint.enable(true)
 
 			vim.keymap.set("n", "gp", function()

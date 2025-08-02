@@ -1,5 +1,6 @@
 return {
 	cmd = { "typescript-language-server", "--stdio" },
+	name = "ts_ls",
 	filetypes = {
 		'javascript',
 		'javascriptreact',
@@ -14,7 +15,7 @@ return {
 			inlayHints = {
 				includeInlayParameterNameHints = "all", -- 'none' | 'literals' | 'all'
 				includeInlayParameterNameHintsWhenArgumentMatchesName = true,
-				includeInlayVariableTypeHints = true,
+				-- includeInlayVariableTypeHints = true,
 				includeInlayFunctionParameterTypeHints = true,
 				includeInlayVariableTypeHintsWhenTypeMatchesName = true,
 				includeInlayPropertyDeclarationTypeHints = true,
@@ -26,8 +27,7 @@ return {
 			inlayHints = {
 				includeInlayParameterNameHints = "all", -- 'none' | 'literals' | 'all'
 				includeInlayParameterNameHintsWhenArgumentMatchesName = true,
-				includeInlayVariableTypeHints = true,
-
+				-- includeInlayVariableTypeHints = true,
 				includeInlayFunctionParameterTypeHints = true,
 				includeInlayVariableTypeHintsWhenTypeMatchesName = true,
 				includeInlayPropertyDeclarationTypeHints = true,

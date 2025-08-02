@@ -5,14 +5,14 @@ return {
 	--          vim.cmd.colorscheme("kanagawa")
 	--      end,
 	--    },
-	-- {
-	-- 	"shaunsingh/nord.nvim",
-	-- 	priority = 1000, -- Ensure it loads first
-	-- },
-	-- {
-	-- 	"Mofiqul/dracula.nvim",
-	-- 	priority = 1000, -- Ensure it loads first
-	-- },
+	{
+		"shaunsingh/nord.nvim",
+		priority = 1000, -- Ensure it loads first
+	},
+	{
+		"Mofiqul/dracula.nvim",
+		priority = 1000, -- Ensure it loads first
+	},
 	-- {
 	-- 	"olimorris/onedarkpro.nvim",
 	-- 	priority = 1000, -- Ensure it loads first
@@ -21,12 +21,9 @@ return {
 		"catppuccin/nvim",
 		name = "catppuccin",
 		priority = 1000,
-		config = function()
-			vim.cmd.colorscheme("catppuccin-mocha")
-		end,
 	},
 	-- { "sainnhe/everforest", priority = 1000 },
-	-- { "ellisonleao/gruvbox.nvim", priority = 1000 },
+	{ "ellisonleao/gruvbox.nvim", priority = 1000 },
 	{ "tribela/vim-transparent" },
 	-- {
 	-- 	"fynnfluegge/monet.nvim",
@@ -36,11 +33,11 @@ return {
 	-- 		dark_mode = true,
 	-- 	},
 	-- },
-	-- {
-	-- 	"folke/tokyonight.nvim",
-	-- 	priority = 1000,
-	-- 	opts = {},
-	-- },
+	{
+		"folke/tokyonight.nvim",
+		priority = 1000,
+		opts = {},
+	},
 	-- {
 	-- 	"rebelot/kanagawa.nvim",
 	-- 	priority = 1000,
@@ -64,5 +61,5 @@ return {
 	-- 		vim.cmd("colorscheme cyberdream") -- set the colorscheme
 	-- 	end,
 	-- },
-	{ "rose-pine/neovim",       as = "rose-pine" },
+	{ "rose-pine/neovim", as = "rose-pine" },
 }

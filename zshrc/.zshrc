@@ -8,7 +8,7 @@ DISABLE_AUTO_TITLE="true"
 eval "$(starship init zsh)" 
 alias tx="tmuxinator"
 alias gup="git add --all && git commmit -m \"$(date)\" && git push"
-alias n="nvim"
+alias n="nvim --listen /tmp/nvim"
 
 source <(fzf --zsh)
 

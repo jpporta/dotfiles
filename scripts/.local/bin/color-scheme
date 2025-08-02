@@ -1,26 +1,33 @@
 #!/usr/bin/env bash
 
-# Supported
-# - Catppuccin (dark)
-# - Dracula (dark)
-# - Gruvbox (dark)
-# - Catppuccin Latte
-# - Gruvbox Light
-supported="catppuccin dracula gruvbox catppuccin-latte gruvbox-light"
-colorscheme=${1:-catppuccin}
+opts="Gruvbox Light\nGruvbox Dark\nCatppuccin Latte\nCatppuccin Mocha\nDracula\nTokio Night\nRose Pine"
 
-if ! $(echo $supported | grep -w -q $colorscheme); then 
-		echo "Colorscheme Not Supported"
-		exit 1
-fi
+select=$(printf "$opts" | wofi -dmenu -p "Select Color Scheme" -i --lines 7 --width 300 --height 200)
 
-# Wallpaper
-wallpapers=(["catppuccin"]="/catppuccin-mocha/evening-sky.png" ["catppuccin-latte"]="/catppuccin-latte/gradient.png" ["gruvbox"]="/gruvbox-dark/japan-street.jpg" ["gruvbox-light"]="/gruvbox-light/sunflower.png" ["dracula"]="/dracula/forest.jpg")
-
-wallpaperpath="/home/jpporta/Documents/wallpaper${wallpapers["$(echo $1)"]}"
-
-echo "${wallpapers[$1]}"
-echo $wallpaperpath
-# Terminal
-# Neovim
-# Hyprland
+case $select in
+  "Gruvbox Light")
+	bash "$HOME/.local/bin/themes/gruvbox-light.sh"
+	;;
+  "Gruvbox Dark")
+  bash "$HOME/.local/bin/themes/gruvbox-dark.sh"
+	;;
+  "Catppuccin Latte")
+  bash "$HOME/.local/bin/themes/catpuccin-latte.sh"
+	;;
+  "Catppuccin Mocha")
+  bash "$HOME/.local/bin/themes/catpuccin-mocha.sh"
+	;;
+  "Dracula")
+  bash "$HOME/.local/bin/themes/dracula.sh"
+	;;
+  "Tokio Night")
+  bash "$HOME/.local/bin/themes/tokio-night.sh"
+	;;
+  "Rose Pine")
+  bash "$HOME/.local/bin/themes/rose-pine.sh"
+	;;
+  *)
+	echo "Invalid selection"
+	exit 1
+	;;
+esac
