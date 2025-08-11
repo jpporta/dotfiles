@@ -1,7 +1,7 @@
 vim.lsp.enable('ts_ls')
 vim.lsp.enable('lua_ls')
 vim.lsp.enable('gopls')
-vim.lsp.enable('eslint_d')
+vim.lsp.enable('eslint')
 vim.lsp.enable('stylua')
 
 -- Auto complete
@@ -28,9 +28,7 @@ vim.api.nvim_create_autocmd("LspAttach", {
 				end,
 			})
 			vim.keymap.set("n", "<leader>f", function()
-				vim.lsp.buf.format({
-					bufnr = args.buf,
-				})
+				vim.lsp.buf.format()
 			end, {
 				desc = "Format Document",
 			})

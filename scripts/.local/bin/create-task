@@ -1,0 +1,22 @@
+#! /bin/env bash
+
+API_KEY=$(cat ~/.task-api-key)
+
+if [ -z "$API_KEY" ]; then
+  echo "API key not found. Please set your API key in ~/.task-api-key"
+	exit 1
+fi
+
+if [ -z "$1" ]; then
+  echo "Usage: create-task <task-name>"
+  exit 1
+fi
+
+PRIORITY=$3
+if [ -z "$PRIORITY" ]; then
+		PRIORITY=1
+fi
+curl -X POST "https://ticket.joaoporta.com/task" \
+	 -H "Content-Type: application/json" \
+	 -H "x-api-key: $API_KEY" \
+	 -d "{\"title\": \"$1\", \"description\": \"$2\", \"priority\": $PRIORITY}"

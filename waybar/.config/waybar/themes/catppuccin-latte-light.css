@@ -1,0 +1,5 @@
+    @define-color primary-background rgba(238, 241, 245, 0.8);
+    @define-color primary-color rgb(221, 120, 120);
+
+    @define-color secondary-background rgba(76, 79, 105, 0.8);
+    @define-color secondary-color rgb(64, 160, 43);

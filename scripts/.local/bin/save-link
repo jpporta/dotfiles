@@ -1,0 +1,20 @@
+#! /bin/env bash
+
+API_KEY=$(cat ~/.task-api-key)
+
+if [ -z "$API_KEY" ]; then
+  echo "API key not found. Please set your API key in ~/.task-api-key"
+	exit 1
+fi
+
+if [ -z "$1" ]; then
+  echo "Usage: save-link <url>"
+  exit 1
+fi
+
+TITLE=$(curl $1 -s | grep -oP '(?<=<title>)(.*?)(?=</title>)')
+
+curl -X POST "https://ticket.joaoporta.com/link" \
+	 -H "Content-Type: application/json" \
+	 -H "x-api-key: $API_KEY" \
+	 -d "{\"title\": \"$TITLE\", \"url\": \"$1\"}"

@@ -2,18 +2,18 @@ plugins=(git zsh-autosuggestions zsh-syntax-highlighting fast-syntax-highlightin
 export ZSH="$HOME/.oh-my-zsh"
 source $ZSH/oh-my-zsh.sh
 
-export TERM=tmux-256color
 DISABLE_AUTO_TITLE="true"
 
 eval "$(starship init zsh)" 
 alias tx="tmuxinator"
 alias gup="git add --all && git commmit -m \"$(date)\" && git push"
-alias n="nvim --listen /tmp/nvim"
+alias n="nvim --listen /tmp/nvim$(echo $RANDOM | md5sum | cut -c1-8).sock"
 
 source <(fzf --zsh)
 
 alias enc="openssl enc -aes-256-cbc -md sha512 -pbkdf2 -iter 1000000 -salt"
 
+alias ct="create-task"
 
 export LANG=en_US.utf8
 export LC_COLLATE=$LANG
@@ -34,14 +34,10 @@ alias ls="eza --icons=always"
 eval "$(zoxide init zsh --cmd cd)"
 
 alias bat="bat --theme ~/.config/bat/themes/Catppuccin\ Mocha.tmTheme"
-export HOMEBREW_NO_ENV_HINTS=1
-
-export PATH=$PATH:/Users/jpporta/.local/share/nvim/mason/bin
 
 export EDITOR=nvim
-export PATH="/opt/homebrew/opt/libpq/bin:$PATH"
 
-alias backup="rsync --archive --update --copy-links ~/Documents 192.168.3.200:/home/jpporta/ --info=progress2"
+alias backup="rsync --archive --update --copy-links ~/Documents 192.168.3.200:/home/jpporta/ --info=progress2 && packup"
 
 # bun completions
 [ -s "/Users/jpporta/.bun/_bun" ] && source "/Users/jpporta/.bun/_bun"
@@ -65,8 +61,6 @@ function yy() {
 }
 
 alias gnow="git commit --amend --date=\"$(date -R)\""
-export DOTNET_ROOT="/opt/homebrew/opt/dotnet/libexec"
-export PATH="$PATH:/Users/jpporta/.dotnet/tools"
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
