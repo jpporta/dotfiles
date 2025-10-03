@@ -1,0 +1,17 @@
+#! /bin/env bash
+
+API_KEY=$(cat ~/.task-api-key)
+
+if [ -z "$API_KEY" ]; then
+  echo "API key not found. Please set your API key in ~/.task-api-key"
+	exit 1
+fi
+
+if [ -z "$1" ]; then
+  echo "Usage: get-link <link-id>"
+  exit 1
+fi
+
+curl -X GET "https://ticket.joaoporta.com/link/$1" \
+		-H "x-api-key: $API_KEY" -s | wl-copy
+

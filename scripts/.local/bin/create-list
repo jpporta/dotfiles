@@ -1,0 +1,31 @@
+#! /bin/env bash
+
+API_KEY=$(cat ~/.task-api-key)
+
+if [ -z "$API_KEY" ]; then
+  echo "API key not found. Please set your API key in ~/.task-api-key"
+	exit 1
+fi
+
+if [ -z "$1" ]; then
+  echo "Usage: create-list <task-name>"
+  exit 1
+fi
+
+list=""
+# While not empty input keep adding to the list
+while IFS= read -r line; do
+  if [ -z "$line" ]; then
+	break
+  fi
+  if [ -z "$list" ]; then
+		list="\"$line\""
+  else
+		list="$list,\"$line\""
+	fi
+done
+
+curl -X POST "https://ticket.joaoporta.com/list" \
+	 -H "Content-Type: application/json" \
+	 -H "x-api-key: $API_KEY" \
+	 -d "{\"title\": \"$1\", \"items\": [$list]}"

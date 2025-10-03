@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-opts="Gruvbox Light\nGruvbox Dark\nCatppuccin Latte\nCatppuccin Mocha\nDracula\nTokio Night\nRose Pine Dark\nRose Pine Light"
+opts="Gruvbox Light\nGruvbox Dark\nCatppuccin Latte\nCatppuccin Mocha\nDracula\nTokio Night\nRose Pine Dark\nRose Pine Light\nAyu Dark\nAyu Light\nMonokai Dark\nMonokai Light\nCobalt2\nSnazzy Dark"
 
 select=$(printf "$opts" | wofi -dmenu -p "Select Color Scheme" -i --lines 7 --width 300 --height 200)
 
@@ -28,6 +28,24 @@ case $select in
 	;;
   "Rose Pine Light")
   bash "$HOME/.local/bin/themes/rose-pine-light.sh"
+	;;
+"Ayu Dark")
+  bash "$HOME/.local/bin/themes/ayu-dark.sh"
+	;;
+"Ayu Light")
+  bash "$HOME/.local/bin/themes/ayu-light.sh"
+	;;
+"Monokai Dark")
+  bash "$HOME/.local/bin/themes/monokai-dark.sh"
+	;;
+"Monokai Light")
+  bash "$HOME/.local/bin/themes/monokai-light.sh"
+	;;
+"Cobalt2")
+  bash "$HOME/.local/bin/themes/cobalt2.sh"
+	;;
+"Snazzy Dark")
+  bash "$HOME/.local/bin/themes/snazzy-dark.sh"
 	;;
   *)
 	echo "Invalid selection"

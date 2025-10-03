@@ -1,0 +1,5 @@
+#! /bin/env bash
+
+before=$(ls /tmp | grep nvim)
+disown n
+after=$(ls /tmp | grep nvim)

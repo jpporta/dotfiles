@@ -1,0 +1,14 @@
+#! /bin/env bash
+
+mv ~/.config/pipewire/pipewire.conf.d/pipewire.conf ~/.config/pipewire/pipewire.conf.d/tmp
+mv ~/.config/pipewire/pipewire.conf.d/old ~/.config/pipewire/pipewire.conf.d/pipewire.conf
+mv ~/.config/pipewire/pipewire.conf.d/tmp ~/.config/pipewire/pipewire.conf.d/old
+
+content=$(cat ~/.config/pipewire/pipewire.conf.d/pipewire.conf)
+# get samplerate from content
+samplerate=$(echo "$content" | grep -oP 'default.clock.rate\s*=\s*\K\d+')
+
+echo "Current samplerate: $samplerate"
+
+systemctl --user restart pipewire
+systemctl --user restart wireplumber

@@ -1,0 +1,8 @@
+#! /bin/env bash
+
+OPERATION=$(echo "" | dmenu-wl -b -p "Calc:" <&-)
+if [ -z "$OPERATION" ]; then
+	exit 0
+fi
+
+notify-send "Result:" "$(echo "scale=2; $OPERATION" | bc -l)" -a "Calc" -u low

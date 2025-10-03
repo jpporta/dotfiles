@@ -1,0 +1,20 @@
+#! /bin/env bash
+
+API_KEY=$(cat ~/.task-api-key)
+
+if [ -z "$API_KEY" ]; then
+  echo "API key not found. Please set your API key in ~/.task-api-key"
+	exit 1
+fi
+
+if [ -z "$1" ]; then
+  echo "Usage: done-task <task-id>"
+  exit 1
+fi
+
+# curl -X PATCH "http://localhost:8000/task/$1" \
+# 	 -H "x-api-key: $API_KEY" 
+curl -X PATCH "https://ticket.joaoporta.com/task/$1" \
+	 -H "x-api-key: $API_KEY" 
+
+notify-send "Task $1 marked as done"

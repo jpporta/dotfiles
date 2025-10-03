@@ -53,7 +53,7 @@ return {
 			},
 		},
 		templates = {
-			subdir = "3 - Templates",
+			subdir = "templates",
 			date_format = "%Y-%m-%d",
 			time_format = "%H:%M",
 			-- A map for custom variables, the key should be the variable and the value a function
@@ -144,6 +144,6 @@ return {
 		},
 		dir = "~/Documents/Notes",
 		new_notes_location = "notes_subdir",
-		notes_subdir = "1 - Notes",
+		notes_subdir = "inbox",
 	},
 }

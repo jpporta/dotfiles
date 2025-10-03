@@ -62,4 +62,20 @@ return {
 	-- 	end,
 	-- },
 	{ "rose-pine/neovim", as = "rose-pine" },
+	{ "Shatur/neovim-ayu" },
+	{
+		"lalitmee/cobalt2.nvim",
+		dependencies = { "tjdevries/colorbuddy.nvim", tag = "v1.0.0" },
+	},
+	{ "tanvirtin/monokai.nvim" },
+
+	{
+		"alexwu/nvim-snazzy",
+		dependencies = { "rktjmp/lush.nvim" },
+		lazy = false,
+		priority = 1000,
+		config = function()
+			vim.cmd.colorscheme("snazzy")
+		end,
+	},
 }

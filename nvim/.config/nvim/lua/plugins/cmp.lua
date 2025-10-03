@@ -8,10 +8,8 @@ return {
 		"saadparwaiz1/cmp_luasnip",
 		"rafamadriz/friendly-snippets",
 		"onsails/lspkind.nvim",
-		"mattn/emmet-vim",
 		"roobert/tailwindcss-colorizer-cmp.nvim",
-
-		-- "hrsh7th/cmp-nvim-lsp",
+		"hrsh7th/cmp-nvim-lsp",
 	},
 
 	config = function()
@@ -23,8 +21,10 @@ return {
 
 		cmp.setup({
 			completion = {
-				completeopt = "menu,menuone,preview,noselect",
+				autocomplete = { cmp.TriggerEvent.TextChanged },
+				completeopt = "menu,menuone,noselect", -- standard Vim option
 			},
+			preselect = cmp.PreselectMode.Item,
 			snippet = {
 				expand = function(args)
 					luasnip.lsp_expand(args.body)
@@ -40,44 +40,33 @@ return {
 				["<C-e>"] = cmp.mapping.abort(),
 
 				["<CR>"] = cmp.mapping.confirm({ select = false }),
-
-				-- 	["<Tab>"] = cmp.mapping(function(fallback)
-				-- 		if cmp.visible() then
-				-- 			cmp.select_next_item()
-				-- 		elseif luasnip.expand_or_jumpable() then
-				-- 			luasnip.expand_or_jump()
-				-- 		else
-				-- 			fallback()
-				-- 		end
-				-- 	end, { "i", "s" }),
-				-- 	["<S-Tab>"] = cmp.mapping(function(fallback)
-				-- 		if cmp.visible() then
-				-- 			cmp.select_prev_item()
-				-- 		elseif luasnip.jumpable(-1) then
-				-- 			luasnip.jump(-1)
-				-- 		else
-				-- 			fallback()
-				-- 		end
-				-- 	end, { "i", "s" }),
 			}),
 			sources = cmp.config.sources({
-				{ name = "nvim_lsp" },
-				{ name = "luasnip" },
-				{ name = "buffer" },
-				{ name = "path" },
+				-- LSP completions first
+				{ name = "nvim_lsp", priority = 1000 },
+				{ name = "nvim_lsp_signature_help", priority = 900 },
+				-- Snippets below LSP
+				{ name = "luasnip", priority = 700 },
+				-- Then none-ls / buffer / path
+				{ name = "buffer", priority = 400 },
+				{ name = "path", priority = 300 },
+				{ name = "none-ls", priority = 200 },
 			}),
 			formatting = {
-				format = lspkind.cmp_format({
-					maxwidth = 50,
-					ellipsis_char = "...",
-				}),
+				format = function(entry, vim_item)
+					-- lspkind icons
+					vim_item.kind = lspkind.symbolic(vim_item.kind, { mode = "symbol_text" })
+
+					-- tailwindcss-colorizer
+					if entry.source.name == "nvim_lsp" then
+						local ok, tw = pcall(require, "tailwindcss-colorizer-cmp")
+						if ok then
+							vim_item = tw.formatter(entry, vim_item)
+						end
+					end
+					return vim_item
+				end,
 			},
-			-- confirm_opts = {
-			-- 	behavior = cmp.ConfirmBehavior.Replace,
-			-- 	select = false,
-			-- },
-			-- view = { entries = "custom" },
-			-- window = { documentation = cmp.config.window.bordered() },
 		})
 	end,
 }

@@ -1,0 +1,48 @@
+#! /bin/env bash
+
+newtask () { \
+		TASK_TITLE=$(echo "" | dmenu-wl -b -p "Task Title:" <&-) || exit 0
+		TASK_DESC=$(echo "" | dmenu-wl -b -p "$TASK_TITLE:" <&-) || exit 0
+		PRIORITY=$(echo -e "1\n2\n3\n4\n5" | dmenu-wl -b -p "Priority:" <&-) || exit 0
+		if [ -z "$TASK_TITLE" ]; then
+			exit 0
+		fi
+		bash $HOME/.local/bin/create-task "$TASK_TITLE" "$TASK_DESC" $PRIORITY
+}
+donetask () { \
+		TASKS=$($HOME/.local/bin/list-tasks "$1" |
+    jq -r '[to_entries[]
+             | "\(.key + 1): [\(.value.id)] - \(.value.title | gsub("^\\s+|\\s+$"; ""))"]
+            + ["0: Next Page"]
+            | join("\n")'
+)
+		TASKS="$TASKS\n0: Next Page"
+		OPTION_RAW=$(printf "%b" "$TASKS" | wofi --dmenu -p "Option or Task ID:" -i -b)
+		if [ -z "$OPTION_RAW" ]; then
+			exit 0
+		fi
+		if [[ "$OPTION_RAW" == "0: Next Page" ]]; then
+			PAGE=$(( $1 + 1 ))
+			donetask $PAGE
+			exit 0
+		fi
+		if [[ "$OPTION_RAW" =~ ^[0-9]+$ ]]; then
+				bash $HOME/.local/bin/done-task $OPTION_RAW
+				exit 0
+		fi
+		ID=$(echo "$OPTION_RAW" | sed -n 's/.*\[\([0-9]\+\)\].*/\1/p')
+		bash $HOME/.local/bin/done-task $ID
+		exit 0
+}
+
+if [ -z "$1" ]; then
+	exit 0
+fi
+if [ "$1" = "New Task" ]; then
+		newtask
+		exit 0
+fi
+if [ "$1" = "Done Task" ]; then
+		donetask 0
+		exit 0
+fi

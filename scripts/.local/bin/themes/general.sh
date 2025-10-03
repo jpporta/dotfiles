@@ -8,7 +8,7 @@ running=$(pgrep -f "nvim" | wc -l)
 if [ $running -gt 1 ]; then
 		for i in $(ls /tmp | grep nvim); do
 			if [ -S "/tmp/$i" ]; then
-				nvim --server /tmp/$i --remote-send "<Esc>:colorscheme $1<CR><Esc>:set background=$2<CR><Esc>:TransparentDisable<CR>" 2&>1 /dev/null &
+				nvim --server /tmp/$i --remote-send "<Esc>:colorscheme $1<CR><Esc>:set background=$2<CR>" 2&>1 /dev/null &
 			fi
 		done
 fi
