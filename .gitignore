@@ -1,1 +1,5 @@
 tmux/.config/tmux/plugins
+scripts/.local/bin/uv
+scripts/.local/bin/uvx
+kitty/.config/kitty/current-theme.conf
+Wallpaper
