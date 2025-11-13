@@ -1,0 +1,57 @@
+#! /bin/env bash
+
+TICKET_ID=$1
+OLLAMA_MODEL="gemma3:4b"
+
+if [ -z "$TICKET_ID" ]; then
+  echo "Usage: $0 <TICKET_ID>"
+  exit 1
+fi
+
+echo "Creating ticket with for Linear ticket ID: $TICKET_ID"
+
+# Linear API
+
+API_KEY=$(pass linear-api)
+BODY=$(cat << EOM
+{ "query": "{ issue(id: \"$TICKET_ID\") { title description priority } }" }
+EOM
+)
+
+RES=$(curl \
+		--silent \
+  -X POST \
+  -H "Content-Type: application/json" \
+	-H "Authorization: $API_KEY" \
+	--data "$BODY" \
+	https://api.linear.app/graphql)
+
+TITLE=$(echo $RES | jq -r '.data.issue.title')
+TITLE="[$TICKET_ID] $TITLE"
+DESC=$(echo $RES | jq -r '.data.issue.description')
+PRIORITY=$(echo $RES | jq -r '.data.issue.priority')
+
+echo "Found issue: $TITLE"
+
+# Ollama
+#
+body=$(jq -n \
+  --arg model "$OLLAMA_MODEL" \
+  --arg prompt "Based on the following description, generate a concise summary for a task management system, the summary should be no longer than 200 characters, please return in the following json format \`{ \"response\": string }\`: $DESC" \
+  '{model: $model, prompt: $prompt, format: "json", stream: false, raw: true, options: {temperature: 0.2}}')
+
+echo "Generating description using Ollama model: $OLLAMA_MODEL"
+
+DESCRIPTION=$(
+		curl -s -X POST "http://localhost:11434/api/generate" \
+				-H "Content-Type: application/json" \
+				--data "$body" | jq -r '.response'
+		)
+
+DESCRIPTION=$(echo $DESCRIPTION | jq '.response // empty')
+
+echo "Generated description: $DESCRIPTION"
+
+echo "Creating Task with Title: $TITLE and Priority: $PRIORITY"
+# Create and Print ticket
+create-task "$TITLE" "$DESCRIPTION" "$PRIORITY"

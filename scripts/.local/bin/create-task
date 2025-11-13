@@ -16,7 +16,14 @@ PRIORITY=$3
 if [ -z "$PRIORITY" ]; then
 		PRIORITY=1
 fi
+
+body=$(jq -n \
+  --arg title "$1" \
+  --arg description "$2" \
+  --argjson priority $3 \
+  '{title: $title, description: $description, priority: $priority}'
+)
 curl -X POST "https://ticket.joaoporta.com/task" \
 	 -H "Content-Type: application/json" \
 	 -H "x-api-key: $API_KEY" \
-	 -d "{\"title\": \"$1\", \"description\": \"$2\", \"priority\": $PRIORITY}"
+	 -d "$body"

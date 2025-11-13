@@ -1,0 +1,23 @@
+#! /bin/env bash
+INPUT=$1
+OUTPUT=$2
+FLAGS=$3
+echo "$INPUT -> $OUTPUT"
+
+# If flags contain "s", scale to 1280x720
+if [[ "$FLAGS" == *"s"* ]]; then
+		ffmpeg -i "$INPUT" \
+			-ss 3 \
+			-vf "scale=1280:720" \
+			-t $(echo "$(ffprobe -i "$INPUT" -show_entries format=duration -v quiet -of csv=p=0) - 6" | bc) \
+			-c:v libx264 -crf 23 -preset fast \
+			-c:a aac -b:a 192k \
+			"$OUTPUT"
+else
+		ffmpeg -i "$INPUT" \
+			-ss 3 \
+			-t $(echo "$(ffprobe -i "$INPUT" -show_entries format=duration -v quiet -of csv=p=0) - 6" | bc) \
+			-c:v libx264 -crf 23 -preset fast \
+			-c:a aac -b:a 192k \
+			"$OUTPUT"
+fi

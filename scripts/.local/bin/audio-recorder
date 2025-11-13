@@ -1,0 +1,148 @@
+#!/bin/env bash
+
+# Configuration
+RECORDING_DIR="$HOME/Documents/Recordings/unprocessed/"
+PID_FILE="/tmp/audio_recording.pid"
+LOG_FILE="/tmp/audio_recording.log"
+
+# Create recordings directory if it doesn't exist
+mkdir -p "$RECORDING_DIR"
+
+# Function to find audio sources
+find_audio_sources() {
+    # Try to automatically detect sources
+    SYSTEM_SOURCE=$(pactl list short sources | grep ".monitor" | grep "DX1" | head -n 1 | cut -f 2)
+    MIC_SOURCE=$(pactl list short sources | grep "input" | grep "HyperX" | grep -v ".monitor" | head -n 1 | cut -f 2)
+    
+    # Fallback to common names if auto-detection fails
+    if [ -z "$SYSTEM_SOURCE" ]; then
+        SYSTEM_SOURCE="alsa_output.pci-0000_00_1f.3.analog-stereo.monitor"
+    fi
+    if [ -z "$MIC_SOURCE" ]; then
+        MIC_SOURCE="alsa_input.pci-0000_00_1f.3.analog-stereo"
+    fi
+    
+    echo "System source: $SYSTEM_SOURCE"
+    echo "Microphone source: $MIC_SOURCE"
+}
+
+# Function to get timestamp for filename
+get_timestamp() {
+    date +"%Y-%m-%d_%H-%M-%S"
+}
+
+# Function to start recording
+start_recording() {
+    if [ -f "$PID_FILE" ]; then
+        echo "Recording is already running!"
+        notify-send "Audio Recording" "Recording is already running!" -t 3000
+        return 1
+    fi
+    
+    # Find audio sources
+    find_audio_sources
+    
+    TIMESTAMP=$(get_timestamp)
+    OUTPUT_FILE="$RECORDING_DIR/recording_${TIMESTAMP}.mp3"
+    
+    echo "Starting recording..."
+    echo "System audio: $SYSTEM_SOURCE"
+    echo "Microphone: $MIC_SOURCE"
+    echo "Output: $OUTPUT_FILE"
+    
+    # Start recording system audio + microphone
+    ffmpeg -f pulse -i "$SYSTEM_SOURCE" -f pulse -i "$MIC_SOURCE" \
+        -filter_complex "[0:a][1:a]amix=inputs=2:duration=longest,volume=2.0" \
+        -c:a libmp3lame -q:a 2 "$OUTPUT_FILE" > "$LOG_FILE" 2>&1 &
+    
+    # Save PID to file
+    echo $! > "$PID_FILE"
+    echo "$OUTPUT_FILE" >> "$PID_FILE"
+    echo "$SYSTEM_SOURCE" >> "$PID_FILE"
+    echo "$MIC_SOURCE" >> "$PID_FILE"
+    
+    notify-send "Audio Recording" "Recording started: $(basename "$OUTPUT_FILE")" -t 3000
+    echo "Recording started: $OUTPUT_FILE"
+}
+
+# Function to stop recording
+stop_recording() {
+    if [ ! -f "$PID_FILE" ]; then
+        echo "No recording is running!"
+        notify-send "Audio Recording" "No recording is running!" -t 3000
+        return 1
+    fi
+    
+    # Read PID from file
+    PID=$(head -n 1 "$PID_FILE")
+    OUTPUT_FILE=$(sed -n '2p' "$PID_FILE")
+    
+    # Kill the recording process
+    kill -SIGINT "$PID" 2>/dev/null
+    
+    # Wait a bit for clean termination
+    sleep 2
+    
+    # Force kill if still running
+    if ps -p "$PID" > /dev/null 2>&1; then
+        kill -9 "$PID" 2>/dev/null
+    fi
+    
+    # Remove PID file
+    rm -f "$PID_FILE"
+    
+    notify-send "Audio Recording" "Recording stopped: $(basename "$OUTPUT_FILE")" -t 5000
+    echo "Recording stopped: $OUTPUT_FILE"
+}
+
+# Function to toggle recording
+toggle_recording() {
+    if [ -f "$PID_FILE" ]; then
+        stop_recording
+    else
+        start_recording
+    fi
+}
+
+# Function to show current audio sources
+show_sources() {
+    echo "=== Available Audio Sources ==="
+    pactl list short sources
+    echo ""
+    echo "=== Currently configured ==="
+    find_audio_sources
+}
+
+# Main script
+case "${1:-toggle}" in
+    start)
+        start_recording
+        ;;
+    stop)
+        stop_recording
+        ;;
+    toggle|"")
+        toggle_recording
+        ;;
+    status)
+        if [ -f "$PID_FILE" ]; then
+            OUTPUT_FILE=$(sed -n '2p' "$PID_FILE")
+            SYSTEM_SOURCE=$(sed -n '3p' "$PID_FILE")
+            MIC_SOURCE=$(sed -n '4p' "$PID_FILE")
+            echo "Recording is running: $OUTPUT_FILE"
+            echo "System audio: $SYSTEM_SOURCE"
+            echo "Microphone: $MIC_SOURCE"
+            notify-send "Audio Recording" "Recording is running: $(basename "$OUTPUT_FILE")" -t 3000
+        else
+            echo "No recording is running"
+            notify-send "Audio Recording" "No recording is running" -t 3000
+        fi
+        ;;
+    sources)
+        show_sources
+        ;;
+    *)
+        echo "Usage: $0 {start|stop|toggle|status|sources}"
+        exit 1
+        ;;
+esac

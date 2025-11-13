@@ -1,0 +1,9 @@
+#! /bin/env bash
+
+PID_FILE="/tmp/audio_recording.pid"
+
+if [ -f "$PID_FILE" ]; then
+	echo '{"text": "Recording", "alt": "recording"}'
+else
+	echo '{"text": "Not Recording", "alt": "not-recording"}'
+fi
