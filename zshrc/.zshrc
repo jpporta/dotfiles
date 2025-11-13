@@ -10,6 +10,8 @@ alias gup="git add --all && git commmit -m \"$(date)\" && git push"
 alias n="nvim --listen /tmp/nvim$(echo $RANDOM | md5sum | cut -c1-8).sock"
 alias asr="atuin scripts run"
 alias man="batman"
+alias :q="exit"
+alias process-notes="mv ~/Documents/Recordings/unprocessed/* ~/Documents/Recordings/processed"
 
 source <(fzf --zsh)
 
@@ -18,6 +20,7 @@ alias enc="openssl enc -aes-256-cbc -md sha512 -pbkdf2 -iter 1000000 -salt"
 alias ct="create-task"
 alias dt="done-task"
 alias cl="create-list"
+alias clt="create-linear-ticket"
 alias m_vps="sshfs -o reconnect,ServerAliveInterval=1 jpporta@192.168.3.200:/media/drive /home/VPS"
 
 export LANG=en_US.utf8
@@ -42,7 +45,7 @@ alias bat="bat --theme ~/.config/bat/themes/Catppuccin\ Mocha.tmTheme"
 
 export EDITOR=nvim
 
-alias backup="packup && rm ~/Documents/packup* && mv ~/packup* ~/Documents/ && rsync --archive --update --copy-links ~/Documents 192.168.3.200:/home/jpporta/ --info=progress2"
+alias backup="packup && rm ~/Documents/packup* && mv ~/packup* ~/Documents/ && rsync --archive --update --copy-links ~/Documents 192.168.0.200:/home/jpporta/ --info=progress2"
 
 # bun completions
 [ -s "/Users/jpporta/.bun/_bun" ] && source "/Users/jpporta/.bun/_bun"
