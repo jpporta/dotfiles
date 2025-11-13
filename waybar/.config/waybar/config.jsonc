@@ -8,11 +8,12 @@
     "tray",
     "custom/lock",
     "custom/reboot",
-    "custom/power"
+    "custom/power",
   ],
   "modules-center": ["hyprland/window"],
   "modules-right": [
     "network",
+    "custom/recording",
     "battery",
     "bluetooth",
     "pulseaudio",
@@ -20,7 +21,7 @@
     "custom/temperature",
     "memory",
     "cpu",
-    "clock"
+    "clock",
   ],
   "hyprland/workspaces": {
     "disable-scroll": false,
@@ -28,7 +29,7 @@
     "format": "{icon}",
     "on-click": "activate",
     "persistent-workspaces": {
-    "*":[1,2,3,4,5,6]
+      "*": [1, 2, 3, 4, 5, 6],
     },
     "format-icons": {
       "1": "󰈹",
@@ -37,12 +38,22 @@
       "4": "",
       "5": "",
       "6": "󰇮",
-      "default": ""
-    }
+      "default": "",
+    },
+  },
+  "custom/recording": {
+    "exec": "$HOME/.local/bin/is-audio-recording",
+    "interval": 1,
+    "format-icons": {
+      "recording": "<span> 󰍬 </span>",
+      "not-recording": "<span> 󰍭 </span>",
+    },
+    "return-type": "json",
+    "format": "{icon} {text}",
   },
   "custom/lock": {
-  "format": "<span >  </span>",
-  "on-click": "hyprlock",
+    "format": "<span >  </span>",
+    "on-click": "hyprlock",
   },
   "custom/reboot": {
     "format": "<span >  </span>",
@@ -59,7 +70,7 @@
     "format-linked": "<span>󱘖  </span>{ifname} (No IP) ",
     "format-disconnected": "<span>  </span>Disconnected ",
     "format-alt": "<span>󰤨  </span>{signalStrength}% ",
-    "interval": 1
+    "interval": 1,
   },
   "pulseaudio": {
     "format": "<span >{icon}  </span>{volume}% ",
@@ -74,8 +85,8 @@
       "default": [
         "<span >  </span>",
         "<span >  </span>",
-        "<span >  </span>"
-      ]
+        "<span >  </span>",
+      ],
     },
     "on-click-right": "pavucontrol -t 3",
     "on-click": "pactl -- set-sink-mute 0 toggle",
@@ -98,7 +109,7 @@
   },
   "tray": {
     "icon-size": 17,
-    "spacing": 6
+    "spacing": 6,
   },
   "bluetooth": {
     "format": "<span >   </span>{status} ",
@@ -107,6 +118,6 @@
     "tooltip-format": "{controller_alias}\t{controller_address}\n\n{num_connections} connected",
     "tooltip-format-connected": "{controller_alias}\t{controller_address}\n\n{num_connections} connected\n\n{device_enumerate}",
     "tooltip-format-enumerate-connected": "{device_alias}\t{device_address}",
-    "tooltip-format-enumerate-connected-battery": "{device_alias}\t{device_address}\t{device_battery_percentage}%"
-  }
+    "tooltip-format-enumerate-connected-battery": "{device_alias}\t{device_address}\t{device_battery_percentage}%",
+  },
 }

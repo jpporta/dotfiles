@@ -1,7 +1,8 @@
-@import url('./global.css');
+@import url("./global.css");
 /* 全局设置 */
 * {
-  font-family: "JetBrains Mono", "Font Awesome 6 Free", "Font Awesome 6 Free Solid";
+  font-family:
+    "JetBrains Mono", "Font Awesome 6 Free", "Font Awesome 6 Free Solid";
   font-weight: bold;
   font-size: 12px;
   color: @primary-color;
@@ -15,7 +16,7 @@
 
 #workspaces,
 #window,
-#tray{
+#tray {
   background-color: @primary-background;
   padding: 4px 6px; /* 保持内部间距 */
   margin-top: 6px; /* 外部间距增加 */
@@ -26,7 +27,7 @@
 }
 
 #clock,
-#custom-power{
+#custom-power {
   background-color: @primary-background;
   margin-top: 6px; /* 与屏幕顶部留出距离 */
   margin-right: 6px;
@@ -37,7 +38,7 @@
 }
 
 #network,
-#custom-lock{
+#custom-lock {
   background-color: @primary-background;
   margin-top: 6px; /* 与屏幕顶部留出距离 */
   margin-left: 6px;
@@ -47,6 +48,7 @@
   border-width: 0px;
 }
 
+#custom-recording,
 #custom-reboot,
 #bluetooth,
 #battery,
@@ -54,7 +56,7 @@
 #backlight,
 #custom-temperature,
 #memory,
-#cpu{
+#cpu {
   background-color: @primary-background;
   margin-top: 6px; /* 与屏幕顶部留出距离 */
   /*margin-bottom: 4px;*/
@@ -87,7 +89,7 @@
 }
 
 /* 工作区激活状态高亮 */
-#workspaces button:hover{
+#workspaces button:hover {
   background-color: @secondary-background;
   padding: 2px 8px;
   margin: 0 2px;
