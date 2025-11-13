@@ -1,10 +1,6 @@
 vim.lsp.enable("ts_ls")
-vim.lsp.enable("lua_ls")
 vim.lsp.enable("gopls")
-vim.lsp.enable("eslint")
-vim.lsp.enable("stylua")
-vim.lsp.enable("json")
-vim.lsp.enable("marksman")
+vim.lsp.enable("tailwindcss")
 
 -- Auto complete
 vim.api.nvim_create_autocmd("LspAttach", {
