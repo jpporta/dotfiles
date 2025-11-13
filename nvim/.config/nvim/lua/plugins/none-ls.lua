@@ -22,7 +22,9 @@ return {
 				require("none-ls.diagnostics.eslint_d"),
 				null_ls.builtins.diagnostics.golangci_lint,
 			},
-			-- configure format on save
+			vim.keymap.set("n", "<leader>rn", function()
+				vim.lsp.buf.rename()
+			end, { desc = "Rename Variable" }),
 			vim.keymap.set("n", "<leader>f", function()
 				vim.lsp.buf.format({ async = true })
 			end, { desc = "Format current buffer" }),
