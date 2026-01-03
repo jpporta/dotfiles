@@ -2,12 +2,11 @@ return {
 	{
 		-- Highlight, edit, and navigate code
 		"nvim-treesitter/nvim-treesitter",
-		dependencies = { "nvim-treesitter/nvim-treesitter-textobjects", "tpope/vim-markdown" },
+		dependencies = { "tpope/vim-markdown" },
 		build = ":TSUpdate",
-		event = "VeryLazy",
 		config = function()
 			---@diagnostic disable-next-line: missing-fields
-			require("nvim-treesitter.configs").setup({
+			require("nvim-treesitter").setup({
 				disable = { "markdown" },
 				auto_install = true,
 				highlight = { enable = true },

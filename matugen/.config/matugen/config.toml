@@ -1,0 +1,57 @@
+[config]
+mode = "dark"
+
+[templates.kitty]
+input_path = '~/.config/matugen/templates/kitty-colors.conf'
+output_path = '~/.config/kitty/colors/matugen.conf'
+post_hook = 'pkill -SIGUSR1 kitty'
+
+[templates.gtk3]
+input_path = '~/.config/matugen/templates/gtk-colors.conf'
+output_path = '~/.config/gtk-3.0/colors.css'
+post_hook = 'gsettings set org.gnome.desktop.interface gtk-theme ""; gsettings set org.gnome.desktop.interface gtk-theme adw-gtk3-{{mode}}'
+
+[templates.gtk4]
+input_path = '~/.config/matugen/templates/gtk-colors.conf'
+output_path = '~/.config/gtk-4.0/colors.css'
+
+[templates.tmux]
+input_path = '~/.config/matugen/templates/tmux-colors.conf'
+output_path = '~/.config/tmux/colors/matugen.conf'
+post_hook = 'tmux source-file ~/.config/tmux/colors/matugen.conf' 
+
+[templates.waybar]
+input_path = '~/.config/matugen/templates/colors.css'
+output_path = '~/.config/waybar/colors/matugen.css'
+post_hook = 'pkill -SIGUSR2 waybar'
+
+[templates.hyprland]
+input_path = '~/.config/matugen/templates/hyprland-colors.conf'
+output_path = '~/.config/hypr/colors/matugen.conf'
+post_hook = 'hyprctl reload'
+
+[templates.rofi]
+input_path = '~/.config/matugen/templates/rofi.rasi'
+output_path = '~/dotfiles/rofi/.config/rofi/launchers/type-7/style-5.rasi'
+
+[templates.wallpaper_rofi]
+input_path = '~/.config/matugen/templates/rofi_wall.rasi'
+output_path = '~/dotfiles/rofi/.config/rofi/launchers/type-2/style-13.rasi'
+
+[templates.wlogout]
+input_path = '~/.config/matugen/templates/colors.css'
+output_path = '~/.config/wlogout/colors/matugen.css'
+
+[templates.swaync]
+input_path = '~/.config/matugen/templates/colors.css'
+output_path = '~/.config/swaync/colors/matugen.css'
+post_hook = "killall -9 swaync && swaync & disown"
+
+[templates.swww]
+input_path = '/dev/null'
+pre_hook = 'swww img --transition-type wipe --transition-angle 30 --transition-step 90 {{image}}'
+
+[templates.neovim]
+input_path = '~/.config/matugen/templates/template.lua'
+output_path = '~/.config/nvim/generated.lua'
+post_hook = 'pkill -SIGUSR1 nvim'

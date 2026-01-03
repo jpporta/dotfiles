@@ -1,0 +1,37 @@
+@import "colors/matugen.css";
+@import "buttons.css";
+
+* {
+  background-image: none;
+  box-shadow: none;
+}
+
+window {
+  background-color: alpha(@surface, 0.5);
+}
+
+button {
+  border-radius: 10%;
+  text-decoration-color: @primary;
+  color: @primary;
+  background-color: @surface;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 10%;
+  margin: 1rem;
+  transition: all 0.2s ease-in-out;
+}
+
+button:focus,
+button:active,
+button:hover {
+  background-size: 15%;
+  background-color: @inverse_surface;
+
+  color: @inverse_on_surface;
+  text-decoration-color: @inverse_on_surface;
+  outline-style: none;
+
+  box-shadow:
+    0 0 100px alpha(@inverse_surface, .5);
+}
