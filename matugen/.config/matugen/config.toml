@@ -55,3 +55,7 @@ pre_hook = 'swww img --transition-type wipe --transition-angle 30 --transition-s
 input_path = '~/.config/matugen/templates/template.lua'
 output_path = '~/.config/nvim/generated.lua'
 post_hook = 'pkill -SIGUSR1 nvim'
+
+[templates.ohmyposh]
+input_path = '~/.config/matugen/templates/oh-my-posh.omp.json'
+output_path = '~/.config/oh-my-posh.omp.json'

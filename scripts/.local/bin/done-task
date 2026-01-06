@@ -1,6 +1,6 @@
 #! /bin/env bash
 
-API_KEY=$(cat ~/.task-api-key)
+API_KEY=$(pass show ticket-api-key)
 
 if [ -z "$API_KEY" ]; then
   echo "API key not found. Please set your API key in ~/.task-api-key"

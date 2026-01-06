@@ -13,11 +13,11 @@ configuration {
 /*****----- Global Properties -----*****/
 * {
     font:                        "JetBrainsMono Nerd Font Propo Medium 10";
-    background:                  #121318;
-    background-alt:              #45464f;
-    foreground:                  #e3e1e9;
-    selected:                    #b5c4ff;
-    active:                      #b5c4ff;
+    background:                  #131318;
+    background-alt:              #46464f;
+    foreground:                  #e4e1e9;
+    selected:                    #bfc2ff;
+    active:                      #bfc2ff;
     urgent:                      #ffb4ab;
 }
 
@@ -62,7 +62,7 @@ inputbar {
     spacing:                     10px;
     padding:                     80px 60px;
     background-color:            transparent;
-    background-image:            url("~/blue-bulbasaur.jpg", width);
+    background-image:            url("~/yellow-dark-hornet.png", width);
     text-color:                  @foreground;
     orientation:                 horizontal;
     children:                    [ "textbox-prompt-colon", "entry", "dummy", "mode-switcher" ];

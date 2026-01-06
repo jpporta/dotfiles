@@ -26,3 +26,5 @@ source /usr/share/nvm/init-nvm.sh
 export PATH=$PATH:/home/jpporta/.local/bin
 
 fastfetch
+
+eval "$(oh-my-posh init zsh --config $HOME/.config/oh-my-posh.omp.json)"

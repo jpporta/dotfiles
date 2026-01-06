@@ -27,7 +27,6 @@ return {
 			font = "JetBrainsMono Nerd Font=24",
 			no_window_controls = true,
 			no_line_number = false,
-						theme = "Catppuccin Mocha",
 			line_offset = get_visual() + 1,
 			to_clipboard = true,
 			window_title = function()

@@ -1,0 +1,86 @@
+{
+  "$schema": "https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json",
+  "transient_prompt": {
+    "template": "> "
+  },
+  "blocks": [
+    {
+      "alignment": "left",
+      "segments": [
+        {
+          "foreground": "{{ colors.primary.default.hex }}",
+          "style": "plain",
+          "template": "\{{ .UserName }}'s ",
+          "type": "session"
+        },
+        {
+          "foreground": "{{ colors.inverse_primary.default.hex }}",
+          "options": {
+            "style": "folder"
+          },
+          "style": "plain",
+          "template": "\{{ .Path }}/ ",
+          "type": "path"
+        },
+        {
+          "foreground": "{{ colors.on_surface.default.hex }}",
+          "options": {
+            "fetch_status": true
+          },
+          "style": "plain",
+          "template": "<#ffffff>on</> \{{ .HEAD }}\{{if .BranchStatus }} \{{ .BranchStatus }}\{{ end }}\{{ if .Working.Changed }} \uf044 \{{ .Working.String }}\{{ end }}\{{ if and (.Working.Changed) (.Staging.Changed) }} |\{{ end }}\{{ if .Staging.Changed }} \uf046 \{{ .Staging.String }}\{{ end }} ",
+          "type": "git"
+        },
+        {
+          "foreground": "{{ colors.secondary.default.hex }}",
+          "options": {
+            "fetch_version": true
+          },
+          "style": "plain",
+          "template": "<#ffffff>via</> \ue781 \{{ if .PackageManagerIcon }}\{{ .PackageManagerIcon }} \{{ end }}\{{ .Full }} ",
+          "type": "node"
+        }
+      ],
+      "type": "prompt"
+    },
+    {
+      "alignment": "right",
+      "segments": [
+        {
+          "foreground": "{{ colors.tertiary.default.hex }}",
+          "style": "diamond",
+          "template": "RAM:\{{ (div ((sub .PhysicalTotalMemory .PhysicalAvailableMemory)|float64) 1073741824.0) }}/\{{ (div .PhysicalTotalMemory 1073741824.0) }}GB ",
+          "trailing_diamond": " ",
+          "type": "sysinfo"
+        },
+        {
+          "foreground": "#ffffff",
+          "leading_diamond": "\u250b",
+          "options": {
+            "style": "roundrock",
+            "threshold": 0
+          },
+          "style": "diamond",
+          "template": " \{{ .FormattedMs }} ",
+          "type": "executiontime"
+        }
+      ],
+      "type": "prompt"
+    },
+    {
+      "alignment": "left",
+      "newline": true,
+      "segments": [
+        {
+          "foreground": "{{ colors.primary.default.hex }}",
+          "style": "plain",
+          "template": "󰐝 ",
+          "type": "text"
+        }
+      ],
+      "type": "prompt"
+    }
+  ],
+  "final_space": true,
+  "version": 4
+}
