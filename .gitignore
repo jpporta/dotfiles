@@ -3,3 +3,11 @@ scripts/.local/bin/uv
 scripts/.local/bin/uvx
 kitty/.config/kitty/current-theme.conf
 Wallpaper
+nvim/.config/nvim/generated.lua
+hyprland/.config/hypr/colors/matugen.conf
+rofi/.config/rofi/launchers/type-2/style-13.rasi
+rofi/.config/rofi/launchers/type-7/style-5.rasi
+swaync/.config/swaync/colors/matugen.css
+tmux/.config/tmux/colors/matugen.conf
+waybar/.config/waybar/colors/matugen.css
+wlogout/.config/wlogout/colors/matugen.css

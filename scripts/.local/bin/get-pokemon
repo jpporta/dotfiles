@@ -1,0 +1,12 @@
+#!/bin/env bash
+
+POKEDEX=$HOME/.local/state/got-pokemons.txt
+
+echo -ne "$(date +%s)\t" >> $POKEDEX
+pokeget random 2>> $POKEDEX
+
+last_added=$(tail -n 1 $POKEDEX | awk '{print $2}')
+
+if  head -n -1 $POKEDEX | grep -q "$last_added" ; then
+		sed -i '$d' $POKEDEX
+fi

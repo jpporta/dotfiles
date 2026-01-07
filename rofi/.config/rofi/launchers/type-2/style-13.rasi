@@ -18,11 +18,11 @@ configuration {
 /*****----- Global Properties -----*****/
 * {
     font:                        "JetBrainsMono Nerd Font Propo Medium 10";
-    background:                  #131318;
-    background-alt:              #46464f;
-    foreground:                  #e4e1e9;
-    selected:                    #bfc2ff;
-    active:                      #bfc2ff;
+    background:                  #121318;
+    background-alt:              #44464f;
+    foreground:                  #e2e2e9;
+    selected:                    #afc6ff;
+    active:                      #afc6ff;
     urgent:                      #ffb4ab;
 }
 

@@ -1,0 +1,11 @@
+#!/bin/env bash
+
+POKEDEX=$HOME/.local/state/got-pokemons.txt
+
+total=$(wc -l $POKEDEX | awk '{print $1}')
+last_poke=$(tail -n1 $POKEDEX | awk '{print $2}')
+last_caught_at_unix=$(tail -n1 $POKEDEX | awk '{print $1}')
+last_caught_at=$(date -d @"$last_caught_at_unix" +"%d/%m/%Y")
+
+
+printf "${last_poke} \033[3m\033[33m(${last_caught_at}) \033[0m| \033[31mTotal: ${total}"
