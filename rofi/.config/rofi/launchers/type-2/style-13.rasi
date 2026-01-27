@@ -1,3 +1,5 @@
+@theme './colors.rasi'
+
 /**
  *
  * Author : Aditya Shakya (adi1090x)
@@ -18,12 +20,12 @@ configuration {
 /*****----- Global Properties -----*****/
 * {
     font:                        "JetBrainsMono Nerd Font Propo Medium 10";
-    background:                  #121318;
-    background-alt:              #44464f;
-    foreground:                  #e2e2e9;
-    selected:                    #afc6ff;
-    active:                      #afc6ff;
-    urgent:                      #ffb4ab;
+    background:                  @bg2;
+    background-alt:              @bg3;
+    foreground:                  @text;
+    selected:                    @green;
+    active:                      @orange;
+    urgent:                      @red;
 }
 
 /*****----- Main Window -----*****/

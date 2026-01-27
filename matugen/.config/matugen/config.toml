@@ -32,11 +32,15 @@ post_hook = 'hyprctl reload'
 
 [templates.rofi]
 input_path = '~/.config/matugen/templates/rofi.rasi'
-output_path = '~/dotfiles/rofi/.config/rofi/launchers/type-7/style-5.rasi'
+output_path = '~/dotfiles/rofi/.config/rofi/launchers/type-7/colors.rasi'
 
 [templates.wallpaper_rofi]
-input_path = '~/.config/matugen/templates/rofi_wall.rasi'
-output_path = '~/dotfiles/rofi/.config/rofi/launchers/type-2/style-13.rasi'
+input_path = '~/.config/matugen/templates/rofi.rasi'
+output_path = '~/dotfiles/rofi/.config/rofi/launchers/type-2/colors.rasi'
+
+[templates.theme_rofi]
+input_path = '~/.config/matugen/templates/rofi.rasi'
+output_path = '~/dotfiles/rofi/.config/rofi/launchers/type-4/colors.rasi'
 
 [templates.wlogout]
 input_path = '~/.config/matugen/templates/colors.css'

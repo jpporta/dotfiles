@@ -1,3 +1,5 @@
+@theme './colors.rasi'
+
 /**
  *
  * Author : Aditya Shakya (adi1090x)
