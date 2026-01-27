@@ -2,11 +2,10 @@
 
 POKEDEX=$HOME/.local/state/got-pokemons.txt
 
-echo -ne "$(date +%s)\t" >> $POKEDEX
-pokeget random 2>> $POKEDEX
+POKEMON=$(pokeget random 2>&1 >/dev/null)
 
-last_added=$(tail -n 1 $POKEDEX | awk '{print $2}')
-
-if  head -n -1 $POKEDEX | grep -q "$last_added" ; then
-		sed -i '$d' $POKEDEX
+if ! grep -q "$POKEMON" $POKEDEX; then
+		echo -ne "$(date +%s)\t$(echo -n $POKEMON)\n" >> $POKEDEX
 fi
+
+pokeget $POKEMON 2>/dev/null

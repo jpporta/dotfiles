@@ -1,54 +1,67 @@
 #!/usr/bin/env bash
 
-opts="Gruvbox Light\nGruvbox Dark\nCatppuccin Latte\nCatppuccin Mocha\nDracula\nTokio Night\nRose Pine Dark\nRose Pine Light\nAyu Dark\nAyu Light\nMonokai Dark\nMonokai Light\nCobalt2\nSnazzy Dark"
+THEME=$1
+THEME_DIR=$HOME/.config/colorschemes/$THEME
 
-select=$(printf "$opts" | wofi -dmenu -p "Select Color Scheme" -i --lines 7 --width 300 --height 200)
+if [ ! -n "$THEME" ]; then
+		echo "usage: color-scheme <theme>"
+		exit 1
+fi
 
-case $select in
-  "Gruvbox Light")
-	bash "$HOME/.local/bin/themes/gruvbox-light.sh"
-	;;
-  "Gruvbox Dark")
-  bash "$HOME/.local/bin/themes/gruvbox-dark.sh"
-	;;
-  "Catppuccin Latte")
-  bash "$HOME/.local/bin/themes/catpuccin-latte.sh"
-	;;
-  "Catppuccin Mocha")
-  bash "$HOME/.local/bin/themes/catpuccin-mocha.sh"
-	;;
-  "Dracula")
-  bash "$HOME/.local/bin/themes/dracula.sh"
-	;;
-  "Tokio Night")
-  bash "$HOME/.local/bin/themes/tokio-night.sh"
-	;;
-  "Rose Pine Dark")
-  bash "$HOME/.local/bin/themes/rose-pine.sh"
-	;;
-  "Rose Pine Light")
-  bash "$HOME/.local/bin/themes/rose-pine-light.sh"
-	;;
-"Ayu Dark")
-  bash "$HOME/.local/bin/themes/ayu-dark.sh"
-	;;
-"Ayu Light")
-  bash "$HOME/.local/bin/themes/ayu-light.sh"
-	;;
-"Monokai Dark")
-  bash "$HOME/.local/bin/themes/monokai-dark.sh"
-	;;
-"Monokai Light")
-  bash "$HOME/.local/bin/themes/monokai-light.sh"
-	;;
-"Cobalt2")
-  bash "$HOME/.local/bin/themes/cobalt2.sh"
-	;;
-"Snazzy Dark")
-  bash "$HOME/.local/bin/themes/snazzy-dark.sh"
-	;;
-  *)
-	echo "Invalid selection"
-	exit 1
-	;;
-esac
+if [ ! -d "$THEME_DIR" ]; then
+		echo "Theme '$THEME' not found in $THEME_DIR"
+		exit 1
+fi
+
+# Hyprland
+cp "$THEME_DIR/hypr/colors.conf" "$HOME/.config/hypr/colors/matugen.conf"
+hyprctl reload
+
+# Kitty
+cp "$THEME_DIR/kitty/colors.conf" "$HOME/.config/kitty/colors/matugen.conf"
+pkill -SIGUSR1 kitty
+
+# GTK 3
+cp "$THEME_DIR/gtk-4.0/gtk-dark.css" "$HOME/.config/gtk-3.0/colors.css"
+gsettings set org.gnome.desktop.interface gtk-theme ""; gsettings set org.gnome.desktop.interface gtk-theme adw-gtk3-dark
+
+# GTK 4
+cp "$THEME_DIR/gtk-4.0/gtk-dark.css" "$HOME/.config/gtk-4.0/colors.css"
+
+# # Tmux
+# cp "$THEME_DIR/tmux-colors.conf" "$HOME/.config/tmux/colors/matugen.conf"
+# tmux source-file "$HOME/.config/tmux/colors/matugen.conf"
+
+# Waybar
+cp "$THEME_DIR/waybar/colors.css" "$HOME/.config/waybar/colors/matugen.css"
+pkill -SIGUSR2 waybar
+
+
+# Rofi
+cp "$THEME_DIR/rofi/colors.rasi" "$HOME/dotfiles/rofi/.config/rofi/launchers/type-7/colors.rasi"
+
+# Wallpaper Rofi
+cp "$THEME_DIR/rofi/colors.rasi" "$HOME/dotfiles/rofi/.config/rofi/launchers/type-2/colors.rasi"
+
+# Theme Rofi
+cp "$THEME_DIR/rofi/colors.rasi" "$HOME/dotfiles/rofi/.config/rofi/launchers/type-4/colors.rasi"
+
+# Wlogout
+cp "$THEME_DIR/wlogout/colors.css" "$HOME/.config/wlogout/colors/matugen.css"
+
+# Swaync
+cp "$THEME_DIR/swaync/colors.css" "$HOME/.config/swaync/colors/matugen.css"
+killall -9 swaync && swaync & disown > /dev/null 2>&1
+
+# Swww
+rm -rf "$HOME/.config/colorschemes/wallpapers"
+ln -sf "$THEME_DIR/wallpapers/" "$HOME/.config/colorschemes/wallpapers"
+sleep .1
+$HOME/.local/bin/chwal-static
+
+# Neovim
+cp $THEME_DIR/nvim/colors.lua $HOME/.config/nvim/generated.lua
+pkill -SIGUSR1 nvim
+
+# # Oh My Posh
+# cp $THEME_DIR/oh-my-posh.omp.json $HOME/.config/oh-my-posh.omp.json

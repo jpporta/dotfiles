@@ -1,0 +1,11 @@
+#!/bin/env bash
+
+cur_line=$(head -n1 $HOME/.config/hypr/hyprland.conf)
+hypr_file=$HOME/.config/hypr/hyprland.conf
+
+if [[ $cur_line == *"flat"* ]]; then
+		sed -i 's/look-flat.conf/look-blur.conf/g' $hypr_file
+else
+		sed -i 's/look-blur.conf/look-flat.conf/g' $hypr_file
+fi
+
