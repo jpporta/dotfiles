@@ -28,3 +28,10 @@ export PATH=$PATH:/home/jpporta/.local/bin
 fastfetch
 
 eval "$(oh-my-posh init zsh --config $HOME/.config/oh-my-posh.omp.json)"
+
+# Added by LM Studio CLI (lms)
+export PATH="$PATH:/home/jpporta/.lmstudio/bin"
+# End of LM Studio CLI section
+
+export SONAR_SCANNER_HOME="/opt/sonar-scanner"
+export PATH="${SONAR_SCANNER_HOME}/bin:${PATH}"

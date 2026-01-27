@@ -10,6 +10,10 @@ return {
 		priority = 1000,
 	},
 	{
+		"EdenEast/nightfox.nvim",
+		priority = 1000, -- Ensure it loads first
+	},
+	{
 		"shaunsingh/nord.nvim",
 		priority = 1000, -- Ensure it loads first
 	},
@@ -26,9 +30,14 @@ return {
 		name = "catppuccin",
 		priority = 1000,
 	},
-	-- { "sainnhe/everforest", priority = 1000 },
+	{ "sainnhe/everforest", priority = 1000 },
+	{ "kdheepak/monochrome.nvim", priority = 1000 },
 	{ "ellisonleao/gruvbox.nvim", priority = 1000 },
-	{ "tribela/vim-transparent" },
+	{
+		"tribela/transparent.nvim",
+		priority = 1000,
+		config = true,
+	},
 	-- {
 	-- 	"fynnfluegge/monet.nvim",
 	-- 	name = "monet",
@@ -42,10 +51,10 @@ return {
 		priority = 1000,
 		opts = {},
 	},
-	-- {
-	-- 	"rebelot/kanagawa.nvim",
-	-- 	priority = 1000,
-	-- },
+	{
+		"rebelot/kanagawa.nvim",
+		priority = 1000,
+	},
 	-- { "kepano/flexoki-neovim", priority = 1000, name = "flexoki" },
 	-- { "jacoborus/tender.vim", priority = 1000, name = "tender" },
 	-- { "bluz71/vim-moonfly-colors", name = "moonfly", lazy = false, priority = 1000 },

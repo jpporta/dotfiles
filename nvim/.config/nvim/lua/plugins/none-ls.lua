@@ -18,6 +18,7 @@ return {
 				-- Formatters
 				null_ls.builtins.formatting.prettierd,
 				null_ls.builtins.formatting.stylua,
+				require("none-ls.formatting.beautysh"),
 				-- Diagnostics
 				require("none-ls.diagnostics.eslint_d"),
 				null_ls.builtins.diagnostics.golangci_lint,
