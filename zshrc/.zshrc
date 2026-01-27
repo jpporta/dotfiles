@@ -35,3 +35,7 @@ export PATH="$PATH:/home/jpporta/.lmstudio/bin"
 
 export SONAR_SCANNER_HOME="/opt/sonar-scanner"
 export PATH="${SONAR_SCANNER_HOME}/bin:${PATH}"
+
+qr() {
+		zint -b 58 -d "$1" --nobackground --direct --quietzones --scale=5 --vers=5 --secure=4 --fg=$(grep fg ~/.config/swaync/colors/matugen.css | head -n1 | awk '{ gsub(/[#;]/, "", $3); print $3 }') | kitten icat	
+}
