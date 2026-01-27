@@ -1,0 +1,5 @@
+#! /bin/env bash
+
+DATA=$(curl https://n8n.joaoporta.com/webhook/get-prs -s -H "avodah-staging-deploy-key: $(pass avodah/n8n-key)")
+
+echo "$DATA" | jq -r '.PRS.[]'

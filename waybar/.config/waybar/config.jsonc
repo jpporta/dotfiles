@@ -2,7 +2,12 @@
   "layer": "top",
   "margin-top": 10,
 
-  "modules-left": ["custom/launcher", "clock", "hyprland/workspaces"],
+  "modules-left": [
+    "custom/launcher",
+    "clock",
+    "hyprland/workspaces",
+    "custom/prs",
+  ],
   "modules-center": ["custom/notification", "custom/media"],
   "modules-right": [
     "custom/pacman",
@@ -29,6 +34,13 @@
     "persistent-workspaces": {
       "*": 5, // 5 workspaces by default on every monitor
     },
+  },
+
+  "custom/prs": {
+    "format": " {}",
+    "exec": "bash $HOME/.local/bin/prs | wc -l",
+		"on-click": "bash $HOME/.local/bin/open-prs",
+		"interval": 300,
   },
 
   "custom/launcher": {

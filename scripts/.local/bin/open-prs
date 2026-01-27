@@ -1,0 +1,8 @@
+#! /bin/env bash
+
+PRS=$($HOME/.local/bin/prs)
+
+for PR in $PRS; do
+  xdg-open "$PR"
+done
+
