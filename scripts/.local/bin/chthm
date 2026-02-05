@@ -1,6 +1,6 @@
 #!/bin/env bash
 
-themes=$(ls ~/.config/colorschemes | sort | head -n -1 | shuf)
+themes=$(ls ~/.config/colorschemes | grep -v wallpapers | shuf)
 IFS=$' '
 echo "$themes"
 selected_theme=$(echo $themes | while read a; do echo -en "$a\n"; done | rofi -dmenu -p "Choose Theme" -theme "~/.config/rofi/launchers/type-4/style-6.rasi")

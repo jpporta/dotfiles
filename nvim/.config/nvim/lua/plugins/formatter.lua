@@ -1,16 +1,16 @@
 return {
-	'sbdchd/neoformat',
+	"sbdchd/neoformat",
 	cmd = { "Neoformat" },
 	keys = {
 		{
-			'<leader>f',
+			"<leader>f",
 			function()
-				vim.cmd('Neoformat')
+				vim.cmd("Neoformat")
 			end,
-			desc = 'Format',
+			desc = "Format",
 		},
 	},
-config = function()
+	config = function()
 		vim.g.neoformat_try_node_exe = 1
 	end,
 }

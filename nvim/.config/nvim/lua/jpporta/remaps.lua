@@ -21,3 +21,7 @@ vim.keymap.set("n", "<leader>qq", function()
 end, { desc = "Toggle quickfix list" })
 
 vim.keymap.set("n", "<leader>bo", "<cmd>%bd|e#<cr>", {desc="Close all buffers but the current one"}) -- https://stackoverflow.com/a/42071865/516188
+
+vim.keymap.set("n", "<leader>cd", vim.cmd("Copilot disable"), { desc = "Disable GitHub Copilot" })
+vim.keymap.set("n", "<leader>ce", vim.cmd("Copilot enable"), { desc = "Enable GitHub Copilot" })
+-- vim.keymap.set("n", "<leader>tt", vim.cmd("TransparentToggle"), { desc = "Toggle transparency" })
