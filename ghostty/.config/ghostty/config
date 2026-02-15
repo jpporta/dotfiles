@@ -1,6 +1,10 @@
-font-family = JetBrainsMono Nerd Font
-font-size = 14
-theme = catppuccin-mocha
-background-opacity = 0.9
+font-family = BerkeleyMono Nerd Font Mono
+font-size = 10.7
+background-opacity = 0.7
 gtk-titlebar = false
 window-decoration = false
+window-padding-x = 10
+window-padding-y = 10
+window-theme = system
+
+theme = Nord

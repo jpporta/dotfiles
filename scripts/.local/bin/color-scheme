@@ -65,3 +65,6 @@ pkill -SIGUSR1 nvim
 
 # # Oh My Posh
 # cp $THEME_DIR/oh-my-posh.omp.json $HOME/.config/oh-my-posh.omp.json
+
+# Ghostty
+cp "$THEME_DIR/ghostty/colors" "$HOME/.config/ghostty/colors"

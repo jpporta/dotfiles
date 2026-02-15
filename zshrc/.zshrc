@@ -6,6 +6,7 @@ source $ZSH/oh-my-zsh.sh
 
 alias tx="tmuxinator"
 alias n="nvim --listen /tmp/nvim$(echo $RANDOM | md5sum | cut -c1-8).sock"
+alias ls="eza --icons --group-directories-first --color=always"
 alias man="batman"
 alias :q="exit"
 
@@ -42,3 +43,4 @@ qr() {
 
 export PATH="${HOME}/.cargo/bin:${PATH}"
 
+export LEDGER_FILE=$HOME/Documents/Transactions/hledger.journal

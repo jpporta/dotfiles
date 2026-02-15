@@ -15,13 +15,13 @@ vim.api.nvim_create_autocmd("LspAttach", {
 		-- end
 		local augroup = vim.api.nvim_create_augroup("LspFormatting", {})
 		vim.api.nvim_clear_autocmds({ group = augroup, buffer = args.buf })
-		vim.api.nvim_create_autocmd("BufWritePre", {
-			group = augroup,
-			buffer = args.buf,
-			callback = function()
-				vim.cmd("Neoformat")
-			end,
-		})
+		-- vim.api.nvim_create_autocmd("BufWritePre", {
+		-- 	group = augroup,
+		-- 	buffer = args.buf,
+		-- 	callback = function()
+		-- 		vim.cmd("Neoformat")
+		-- 	end,
+		-- })
 		if client:supports_method("textDocument/inlayHint") then
 			vim.lsp.inlay_hint.enable(true)
 
