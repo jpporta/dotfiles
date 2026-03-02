@@ -74,7 +74,7 @@
         {
           "foreground": "{{ colors.primary.default.hex }}",
           "style": "plain",
-          "template": "󰐝 ",
+          "template": " ",
           "type": "text",
           "foreground_templates": ["\{{ if gt .Code 0 }}{{colors.error.default.hex}}\{{ end }}"]
         }
