@@ -26,10 +26,9 @@
     "format-icons": {
       "1": "󰖟",
       "2": "",
-      "3": "",
-      "4": "",
-      "5": "󱞁",
-      "default": "",
+      "3": "",
+      "4": "󱞁",
+      "5": "",
     },
     "persistent-workspaces": {
       "*": 5, // 5 workspaces by default on every monitor
