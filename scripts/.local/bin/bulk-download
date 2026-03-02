@@ -1,0 +1,8 @@
+#! /bin/env bash
+
+for item in $(cat ~/.local/share/music-to-dowload.txt); do
+	echo "Downloading $item"
+	tidaler dl $item
+done
+
+notify-send "Bulk Download" "All downloads have been completed."
