@@ -11,7 +11,8 @@ IFS=$'\n'
 selected_wall=$(shuf -e *.jpg *.png | while read a; do echo -en "$a\0icon\x1f$a\n"; done | rofi -dmenu -p "Choose Wallpaper" -theme "~/.config/rofi/launchers/type-2/style-13.rasi")
 
 if [ -n "$selected_wall" ]; then
-		matugen image $selected_wall
+		swww img --transition-type wipe --transition-angle 30 --transition-step 90 $selected_wall
+		# matugen image $selected_wall
 fi
 
 cd $cwd
