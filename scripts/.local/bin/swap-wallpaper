@@ -1,0 +1,3 @@
+#!/bin/env bash
+
+if [ $(cat $HOME/.local/state/cycle_wallpaper) == "1" ]; then matugen image $HOME/Pictures/Wallpaper/$(ls $HOME/Pictures/Wallpaper | shuf | head -n1)  --source-color-index 0 --contrast 0.1 --lightness-dark 0.1; fi

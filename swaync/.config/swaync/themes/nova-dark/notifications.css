@@ -1,19 +1,13 @@
-@define-color text            @fg;
-@define-color background-alt  @bg0;
-@define-color selected        @blue;
+@define-color text            @on_background;
+@define-color background-alt  @surface;
+@define-color selected        @primary;
 @define-color hover           alpha(@selected, .4);
-@define-color urgent          @red;
-@define-color background      @bg2;
+@define-color urgent          @error;
 
 * {
-  /*background-alt:        @color1;      Buttons background */
-  /*selected:              @color2;      Button selected */
-  /*hover:                 @color5;      Hover button */
-  /*urgent:                @color6;      Urgency critical */
-  /*text-selected:         @background; */
 
   color: @text;
-
+  background-color: @background
   all: unset;
   font-size: 14px;
   font-family: "BerkeleyMono Nerd Font Propo";
@@ -122,7 +116,7 @@
   margin: 6px;
   padding: 2px;
   border-radius: 6px;
-  background-color: transparent;
+  background-color: @background;
   border: 1px solid transparent;
 }
 

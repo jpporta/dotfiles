@@ -7,11 +7,11 @@ return {
 	dependencies = { "nvim-lua/plenary.nvim" },
 	keys = {
 		{
-			"<leader>ot",
+			"<leader>oo",
 			function()
 				vim.cmd("ObsidianToday")
 			end,
-			desc = "[O]bsidian [T]oday",
+			desc = "[O]bsidian T[o]day",
 		},
 		{
 			"<leader>os",
@@ -33,6 +33,12 @@ return {
 			desc = "[O]bsidian [E]xtract",
 			mode = "v",
 		},
+		{
+			"<leader>ot",
+			":ObsidianTemplate<CR>",
+			desc = "[O]bsidian [T]emplate",
+			mode = "n",
+		},
 	},
 	opts = {
 
@@ -53,7 +59,7 @@ return {
 			},
 		},
 		templates = {
-			subdir = "templates",
+			subdir = "Templates",
 			date_format = "%Y-%m-%d",
 			time_format = "%H:%M",
 			-- A map for custom variables, the key should be the variable and the value a function
@@ -77,16 +83,13 @@ return {
 					suffix = suffix .. string.char(math.random(65, 90))
 				end
 			end
-			return os.date("%Y%m%d%H%M%S", os.time()) .. "-" .. suffix
+			return os.date("%Y-%m-%d %H%M", os.time()) .. " " .. suffix
 		end,
 		note_frontmatter_func = function(note)
 			-- This is equivalent to the default frontmatter function.
 			local out = {
-				id = note.id,
-				aliases = note.aliases,
-				tags = note.tags,
-				title = note.aliases[1],
-				createdAt = os.date("%Y-%m-%d %H:%M:%S"),
+				tags = { "#note", "#journal" },
+				created = os.date("%Y-%m-%d %H:%M:%S"),
 			}
 			-- `note.metadata` contains any manually added fields in the frontmatter.
 			-- So here we just make sure those fields are kept in the frontmatter.
@@ -142,8 +145,8 @@ return {
 				ObsidianHighlightText = { bg = "#75662e" },
 			},
 		},
-		dir = "~/Documents/Notes",
+		dir = "~/Documents/Second Brain",
 		new_notes_location = "notes_subdir",
-		notes_subdir = "inbox",
+		notes_subdir = "",
 	},
 }

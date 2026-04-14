@@ -12,9 +12,9 @@ window {
 
 button {
   border-radius: 10%;
-  text-decoration-color: @fg;
-  color: @fg;
-  background-color: @bg2;
+  text-decoration-color: @on_surface;
+  color: @on_surface;
+  background-color: @surface_bright;
   background-repeat: no-repeat;
   background-position: center;
   background-size: 10%;
@@ -26,12 +26,12 @@ button:focus,
 button:active,
 button:hover {
   background-size: 15%;
-  background-color: @blue;
+  background-color: @surface_variant;
 
-  color: @fg;
-  text-decoration-color: @fg;
+  color: @on_surface_variant;
+  text-decoration-color: @on_surface_variant;
   outline-style: none;
 
   box-shadow:
-    0 0 100px alpha(@aqua, .5);
+    0 0 100px alpha(@surface_bright, .5);
 }

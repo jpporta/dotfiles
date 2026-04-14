@@ -9,6 +9,7 @@ alias n="nvim --listen /tmp/nvim$(echo $RANDOM | md5sum | cut -c1-8).sock"
 alias ls="eza --icons --group-directories-first --color=always"
 alias man="batman"
 alias :q="exit"
+alias so="source ~/.zshrc"
 
 source <(fzf --zsh)
 
@@ -18,7 +19,9 @@ eval "$(zoxide init zsh --cmd cd)"
 
 export EDITOR=nvim
 
-alias backup="packup && rm ~/Documents/packup* && mv ~/packup* ~/Documents/ && rsync --archive --update --copy-links ~/Documents 192.168.0.200:/home/jpporta/ --info=progress2"
+alias backup="packup && rm ~/Documents/packup* && mv ~/packup* ~/Documents/ && rsync --archive --update --copy-links ~/Documents 192.168.3.200:/home/jpporta/ --info=progress2"
+
+alias gn="git commit -m \"$(date)\""
 
 # NVM
 source /usr/share/nvm/init-nvm.sh
@@ -30,10 +33,6 @@ fastfetch
 
 eval "$(oh-my-posh init zsh --config $HOME/.config/oh-my-posh.omp.json)"
 
-# Added by LM Studio CLI (lms)
-export PATH="$PATH:/home/jpporta/.lmstudio/bin"
-# End of LM Studio CLI section
-
 export SONAR_SCANNER_HOME="/opt/sonar-scanner"
 export PATH="${SONAR_SCANNER_HOME}/bin:${PATH}"
 
@@ -42,5 +41,3 @@ qr() {
 }
 
 export PATH="${HOME}/.cargo/bin:${PATH}"
-
-export LEDGER_FILE=$HOME/Documents/Transactions/hledger.journal

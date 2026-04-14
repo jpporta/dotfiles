@@ -1,0 +1,17 @@
+#!/bin/env bash
+
+wallpaper_dir="$HOME/Pictures/Wallpaper/Mine"
+
+cwd="$(pwd)"
+
+cd $wallpaper_dir || exit 1
+
+IFS=$'\n'
+
+selected_wall=$(shuf -e *.jpg *.png *.gif | while read a; do echo -en "$a\0icon\x1f$a\n"; done | rofi -dmenu -p "Choose Wallpaper" -theme "~/.config/rofi/launchers/type-2/style-13.rasi")
+
+if [ -n "$selected_wall" ]; then
+		matugen image $selected_wall --source-color-index 0 --contrast 0.1 --lightness-dark 0.1
+fi
+
+cd $cwd

@@ -1,19 +1,55 @@
 #!/usr/bin/env bash
 
-# COLUMNS="%l+%t+%h+%u+%p+%c"
-COLUMNS="%t+%h+%u+%p"
-HEADER=$'Location\tTemp\tHum\tUV\tPrec\t'
-BASE="wttr.in/"
+BASE="https://api.openweathermap.org/data/2.5/weather"
+CITY="3454690" # Paulinia city id
+API_KEY=$(pass personal/api/openweather)
 
-if [ -z $1 ]
-then
-		RES=$"$(curl -s "$BASE?format=$COLUMNS\n")"
-else
-		RES=$"$(curl -s "$BASE{$1}?format=$COLUMNS\n")"
+LAST_RES=$(tail --lines 1 $HOME/.local/state/weather_history)
+
+LAST_EXEC=$(echo $LAST_RES | awk '{print $1}')
+DIFF=$(($(date +%s) - $LAST_EXEC))
+
+if [ $DIFF -gt 1200 ]; then 
+		RES=$(curl -s "$BASE?id=$CITY&appid=$API_KEY&units=metric&lang=pt_br")
+		DATA="$(date +%s)\t$(echo $RES | jq '.main.temp')\t$(echo $RES | jq '.main.temp_min')\t$(echo $RES | jq '.main.temp_max')\t$(echo $RES | jq '.main.humidity')\t$(echo $RES | jq -r '.weather[0].main')"
+		if [ $(echo $DATA | awk '{print $2}') -nq "null" ]; then
+				echo -e $DATA >> $HOME/.local/state/weather_history
+				LAST_RES=$DATA
+		fi
 fi
-# echo "$HEADER"
-while IFS= read -r line; do
-		PAR=$(echo $line)
-		echo "${PAR/_/ }"
 
-done <<< "$RES"
+bash $HOME/.local/bin/generate-weather-graph
+
+ICON_RAW=$(echo $LAST_RES | awk '{print $6}')
+
+case $ICON_RAW in
+
+		Clear)
+				ICON=""
+				;;
+
+		Clouds)
+				ICON="󰖐"
+				;;
+
+		Rain)
+				ICON=""
+				;;
+
+		*)
+				ICON="?"
+				;;
+esac
+
+# "text": "$(echo $LAST_RES | awk '{print $2}')°C |  $(echo $LAST_RES | awk '{print $3}')°C |  $(echo $LAST_RES | awk '{print $4}')°C | 󰖌 $(echo $LAST_RES | awk '{print $5}')%"
+
+JSON=$(cat << EOF
+{
+		"alt": "$ICON",
+		"text": "$(echo $LAST_RES | awk '{printf "%.1f", $2}')°C | 󰖌 $(echo $LAST_RES | awk '{print $5}')%"
+}
+EOF
+)
+
+
+echo $JSON | jq -c .

@@ -1,3 +1,4 @@
+@theme './colors.rasi'
 /**
  *
  * Author : Aditya Shakya (adi1090x)
@@ -20,39 +21,21 @@ configuration {
 }
 
 /*****----- Global Properties -----*****/
-@import                          "shared/colors.rasi"
-@import                          "shared/fonts.rasi"
-
 * {
-    border-colour:               var(selected);
-    handle-colour:               var(selected);
-    background-colour:           var(background);
-    foreground-colour:           var(foreground);
-    alternate-background:        var(background-alt);
-    normal-background:           var(background);
-    normal-foreground:           var(foreground);
-    urgent-background:           var(urgent);
-    urgent-foreground:           var(background);
-    active-background:           var(active);
-    active-foreground:           var(background);
-    selected-normal-background:  var(selected);
-    selected-normal-foreground:  var(background);
-    selected-urgent-background:  var(active);
-    selected-urgent-foreground:  var(background);
-    selected-active-background:  var(urgent);
-    selected-active-foreground:  var(background);
-    alternate-normal-background: var(background);
-    alternate-normal-foreground: var(foreground);
-    alternate-urgent-background: var(urgent);
-    alternate-urgent-foreground: var(background);
-    alternate-active-background: var(active);
-    alternate-active-foreground: var(background);
+    font:                        "JetBrainsMono Nerd Font Propo Medium 10";
+    background:                  @bg2;
+    background-alt:              @bg3;
+    foreground:                  @text;
+    selected:                    @green;
+    active:                      @orange;
+    urgent:                      @red;
+		border-radius:								8px;
 }
 
 /*****----- Main Window -----*****/
 window {
     /* properties for window widget */
-    transparency:                "real";
+    transparency:                "0.8";
     location:                    center;
     anchor:                      center;
     fullscreen:                  false;
@@ -65,10 +48,10 @@ window {
     margin:                      0px;
     padding:                     0px;
     border:                      0px solid;
-    border-radius:               0px;
+    border-radius:               @border-radius;
     border-color:                @border-colour;
     cursor:                      "default";
-    background-color:            @background-colour;
+    background-color:            @bg2;
 }
 
 /*****----- Main Box -----*****/
@@ -78,7 +61,7 @@ mainbox {
     margin:                      0px;
     padding:                     0px;
     border:                      0px solid;
-    border-radius:               0px 0px 0px 0px;
+    border-radius:               @border-radius;
     border-color:                @border-colour;
     background-color:            transparent;
     children:                    [ "inputbar", "listview" ];
@@ -91,10 +74,10 @@ inputbar {
     margin:                      0px;
     padding:                     0px;
     border:                      0px 0px 1px 0px;
-    border-radius:               0px;
-    border-color:                @alternate-background;
-    background-color:            @background-colour;
-    text-color:                  @foreground-colour;
+    border-radius:               @border-radius;
+    border-color:                @bg2;
+    background-color:            @bg2;
+    text-color:                  @text;
     children:                    [ "prompt", "entry" ];
 }
 

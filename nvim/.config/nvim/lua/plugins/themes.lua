@@ -34,9 +34,41 @@ return {
 	{ "kdheepak/monochrome.nvim", priority = 1000 },
 	{ "ellisonleao/gruvbox.nvim", priority = 1000 },
 	{
-		"tribela/transparent.nvim",
+		"xiyaowong/transparent.nvim",
 		priority = 1000,
-		config = true,
+		opts = {
+			groups = {
+				"Normal",
+				"NormalNC",
+				"Comment",
+				"Constant",
+				"Special",
+				"Identifier",
+				"Statement",
+				"PreProc",
+				"Type",
+				"Underlined",
+				"Todo",
+				"String",
+				"Function",
+				"Conditional",
+				"Repeat",
+				"Operator",
+				"Structure",
+				"LineNr",
+				"NonText",
+				"SignColumn",
+				"CursorLine",
+				"CursorLineNr",
+				"StatusLine",
+				"StatusLineNC",
+				"EndOfBuffer",
+			},
+			extra_groups = {
+				"NormalFloat", -- plugins which have float panel such as Lazy, Mason, LspInfo
+				"NvimTreeNormal", -- NvimTree
+			},
+		},
 	},
 	-- {
 	-- 	"fynnfluegge/monet.nvim",
@@ -87,8 +119,5 @@ return {
 		dependencies = { "rktjmp/lush.nvim" },
 		lazy = false,
 		priority = 1000,
-		config = function()
-			vim.cmd.colorscheme("snazzy")
-		end,
 	},
 }

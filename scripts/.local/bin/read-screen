@@ -1,0 +1,5 @@
+#! /bin/env bash
+
+hyprshot --freeze -m region -o ~/Pictures/Screenshots
+FILE="$HOME/Pictures/Screenshots/$(ls ~/Pictures/Screenshots| sort -r | head -n1)"
+tesseract $FILE - -l eng+por | wl-copy && rm $FILE

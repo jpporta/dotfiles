@@ -1,0 +1,55 @@
+#! /bin/env bash
+
+FILE="$HOME/.local/state/weather_history"
+OUT="$HOME/.local/state/weather_history.png"
+SURFACE_COLOR=$(cat $HOME/.config/kitty/colors/matugen.conf | grep background | head -n1 | awk '{print $2}')
+TEXT_COLOR=$(cat $HOME/.config/kitty/colors/matugen.conf | grep foreground | head -n1 | awk '{print $2}')
+PRIMARY_COLOR=$(cat $HOME/.config/kitty/colors/matugen.conf | grep color4 | tail -n1 | awk '{print $2}')
+SECONDARY_COLOR=$(cat $HOME/.config/swaync/colors/matugen.css | grep " secondary" | head -n1 | awk '{print $3}')
+TERTIARY_COLOR=$(cat $HOME/.config/swaync/colors/matugen.css | grep " tertiary" | head -n1 | awk '{print $3}')
+
+gnuplot -persist <<- EOF
+
+		set terminal pngcairo size 600,400 background rgb "$SURFACE_COLOR"
+		set output "$OUT"
+
+		# Data formatting
+		set datafile separator whitespace
+		set timefmt "%s"
+		set xdata time
+
+		# Hide X axis labels and ticks
+		unset xlabel
+		unset xtics
+
+		# Left Y axis: temperature
+		set ylabel "Temperature (°C)"
+		set yrange [0:45]
+
+		# Right Y axis: humidity
+		set y2label "Humidity (%)"
+		set y2range [0:100]
+		set y2tics
+
+		# Grid
+		set grid ytics y2tics
+
+		# Legend
+		set key off
+
+		set border lc rgb "$TEXT_COLOR"
+		set ytics textcolor rgb "$TEXT_COLOR"
+		set y2tics textcolor rgb "$TEXT_COLOR"
+		set grid lc rgb "$TEXT_COLOR"
+
+		set ylabel "Temperature (°C)" textcolor rgb "$PRIMARY_COLOR"
+		set ytics textcolor rgb "$PRIMARY_COLOR"
+
+		set y2label "Humidity (%)" textcolor rgb "$SECONDARY_COLOR"
+		set y2tics textcolor rgb "$SECONDARY_COLOR"
+
+		plot \
+				"$FILE" using 1:2 with lines lw 2 lc '$PRIMARY_COLOR' title "Temp (°C)", \
+				"$FILE" using 1:5 axes x1y2 with lines lw 2 lc '$SECONDARY_COLOR' title "Humidity (%)"
+
+EOF

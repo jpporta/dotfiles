@@ -91,11 +91,11 @@
   },
 
   "custom/weather": {
-    "exec": "${HOME}/.config/waybar/scripts/get_weather.sh Paulinia+Brazil",
+    "exec": "$HOME/.local/bin/weather",
     "return-type": "json",
-    "format": "{}",
-    "tooltip": true,
-    "interval": 3600,
+    "format": "{alt} {text}",
+    "interval": 300, // every 5min, script caches 20 min result
+    "on-click": "kitty --hold '/home/jpporta/.local/bin/weather-history'", // update system
   },
 
   "pulseaudio": {

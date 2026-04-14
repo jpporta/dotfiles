@@ -18,7 +18,7 @@ output_path = '~/.config/gtk-4.0/colors.css'
 [templates.tmux]
 input_path = '~/.config/matugen/templates/tmux-colors.conf'
 output_path = '~/.config/tmux/colors/matugen.conf'
-post_hook = 'tmux source-file ~/.config/tmux/colors/matugen.conf' 
+post_hook = 'tmux refresh-client -a' 
 
 [templates.waybar]
 input_path = '~/.config/matugen/templates/colors.css'
@@ -53,13 +53,21 @@ post_hook = "killall -9 swaync && swaync & disown"
 
 [templates.swww]
 input_path = '/dev/null'
-pre_hook = 'swww img --transition-type wipe --transition-angle 30 --transition-step 90 {{image}}'
+pre_hook = 'awww img --transition-type wipe --transition-angle 30 --transition-step 90 {{image}}'
 
 [templates.neovim]
 input_path = '~/.config/matugen/templates/template.lua'
 output_path = '~/.config/nvim/generated.lua'
-post_hook = 'pkill -SIGUSR1 nvim'
+post_hook = 'pkill -SIGUSR1 nvim && nvim --server /tmp/nvim*.sock --remote-send ":TransparentEnable<CR>'
 
 [templates.ohmyposh]
 input_path = '~/.config/matugen/templates/oh-my-posh.omp.json'
 output_path = '~/.config/oh-my-posh.omp.json'
+
+[templates.obsidian]
+input_path = '~/.config/matugen/templates/appearance.json'
+output_path = '~/Documents/Notes/.obsidian/appearance.json'
+
+[templates.obsidian-avodah]
+input_path = '~/.config/matugen/templates/appearance.json'
+output_path = '~/Documents/Avodah/.obsidian/appearance.json'

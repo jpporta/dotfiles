@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+
+chafa \
+  ~/.local/state/weather_history.png \
+  --size=60x20 \
+  --symbols=ascii \
+  --colors=full
