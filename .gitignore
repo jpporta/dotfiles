@@ -11,3 +11,4 @@ swaync/.config/swaync/colors/matugen.css
 tmux/.config/tmux/colors/matugen.conf
 waybar/.config/waybar/colors/matugen.css
 wlogout/.config/wlogout/colors/matugen.css
+/scripts/.local/bin/avodah-prompts
