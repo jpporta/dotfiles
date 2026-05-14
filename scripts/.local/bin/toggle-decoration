@@ -1,11 +1,23 @@
-#!/bin/env bash
+#!/usr/bin/env bash
+# Toggle Hyprland decoration profile between "blur" and "flat".
+# State is persisted in ~/.local/state/hypr-look and read by hyprland/look.lua.
 
-cur_line=$(head -n1 $HOME/.config/hypr/hyprland.conf)
-hypr_file=$HOME/.config/hypr/hyprland.conf
+set -euo pipefail
 
-if [[ $cur_line == *"flat"* ]]; then
-		sed -i 's/look-flat.conf/look-blur.conf/g' $hypr_file
-else
-		sed -i 's/look-blur.conf/look-flat.conf/g' $hypr_file
+state_dir="$HOME/.local/state"
+state_file="$state_dir/hypr-look"
+
+mkdir -p "$state_dir"
+
+current="blur"
+if [[ -f "$state_file" ]]; then
+    current="$(<"$state_file")"
 fi
 
+if [[ "$current" == "flat" ]]; then
+    echo "blur" > "$state_file"
+else
+    echo "flat" > "$state_file"
+fi
+
+hyprctl reload >/dev/null
