@@ -1,0 +1,4 @@
+#! /bin/env bash
+
+ps aux | rg 11011 | rg serve | awk '{print $2}' | xargs kill -9
+killall chromium

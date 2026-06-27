@@ -1,12 +1,12 @@
 {
   "layer": "top",
   "margin-top": 10,
+	"output": "DP-1",
 
   "modules-left": [
     "custom/launcher",
     "clock",
     "hyprland/workspaces",
-    "custom/prs",
   ],
   "modules-center": ["custom/notification", "custom/media"],
   "modules-right": [
@@ -35,12 +35,12 @@
     },
   },
 
-  "custom/prs": {
-    "format": " {}",
-    "exec": "bash $HOME/.local/bin/prs | wc -l",
-		"on-click": "bash $HOME/.local/bin/open-prs",
-		"interval": 300,
-  },
+  // "custom/prs": {
+  //   "format": " {}",
+  //   "exec": "bash $HOME/.local/bin/prs | wc -l",
+  // "on-click": "bash $HOME/.local/bin/open-prs",
+  // "interval": 300,
+  // },
 
   "custom/launcher": {
     "format": "󰣇",

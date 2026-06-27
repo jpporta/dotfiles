@@ -1,8 +1,7 @@
 return {
 	{
-		"numToStr/Comment.nvim",
-		opts = {},
-		event = "VeryLazy",
+		"nvim-mini/mini.comment",
+		version = false,
 	},
-	{ "windwp/nvim-autopairs", event = "InsertEnter", config = true },
+	{ "windwp/nvim-autopairs", event = "InsertEnter", opts = {} },
 }

@@ -1,0 +1,21 @@
+#! /bin/env bash
+
+# Check if display connected
+monitor_there=$(hyprctl monitors | rg HDMI-A-1)
+
+if [ -n $monitor_there ]; then
+		exit 1
+fi
+
+# Start the web server
+npx serve ~/work/personal/monitor-dashboard/ -p 11011 & disown
+
+# Open browser
+chromium http://localhost:11011 & disown
+sleep 1
+
+# Send to screen
+hyprctl dispatch 'hl.dsp.window.move({ monitor = "HDMI-A-1" })'
+
+# Fullscreen
+hyprctl dispatch 'hl.dsp.window.fullscreen()'

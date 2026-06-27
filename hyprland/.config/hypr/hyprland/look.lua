@@ -6,7 +6,8 @@
 local colors = require("hyprland.colors")
 
 -- Environment + input + general bits common to both profiles
-hl.env("XCURSOR_SIZE", "24")
+hl.env("HYPRCURSOR_THEME", "Bibata-Modern-Ice-Right")
+hl.env("HYPRCURSOR_SIZE", "24")
 
 hl.config({
     input = {

@@ -1,8 +1,7 @@
 return {
 	"epwalsh/obsidian.nvim",
 	version = "*",
-	lazy = "true",
-	event = "VeryLazy",
+	lazy = true,
 	ft = "markdown",
 	dependencies = { "nvim-lua/plenary.nvim" },
 	keys = {
@@ -83,7 +82,7 @@ return {
 					suffix = suffix .. string.char(math.random(65, 90))
 				end
 			end
-			return os.date("%Y-%m-%d %H%M", os.time()) .. " " .. suffix
+			return os.date("%s", os.time())
 		end,
 		note_frontmatter_func = function(note)
 			-- This is equivalent to the default frontmatter function.
@@ -145,7 +144,7 @@ return {
 				ObsidianHighlightText = { bg = "#75662e" },
 			},
 		},
-		dir = "~/Documents/Second Brain",
+		dir = "~/Documents/Notes",
 		new_notes_location = "notes_subdir",
 		notes_subdir = "",
 	},

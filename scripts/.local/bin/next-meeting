@@ -1,0 +1,10 @@
+#! /bin/env bash
+
+khal list "$(date +%R)" "$(date -d "+120 minutes" +%R)" --json all\
+| jq -r '
+  .[]
+  | .description as $desc
+  | ($desc | capture("(?<url>https?://[^[:space:]\"]+)")? | .url) as $url
+  | select($url != null)
+  | "MEETING\t\(.title) (\(.start))\t\($url)"
+'

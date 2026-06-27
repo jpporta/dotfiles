@@ -10,6 +10,8 @@ alias ls="eza --icons --group-directories-first --color=always"
 alias man="batman"
 alias :q="exit"
 alias so="source ~/.zshrc"
+alias opencode="OPENCODE_ENABLE_EXA=1 opencode"
+alias zki="zk edit --interactive --notebook-dir=~/Documents/Notes"
 
 source <(fzf --zsh)
 
@@ -41,3 +43,5 @@ qr() {
 }
 
 export PATH="${HOME}/.cargo/bin:${PATH}"
+export PATH="${HOME}/go/bin:${PATH}"
+source /usr/share/aur-scan/integration.zsh

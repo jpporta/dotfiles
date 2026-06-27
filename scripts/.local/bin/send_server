@@ -1,0 +1,29 @@
+#!/bin/env bash
+
+# Simple completions setup (only for bash)
+# Simple completions setup (for bash)
+if [[ -n "$BASH" ]] && [[ "${BASH_SOURCE[0]}" != "${0}" ]]; then
+    _myscript_completion() {
+        local cur prev words cword
+        _init_completion || return
+        
+        case $cword in
+            1)
+                # First argument: complete files
+                COMPREPLY=( $(compgen -f -- "$cur") )
+                ;;
+            2)
+                # Second argument: choose from Shows, Movies, Music
+                COMPREPLY=( $(compgen -W "Shows Movies Music Document" -- "$cur") )
+                ;;
+            *)
+                # Additional arguments if needed
+                ;;
+        esac
+        return 0
+    }
+    complete -F _myscript_completion "$(basename "${BASH_SOURCE[0]}")"
+fi
+
+scp -r "$1" jpporta@192.168.0.200:/media/drive/$2
+

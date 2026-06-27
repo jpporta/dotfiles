@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+
+RES=$(curl https://tool.joaoporta.com/timetracker/detailed -s | jq -c '.[]')
+
+echo $RES
+
+for line in $RES; do
+		start=$(jq -r '.start' <<< "$line")
+		end=$(jq -r '.end' <<< "$line")
+		khal new -a Trabalho "${start:0:5}" "${end:0:5}" Trabalho
+done;
+
+vdirsyncer sync
