@@ -8,13 +8,13 @@
       "alignment": "left",
       "segments": [
         {
-          "foreground": "#c3c4ff",
+          "foreground": "#f7c870",
           "style": "plain",
           "template": "{{ .UserName }}'s ",
           "type": "session"
         },
         {
-          "foreground": "#6265a6",
+          "foreground": "#976d0e",
           "options": {
             "style": "folder"
           },
@@ -23,7 +23,7 @@
           "type": "path"
         },
         {
-          "foreground": "#e6e3eb",
+          "foreground": "#efe4d6",
           "options": {
             "fetch_status": true
           },
@@ -32,7 +32,7 @@
           "type": "git"
         },
         {
-          "foreground": "#cac8e2",
+          "foreground": "#e1caa5",
           "options": {
             "fetch_version": true
           },
@@ -47,7 +47,7 @@
       "alignment": "right",
       "segments": [
         {
-          "foreground": "#eebdd7",
+          "foreground": "#b9d6ac",
           "style": "diamond",
           "template": "RAM:{{ (div ((sub .PhysicalTotalMemory .PhysicalAvailableMemory)|float64) 1073741824.0) }}/{{ (div .PhysicalTotalMemory 1073741824.0) }}GB ",
           "trailing_diamond": " ",
@@ -72,7 +72,7 @@
       "newline": true,
       "segments": [
         {
-          "foreground": "#c3c4ff",
+          "foreground": "#f7c870",
           "style": "plain",
           "template": " ",
           "type": "text",
