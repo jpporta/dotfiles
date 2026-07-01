@@ -1,6 +1,6 @@
 #! /bin/env bash
 
-khal list "$(date +%R)" "$(date -d "+120 minutes" +%R)" --json all\
+khal list "$(date +%R)" "$(date -d "+15 minutes" +%R)" --json all\
 | jq -r '
   .[]
   | .description as $desc

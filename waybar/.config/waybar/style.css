@@ -36,6 +36,7 @@ tooltip label {
 #workspaces,
 #custom-notification,
 #custom-media,
+#custom-obs-recording,
 #custom-pacman,
 #custom-weather,
 #language,
@@ -45,6 +46,29 @@ tooltip label {
   color: @primary;
   margin-right: 10px;
   padding: 0 10px;
+}
+
+#custom-obs-recording.stopped {
+  /* customize the not-recording state here */
+}
+
+@keyframes obs-pulse {
+  from {
+    text-shadow: 0 0 1px @error;
+  }
+  to {
+    text-shadow: 0 0 4px @error;
+  }
+}
+
+#custom-obs-recording.recording {
+  color: @error;
+  font-size: 1.25rem;
+  animation: obs-pulse 750ms alternate infinite ease-in-out;
+}
+
+#custom-obs-recording.paused {
+  /* customize the paused state here */
 }
 
 #network {

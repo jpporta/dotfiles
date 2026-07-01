@@ -38,6 +38,7 @@ add_desktop_file() {
   local app_dir="$1"
   local desktop_file="$2"
   local desktop_id line key value name icon type hidden no_display
+  local seen_name=false seen_icon=false seen_type=false seen_hidden=false seen_no_display=false
 
   [[ -f "$desktop_file" ]] || return
 
@@ -56,11 +57,21 @@ add_desktop_file() {
     value=${line#*=}
 
     case "$key" in
-      Name) name=$value ;;
-      Icon) icon=$value ;;
-      Type) type=$value ;;
-      Hidden) hidden=$value ;;
-      NoDisplay) no_display=$value ;;
+      Name)
+        "$seen_name" || { name=$value; seen_name=true; }
+        ;;
+      Icon)
+        "$seen_icon" || { icon=$value; seen_icon=true; }
+        ;;
+      Type)
+        "$seen_type" || { type=$value; seen_type=true; }
+        ;;
+      Hidden)
+        "$seen_hidden" || { hidden=$value; seen_hidden=true; }
+        ;;
+      NoDisplay)
+        "$seen_no_display" || { no_display=$value; seen_no_display=true; }
+        ;;
     esac
   done < "$desktop_file"
 

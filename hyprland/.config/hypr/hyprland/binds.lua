@@ -11,7 +11,7 @@ local mod_alt  = "SUPER + ALT"
 -- ---------- App launchers / global actions ----------
 hl.bind(mod      .. " + Return",  hl.dsp.exec_cmd(p.terminal))
 hl.bind(mod      .. " + Q",       hl.dsp.window.close())
-hl.bind(mod_shft .. " + Q",       hl.dsp.exit())
+hl.bind(mod_shft .. " + Q",       hl.dsp.exec_cmd("killall zoom"))
 hl.bind(mod      .. " + E",       hl.dsp.exec_cmd(p.file_manager))
 hl.bind(mod      .. " + V",       hl.dsp.window.float({ action = "toggle" }))
 hl.bind(mod      .. " + F",       hl.dsp.window.fullscreen())
@@ -87,6 +87,10 @@ hl.bind("XF86AudioPrev",  hl.dsp.exec_cmd("playerctl previous"),   l)
 hl.bind(mod_shft .. " + 2", hl.dsp.exec_cmd("hyprshot -m output -m DP-1 -o ~/Pictures/Screenshots"))
 hl.bind(mod_shft .. " + 3", hl.dsp.exec_cmd("hyprshot -m window -m active -o ~/Pictures/Screenshots"))
 hl.bind(mod_shft .. " + 4", hl.dsp.exec_cmd("hyprshot -m region -o ~/Pictures/Screenshots"))
+
+-- ---------- OBS Recording ----------
+hl.bind(mod_shft .. " + 9", hl.dsp.exec_cmd("obs-cmd recording toggle"))
+hl.bind(mod .. " + 9", hl.dsp.exec_cmd("obs-cmd recording toggle-pause"))
 
 -- Disable animations on the screenshot selection layer
 hl.layer_rule({

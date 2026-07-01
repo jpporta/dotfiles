@@ -1,12 +1,13 @@
 {
   "layer": "top",
   "margin-top": 10,
-	"output": "DP-1",
+  "output": "DP-1",
 
   "modules-left": [
     "custom/launcher",
     "clock",
     "hyprland/workspaces",
+    "custom/obs-recording",
   ],
   "modules-center": ["custom/notification", "custom/media"],
   "modules-right": [
@@ -35,12 +36,12 @@
     },
   },
 
-  // "custom/prs": {
-  //   "format": " {}",
-  //   "exec": "bash $HOME/.local/bin/prs | wc -l",
-  // "on-click": "bash $HOME/.local/bin/open-prs",
-  // "interval": 300,
-  // },
+   "custom/prs": {
+     "format": " {}",
+     "exec": "bash $HOME/.local/bin/prs | wc -l",
+   "on-click": "bash $HOME/.local/bin/open-prs",
+   "interval": 300,
+   },
 
   "custom/launcher": {
     "format": "󰣇",
@@ -66,6 +67,16 @@
     "on-click": "swaync-client -t -sw",
     "on-click-right": "swaync-client -d -sw",
     "escape": true,
+  },
+
+  "custom/obs-recording": {
+    "exec": "$HOME/.config/waybar/scripts/obs-recording.sh",
+    "return-type": "json",
+    "interval": 2,
+    "format": "{}",
+    "tooltip": true,
+    "on-click": "if [ \"$(obs-cmd recording status 2>/dev/null | awk -F': *' '/Active:/ {print $2}')\" = \"true\" ]; then obs-cmd recording toggle-pause; else obs-cmd recording start; fi",
+    "on-click-right": "obs-cmd recording stop",
   },
 
   "custom/media": {
