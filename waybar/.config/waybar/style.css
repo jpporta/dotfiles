@@ -1,4 +1,4 @@
-@import "./colors/matugen.css";
+@import "./themes/gruvbox-dark.css";
 
 * {
   border: none;

@@ -13,7 +13,7 @@
 set -u
 
 # Bail out (hide module) if OBS is not running.
-if ! pgrep -x obs >/dev/null 2>&1; then
+if ! pgrep obs >/dev/null 2>&1; then
   printf '{}\n'
   exit 0
 fi

@@ -11,7 +11,6 @@
   ],
   "modules-center": ["custom/notification", "custom/media"],
   "modules-right": [
-    "custom/pacman",
     "custom/weather",
     "hyprland/language",
     "pulseaudio",
@@ -102,11 +101,10 @@
   },
 
   "custom/weather": {
-    "exec": "$HOME/.local/bin/weather",
+    "exec": "$HOME/.config/waybar/scripts/get_weather.sh",
     "return-type": "json",
     "format": "{alt} {text}",
     "interval": 300, // every 5min, script caches 20 min result
-    "on-click": "kitty --hold '/home/jpporta/.local/bin/weather-history'", // update system
   },
 
   "pulseaudio": {

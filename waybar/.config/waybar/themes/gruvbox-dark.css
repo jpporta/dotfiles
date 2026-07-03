@@ -3,3 +3,9 @@
 
     @define-color secondary-background rgba(102, 92, 84, 0.8);
     @define-color secondary-color #d79921;
+		@define-color surface rgba(40, 40, 40, 0.8);
+		@define-color surface_container rgba(40, 40, 40, 0.8);
+		@define-color primary #98971a;
+		@define-color error #cc241d;
+		@define-color surface_container_highest rgba(40, 40, 40, 0.8);
+		@define-color secondary #d79921;

@@ -1,8 +1,3 @@
--- Look & feel: blur vs flat decoration profile.
--- The active profile is selected by the contents of ~/.local/state/hypr-look
--- ("blur" or "flat"). Default is "blur".
--- Toggle with: ~/.local/bin/toggle-decoration   (then `hyprctl reload`)
-
 local colors = require("hyprland.colors")
 
 -- Environment + input + general bits common to both profiles

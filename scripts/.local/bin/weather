@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/run/current-system/sw/bin/env bash
 
 BASE="https://api.openweathermap.org/data/2.5/weather"
 CITY="3454690" # Paulinia city id
