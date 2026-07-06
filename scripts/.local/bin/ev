@@ -1,8 +1,7 @@
-#! /bin/env bash
+#! /usr/bin/env bash
 
-exclude_cals="-d "Google Personal" -d "Google Avodah"
-calendars=$(khal printcalendars $exclude_cals")
-last_end_time=$(khal list "$(date +%F) 00:00" "$(date +%F\ %R)" -f {end-time} $exclude_cals | tail -1)
+calendars=$(khal printcalendars)
+last_end_time=$(khal list "$(date +%F) 00:00" "$(date +%F\ %R)" -f {end-time} | tail -1)
 
 if [[ -z $last_end_time ]]; then
 		last_end_time="07:00"
@@ -42,4 +41,3 @@ done
 fi
 
 khal new -a $selected_calendar $last_end_time $(date +%R) "$description"
-# echo "khal new -a $selected_calendar $last_end_time $(date +%R) \"$description\""
