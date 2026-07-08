@@ -1,7 +1,8 @@
 return {
-	"f-person/git-blame.nvim",
-	lazy = true,
-	cmd = { "GitBlameEnable", "GitBlameDisable", "GitBlameToggle" },
+	{
+		"f-person/git-blame.nvim",
+		lazy = true,
+		cmd = { "GitBlameEnable", "GitBlameDisable", "GitBlameToggle" },
 		keys = {
 			{
 				"<leader>gb",
@@ -10,4 +11,8 @@ return {
 				mode = "n",
 			},
 		},
+	},
+	{
+		"sindrets/diffview.nvim",
+	},
 }
