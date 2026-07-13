@@ -13,6 +13,15 @@ return {
 		},
 	},
 	{
-		"sindrets/diffview.nvim",
+		"esmuellert/codediff.nvim",
+		cmd = "CodeDiff",
+		keys = {
+			{
+				"<leader>dd",
+				":CodeDiff<CR>",
+				desc = "Toggle CodeDiff",
+				mode = "n",
+			},
+		},
 	},
 }

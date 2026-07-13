@@ -18,9 +18,11 @@ return {
 					require("none-ls.code_actions.eslint_d"),
 					null_ls.builtins.code_actions.gitsigns, -- Optional: git-related code actions
 					null_ls.builtins.code_actions.refactoring,
+					null_ls.builtins.code_actions.statix,
 					-- Diagnostics
 					require("none-ls.diagnostics.eslint_d"),
 					null_ls.builtins.diagnostics.golangci_lint,
+					null_ls.builtins.diagnostics.statix,
 					-- Hover documentation (optional)
 					null_ls.builtins.hover.dictionary,
 				},
